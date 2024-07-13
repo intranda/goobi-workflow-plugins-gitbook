@@ -10,7 +10,7 @@ description: >-
 Name                     | Wert
 -------------------------|-----------
 Identifier               | intranda_quartz_bka_wohnbau
-Repository               | [https://github.com/intranda/goobi-plugin-quartz-bka-wohnbau](https://github.com/intranda/goobi-plugin-quartz-bka-wohnbau
+Repository               | [https://github.com/intranda/goobi-plugin-quartz-bka-wohnbau](https://github.com/intranda/goobi-plugin-quartz-bka-wohnbau)
 Lizenz              | GPL 2.0 oder neuer 
 Letzte Änderung    | 13.07.2024 09:56:58
 
