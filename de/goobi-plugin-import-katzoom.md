@@ -10,7 +10,7 @@ description: >-
 Name                     | Wert
 -------------------------|-----------
 Identifier               | intranda_import_katzoom
-GitHub Repository        | https://github.com/intranda/goobi-plugin-import-katzoom
+Repository               | [https://github.com/intranda/goobi-plugin-import-katzoom](https://github.com/intranda/goobi-plugin-import-katzoom
 Lizenz              | GPL 2.0 oder neuer 
 Letzte Änderung    | 13.07.2024 14:38:25
 

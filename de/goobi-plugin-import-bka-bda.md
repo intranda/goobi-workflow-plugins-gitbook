@@ -10,7 +10,7 @@ description: >-
 Name                     | Wert
 -------------------------|-----------
 Identifier               | intranda_import_bka_bda
-GitHub Repository        | https://github.com/intranda/goobi-plugin-import-bka-bda
+Repository               | [https://github.com/intranda/goobi-plugin-import-bka-bda](https://github.com/intranda/goobi-plugin-import-bka-bda
 Lizenz              | GPL 2.0 oder neuer 
 Letzte Änderung    | 13.07.2024 09:55:40
 

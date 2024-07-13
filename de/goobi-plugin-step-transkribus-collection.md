@@ -10,7 +10,7 @@ description: >-
 Name                     | Wert
 -------------------------|-----------
 Identifier               | plugin-step-transkribus-collection
-GitHub Repository        | https://github.com/intranda/goobi-plugin-step-transkribus-collection
+Repository               | [https://github.com/intranda/goobi-plugin-step-transkribus-collection](https://github.com/intranda/goobi-plugin-step-transkribus-collection
 Lizenz              | GPL 2.0 oder neuer 
 Letzte Änderung    | 13.07.2024 09:56:47
 

@@ -10,7 +10,7 @@ description: >-
 Name                     | Wert
 -------------------------|-----------
 Identifier               | intranda_workflow_newspaper_pages_importer
-GitHub Repository        | https://github.com/intranda/goobi-plugin-workflow-newspaper-pages-importer
+Repository               | [https://github.com/intranda/goobi-plugin-workflow-newspaper-pages-importer](https://github.com/intranda/goobi-plugin-workflow-newspaper-pages-importer
 Lizenz              | GPL 2.0 oder neuer 
 Letzte Änderung    | 13.07.2024 09:56:26
 

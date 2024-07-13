@@ -2,6 +2,7 @@
 * [Overview](README.md)
 
 ## Administration <a id="administration"></a>
+* [Data Poller](goobi-plugin-administration-data-poller.md)
 
 
 ## Dashboards <a id="dashboard"></a>

@@ -2,6 +2,7 @@
 * [Übersicht](README.md)
 
 ## Administration <a id="administration"></a>
+* [Data Poller](goobi-plugin-administration-data-poller.md)
 
 
 ## Dashboards <a id="dashboard"></a>
@@ -22,7 +23,7 @@
 ## OPAC <a id="opac"></a>
 
 
-## Wiederholungen <a id="quartz"></a>
+## Wiederholte Jobs <a id="quartz"></a>
 * [Datenimport für Wohnbauförderungsfond Österreich](goobi-plugin-quartz-bka-wohnbau.md)
 
 

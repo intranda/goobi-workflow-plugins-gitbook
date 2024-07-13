@@ -10,7 +10,7 @@ description: >-
 Name                     | Wert
 -------------------------|-----------
 Identifier               | intranda_step_zbz_order_delivery
-GitHub Repository        | https://github.com/intranda/goobi-plugin-step-zbz-order-delivery
+Repository               | [https://github.com/intranda/goobi-plugin-step-zbz-order-delivery](https://github.com/intranda/goobi-plugin-step-zbz-order-delivery
 Lizenz              | GPL 2.0 oder neuer 
 Letzte Änderung    | 13.07.2024 09:56:41
 

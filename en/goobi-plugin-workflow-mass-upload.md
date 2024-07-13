@@ -10,7 +10,7 @@ description: >-
 Name                     | Wert
 -------------------------|-----------
 Identifier               | intranda_workflow_massupload
-GitHub Repository        | https://github.com/intranda/goobi-plugin-workflow-mass-upload
+Repository               | [https://github.com/intranda/goobi-plugin-workflow-mass-upload](https://github.com/intranda/goobi-plugin-workflow-mass-upload
 Licence              | GPL 2.0 or newer 
 Last change    | 13.07.2024 09:56:33
 
