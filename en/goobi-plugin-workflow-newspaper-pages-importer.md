@@ -1,68 +1,68 @@
 ---
 description: >-
-  Dieses Workflow Plugin erlaubt einen Massenimport von Zeitungsausgaben in Form von Einzelseiten, bei dem Datum, Ausgabennummern und Seitenzählungen übernommen werden.
+  This workflow plugin allows a mass import of newspaper issues in the form of individual pages, in which the date, issue numbers and page numbers are transferred.
 ---
 
-# Import von Zeitungsausgaben als Einzelseiten
+# Import of newspaper issues as single pages
 
-## Übersicht
+## Overview
 
 Name                     | Wert
 -------------------------|-----------
 Identifier               | intranda_workflow_newspaper_pages_importer
 GitHub Repository        | https://github.com/intranda/goobi-plugin-workflow-newspaper-pages-importer
-Lizenz              | GPL 2.0 oder neuer 
-Letzte Änderung    | 13.07.2024 09:56:26
+Licence              | GPL 2.0 or newer 
+Last change    | 13.07.2024 09:56:26
 
 
-## Einführung
-Dieses Workflow-Plugin erlaubt einen Massenimport von Zeitungsausgaben, die als Einzelseiten vorliegen. Für jede in einem Ordner vorliegende Datei wird dabei anhand des Dateinamens das Ausgabendatum sowie die Ausgabennummer ermittelt. Anschließend werden Goobi-Vorgängen auf Jahresebene erzeugt und die Ausgaben samt Metadaten und Seitenzugehörigkeiten erzeugt.
+## Introduction
+This workflow plugin allows the mass import of newspaper issues that are available as individual pages. For each file in a folder, the issue date and issue number are determined based on the file name. Goobi processes are then created at year level and the issues are generated together with metadata and page associations.
 
 ## Installation
-Zur Installation des Plugins müssen folgende beiden Dateien installiert werden:
+To install the plugin, the following two files must be installed:
 
 ```bash
 /opt/digiverso/goobi/plugins/workflow/plugin-workflow-newspaper-pages-importer-base.jar
 /opt/digiverso/goobi/plugins/GUI/plugin-workflow-newspaper-pages-importer-gui.jar
 ```
 
-Um zu konfigurieren, wie sich das Plugin verhalten soll, können verschiedene Werte in der Konfigurationsdatei angepasst werden. Die Konfigurationsdatei befindet sich üblicherweise hier:
+To configure how the plugin should behave, various values can be adjusted in the configuration file. The configuration file is usually located here:
 
 ```bash
 /opt/digiverso/goobi/config/plugin_intranda_workflow_newspaper_pages_importer.xml
 ```
 
-Für eine Nutzung dieses Plugins muss der Nutzer über die korrekte Rollenberechtigung verfügen.
+To use this plugin, the user must have the correct role authorisation.
 
-![Ohne korrekte Berechtigung ist das Plugin nicht nutzbar](images/goobi-plugin-workflow-newspaper-pages-importer_screen1_de.png)
+![The plugin cannot be used without correct authorisation](images/goobi-plugin-workflow-newspaper-pages-importer_screen1_en.png)
 
-Bitte weisen Sie daher der Gruppe die Rolle `Plugin_workflow_newspaper_pages_importer` zu.
+Therefore, please assign the role `Plugin_workflow_newspaper_pages_importer` to the group.
 
-![Korrekt zugewiesene Rolle für die Nutzer](images/goobi-plugin-workflow-newspaper-pages-importer_screen2_de.png)
+![Correctly assigned role for users](images/goobi-plugin-workflow-newspaper-pages-importer_screen2_en.png)
 
 
-## Überblick und Funktionsweise
-Wenn das Plugin korrekt installiert und konfiguriert wurde, ist es innerhalb des Menüpunkts `Workflow` zu finden.
+## Overview and functionality
+If the plugin has been installed and configured correctly, it can be found under the 'Workflow' menu item.
 
-![Geöffnetes Plugin für den Import der Zeitungsausgaben](images/goobi-plugin-workflow-newspaper-pages-importer_screen3_de.png)
+![Open plugin for importing newspaper editions](images/goobi-plugin-workflow-newspaper-pages-importer_screen3_en.png)
 
-Nach dem Betreten des Plugins kann der eigentliche Importvorgang gestartet werden. Hierbei wird innerhalb des konfigurierten Quellverzeichnisses nach vorhandenen Dateien gesucht und deren Namen überprüft. Das Benennungsschema innerhalb des Dateinamens muss dafür folgendermaßen aussehen:
+After entering the plugin, the actual import process can be started. This involves searching for existing files within the configured source directory and checking their names. The naming scheme within the file name must look like this:
 
 ```bash
 yyyy-MM-dd_AAA.bbb
 ```
 
-Die Zeichen stehen dabei für das folgende:
+The characters are in favour of the following:
 
-Zeichen  | Erläuterung
+Character | Explanation
 ---------|----------------------------------------
- `yyyy`  | Angabe des vierstelligen Jahres
- `MM`    | Angabe des zweistelligen Monats, ggf. mit führender Null
- `dd`    | Angabe des zweistelligen Tages, ggf. mit führender Null
- `AAA`   | Numerische Ausgabennummer in drei Stellen, ggf. mit führenden Nullen
- `bbb`   | Dateiendung, wie z.B. `pdf`, `jpeg` oder `tif`  
+ `yyyy`  | Specification of the four-digit year
+ `MM`    | Specification of the two-digit month, with leading zero if necessary
+ `dd`    | Specification of the two-digit day, with leading zero if necessary
+ `AAA`   | Numerical issue number in three digits, with leading zeros if necessary
+ `bbb`   | File extension, e.g. `pdf`, `jpeg` or `tif`  
 
-Beispielhaft ein Verzeichnislisting für einen solchen Ordnerinhalt:
+An example of a directory listing for such a folder content:
 
 ```bash
 tree /opt/digiverso/import
@@ -93,15 +93,15 @@ tree /opt/digiverso/import
 ├── 1867-05-25_004.pdf
 ```
 
-![Nutzeroberfläche nach Durchführung des Imports](images/goobi-plugin-workflow-newspaper-pages-importer_screen4_de.png)
+![User interface after performing the import](images/goobi-plugin-workflow-newspaper-pages-importer_screen4_en.png)
 
-Während der Durchführung des Imports werden in Goobi für jedes Jahr ein Vorgang erzeugt, worin für jede Zeitungsausgabe jeweils ein Strukturelement mit den zugehörigen Daten, die aus den Dateinamen sowie aus den Werten der Konfiguration erzeugt wird. 
+During the import process, a process is created in Goobi for each year, in which a structural element is created for each newspaper issue with the associated data, which is generated from the file names and the values of the configuration. 
 
-![Erzeugte Zeitungsausgaben mit den zugehörigen Metadaten](images/goobi-plugin-workflow-newspaper-pages-importer_screen5_de.png)
+![Generated newspaper editions with the associated metadata](images/goobi-plugin-workflow-newspaper-pages-importer_screen5_en.png)
 
 
-## Konfiguration
-Die Konfiguration des Plugins erfolgt in der Datei `plugin_intranda_workflow_newspaper_pages_importer.xml` wie hier aufgezeigt:
+## Configuration
+The plugin is configured in the file `plugin_intranda_workflow_newspaper_pages_importer.xml` as shown here:
 
 ```xml
 <config_plugin>
@@ -167,13 +167,13 @@ Die Konfiguration des Plugins erfolgt in der Datei `plugin_intranda_workflow_new
 
 ```
 
-Parameter                | Erläuterung
+Parameter                | Explanation
 -------------------------|----------------------------------------
- `importFolder`          | Mit diesem Parameter wird das Verzeichnis festgelegt, aus dem die Daten importiert werden sollen.
- `workflow`              | Dieser Parameter definiert den Namen der Produktionsvorlage von Goobi, auf dessen Basis die Vorgänge erzeugt werden sollen.
- `processtitle`          | Legen Sie hier fest, wie der Titel der anzulegenden Vorgänge lauten sollen. Ihnen wird beim Erzeugen der Vorgänge die Jahreszahl angefügt (z.B. `New_York_Times_123456789`).
- `pageNumberPrefix`      | Sollen den Seiten in der arabischen Paginierung ein Präfix vorangestellt werden, kann dieser hier definiert werden (z.B. `Seite`). 
- `languageForDateFormat` | Legen Sie hier die Sprache fest, die für die Generierung der Ausgabentitel verwendet werden soll (z.B. `de` oder `en`).
- `issueTitlePrefix`      | Soll vor dem ausführlichem Datum als Titel der Zeitungsausgaben ein Präfix vorangestellt werden, kann dieser hier angegeben werden (z.B. `Ausgabe vom`).
- `deleteFromSource`      | Im Fall, dass die zu importierenden Dateien nach dem Import aus dem Importverzeichnis gelöscht werden sollen, kann dies hier festgelegt werden. 
- `metadata`              |  Mit diesen Elementen kann festgelegt werden, welche Metadaten auf Zeitungs- und auf Bandebene für die anzulegenden Vorgänge eingesetzt werden sollen. Aus jedem hier angegebenen Element wird dabei ein eigenständiges Metadatum erstellt. Es akzeptiert sechs Attribute, wobei `value` und `type` obligatorisch sind, während `var`, `anchor`, `volume` und `person` optional sind. Weitere Einzelheiten finden sich in den Kommentaren innerhalb der Beispielkonfiguration.
+ `importFolder`          | This parameter is used to specify the directory from which the data is to be imported.
+ `workflow`              | This parameter defines the name of the Goobi process template on the basis of which the processes are to be generated.
+ `processtitle`          | Specify here what the title of the processes to be created should be. The year is added when the processes are created (e.g. `New_York_Times_123456789`).
+ `pageNumberPrefix`      | If the pages in the Arabic pagination are to be preceded by a prefix, this can be defined here (e.g. "Page"). 
+ `languageForDateFormat` | Specify the language to be used for generating the output titles (e.g. `en` or `de`).
+ `issueTitlePrefix`      | If a prefix is to be placed before the detailed date as the title of the newspaper issue, this can be entered here (e.g. "Issue from").
+ `deleteFromSource`      | If the files to be imported are to be deleted from the import directory after the import, this can be specified here. 
+ `metadata`              |  These elements can be used to specify which metadata should be used at newspaper and volume level for the processes to be created. An independent metadata is created from each element specified here. It accepts six attributes, whereby `value` and `type` are mandatory, while `var`, `anchor`, `volume` and `person` are optional. Further details can be found in the comments within the sample configuration.
