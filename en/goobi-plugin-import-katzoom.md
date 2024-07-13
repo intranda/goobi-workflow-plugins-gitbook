@@ -12,7 +12,7 @@ Name                     | Wert
 Identifier               | intranda_import_katzoom
 GitHub Repository        | https://github.com/intranda/goobi-plugin-import-katzoom
 Licence              | GPL 2.0 or newer 
-Last change    | 13.07.2024 09:57:12
+Last change    | 13.07.2024 14:38:25
 
 
 ## Introduction
@@ -80,7 +80,7 @@ In addition, a stock is created in archive management for each card catalogue. T
 
 The fonds are named after the individual catalogues.
 
-### Configuration
+## Configuration
 The plugin is configured in the file `plugin_intranda_import_katzoom.xml` as shown here:
 
 ```xml

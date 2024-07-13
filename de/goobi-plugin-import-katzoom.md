@@ -12,7 +12,7 @@ Name                     | Wert
 Identifier               | intranda_import_katzoom
 GitHub Repository        | https://github.com/intranda/goobi-plugin-import-katzoom
 Lizenz              | GPL 2.0 oder neuer 
-Letzte Änderung    | 13.07.2024 09:57:12
+Letzte Änderung    | 13.07.2024 14:38:25
 
 
 ## Einführung
@@ -80,7 +80,7 @@ Außerdem wird für jeden Zettelkatalog ein Bestand im Archivmanagement erzeugt.
 
 Die Bestände sind nach den einzelnen Katalogen benannt.
 
-### Konfiguration
+## Konfiguration
 Die Konfiguration des Plugins erfolgt in der Datei `plugin_intranda_import_katzoom.xml` wie hier aufgezeigt:
 
 ```xml

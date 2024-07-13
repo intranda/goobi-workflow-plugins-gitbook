@@ -12,7 +12,7 @@ Name                     | Wert
 Identifier               | intranda_metadata_createStructureElements
 GitHub Repository        | https://github.com/intranda/goobi-plugin-metadata-create-structure-elements
 Licence              | GPL 2.0 or newer 
-Last change    | 13.07.2024 09:57:06
+Last change    | 13.07.2024 14:38:34
 
 
 ## Introduction
@@ -42,7 +42,7 @@ You can also define how many images should be assigned to the respective structu
 
 The generation of the structure elements will overwrite all existing elements.
 
-### Configuration
+## Configuration
 The plug-in is configured in the file `plugin_intranda_metadata_createStructureElements.xml` as shown here:
 
 ```xml
