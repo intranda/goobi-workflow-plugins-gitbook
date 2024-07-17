@@ -13,6 +13,7 @@
 
 
 ## Exporte <a id="export"></a>
+* [Individueller Export für das DMS Imagen Media Archive Management](goobi-plugin-export-adm-bsme.md)
 
 
 ## Importe <a id="import"></a>
