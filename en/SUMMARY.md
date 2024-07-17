@@ -14,6 +14,7 @@
 
 ## Exports <a id="export"></a>
 * [Customised export for the DMS Imagen Media Archive Management](goobi-plugin-export-adm-bsme.md)
+* [PDF export to the NLI directory structure](goobi-plugin-export-nli-pdf-to-folder-structure.md)
 
 
 ## Imports <a id="import"></a>
