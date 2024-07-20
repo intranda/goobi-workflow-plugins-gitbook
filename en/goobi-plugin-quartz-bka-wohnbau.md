@@ -12,7 +12,7 @@ Name                     | Wert
 Identifier               | intranda_quartz_bka_wohnbau
 Repository               | [https://github.com/intranda/goobi-plugin-quartz-bka-wohnbau](https://github.com/intranda/goobi-plugin-quartz-bka-wohnbau)
 Licence              | GPL 2.0 or newer 
-Last change    | 13.07.2024 09:56:58
+Last change    | 18.07.2024 10:58:17
 
 
 ## Introduction
@@ -22,7 +22,7 @@ This documentation describes the installation, configuration and use of the time
 To be able to use the plugin, the following files must be installed:
 
 ```bash
-/opt/digiverso/goobi/plugins/GUI/plugin-quartz-bka-wohnbau.jar
+/opt/digiverso/goobi/plugins/GUI/plugin-quartz-bka-wohnbau-job.jar
 /opt/digiverso/goobi/config/plugin_intranda_quartz_bka_wohnbau.xml
 ```
 
