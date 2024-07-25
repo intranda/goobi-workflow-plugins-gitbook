@@ -135,8 +135,10 @@ The plugin is configured in the file `plugin_intranda_export_adm_bsme.xml` as sh
 	<!-- main viewer url -->
 	<viewerUrl>https://adm.goobi.cloud/viewer/</viewerUrl>
 
-	<!-- configured values to be used inside of the export xml, can use variable 
-		replacer expressions here like e.g.: - $(meta.CatalogIDDigital) - $(meta.topstruct.TitleDocMain) 
+	<!-- configured values to be used inside of the export xml, 
+	    you can use variable replacer expressions here like e.g.: 
+		- $(meta.CatalogIDDigital) 
+		- $(meta.topstruct.TitleDocMain) 
 		- $(process.Template) -->
 	<rightsToUse>$(meta.AdmRightToUse)</rightsToUse>
 	<rightsDetails>$(meta.AdmRightDetails)</rightsDetails>
