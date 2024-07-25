@@ -8,11 +8,11 @@
   * [Konfiguration des Plugins](goobi-plugin-administration-archive-management_03_00.md)
 * [Copy Master-Anchor](goobi-plugin-administration-copyanchor.md)
 * [Data Poller](goobi-plugin-administration-data-poller.md)
-  * [Einspielen der Export-Verzeichnisse](goobi-plugin-administration-goobi2goobi-import_04_00.md)
 * [Goobi-to-Goobi](goobi-plugin-administration-goobi2goobi-import.md)
   * [Installation und Konfiguration](goobi-plugin-administration-goobi2goobi-import_01_00.md)
   * [Erzeugung der Export-Verzeichnisse](goobi-plugin-administration-goobi2goobi-import_02_00.md)
   * [Transfer der Export-Verzeichnisse](goobi-plugin-administration-goobi2goobi-import_03_00.md)
+  * [Einspielen der Export-Verzeichnisse](goobi-plugin-administration-goobi2goobi-import_04_00.md)
 * [Paginierung zurücksetzen](goobi-plugin-administration-reset-pagination.md)
 * [Wiederherstellung von archivierten Bildordnern](goobi-plugin-administration-restore-archived-image-folders.md)
 * [Kompatibilität mit Regelsatz](goobi-plugin-administration-ruleset-compatibility.md)
@@ -69,7 +69,7 @@
 
 
 ## Statistiken <a id="statistics"></a>
-* [identifier: intranda_statistics_ZZZ](goobi-plugin-statistics-sudan-memory.md)
+* [Sudan Memory Übersetzungen](goobi-plugin-statistics-sudan-memory.md)
 
 
 ## Arbeitsschritte <a id="step"></a>
@@ -105,6 +105,25 @@
 * [Qualitätskontrolle von Bildern](goobi-plugin-step-imageqa.md)
 * [Metatatenübernahme aus einem Verzeichnis](goobi-plugin-step-import-from-folder.md)
 * [Bereinigung von Metadaten](goobi-plugin-step-kiel-archive-cleanup.md)
+* [Layout Wizzard](goobi-plugin-step-layoutwizzard.md)
+  * [Verwendung des Plugins](goobi-plugin-step-layoutwizzard_01_00.md)
+    * [Vorschauansicht](goobi-plugin-step-layoutwizzard_01_01.md)
+    * [Einzelseitenansicht](goobi-plugin-step-layoutwizzard_01_02.md)
+    * [Ordner- und Dateioptionen](goobi-plugin-step-layoutwizzard_01_02.md)
+    * [Aktuelles Bild](goobi-plugin-step-layoutwizzard_01_02.md)
+    * [Allgemeine Einstellungen](goobi-plugin-step-layoutwizzard_01_02.md)
+    * [Dateiliste](goobi-plugin-step-layoutwizzard_01_02.md)
+    * [Speicheransicht](goobi-plugin-step-layoutwizzard_01_02.md)
+    * [Arbeitsschritte](goobi-plugin-step-layoutwizzard_01_02.md)
+    * [Ausgewählter Analyseschritt](goobi-plugin-step-layoutwizzard_01_02.md)
+    * [Globale Zuschneideoptionen](goobi-plugin-step-layoutwizzard_01_02.md)
+    * [Bildbereich](goobi-plugin-step-layoutwizzard_01_02.md)
+    * [Anzeige- und Navigationsoptionen](goobi-plugin-step-layoutwizzard_01_03.md)
+  * [Technische Details](goobi-plugin-step-layoutwizzard_02_00.md)
+    * [Installation](goobi-plugin-step-layoutwizzard_02_01.md)
+    * [Konfiguration des LayoutWizzards](goobi-plugin-step-layoutwizzard_02_02.md)
+    * [Konfiguration der Nutzeroberfläche](goobi-plugin-step-layoutwizzard_02_03.md)
+    * [Workflow](goobi-plugin-step-layoutwizzard_02_04.md)
 * [Metadaten bearbeiten](goobi-plugin-step-metadata-edition.md)
 * [Metadaten pro Bild erfassen](goobi-plugin-step-metadata-per-image.md)
 * [Automatische Anreicherung von Metadaten aus eigenen Vokabularen](goobi-plugin-step-metadata-replacement.md)

@@ -69,7 +69,7 @@
 
 
 ## Statistics <a id="statistics"></a>
-* [identifier: intranda_statistics_ZZZ](goobi-plugin-statistics-sudan-memory.md)
+* [Sudan Memory Translations](goobi-plugin-statistics-sudan-memory.md)
 
 
 ## Steps <a id="step"></a>
@@ -105,6 +105,24 @@
 * [Quality control of images](goobi-plugin-step-imageqa.md)
 * [Metadata transfer from a directory](goobi-plugin-step-import-from-folder.md)
 * [Metadata Cleaning](goobi-plugin-step-kiel-archive-cleanup.md)
+* [LayoutWizzard](goobi-plugin-step-layoutwizzard.md)
+  * [Using the plugin](goobi-plugin-step-layoutwizzard_01_00.md)
+    * [Single page view](goobi-plugin-step-layoutwizzard_01_02.md)
+    * [Folder and file options](goobi-plugin-step-layoutwizzard_01_02.md)
+    * [Current image](goobi-plugin-step-layoutwizzard_01_02.md)
+    * [General settings](goobi-plugin-step-layoutwizzard_01_02.md)
+    * [File list](goobi-plugin-step-layoutwizzard_01_02.md)
+    * [Save view](goobi-plugin-step-layoutwizzard_01_02.md)
+    * [Working steps](goobi-plugin-step-layoutwizzard_01_02.md)
+    * [Selected analysis step](goobi-plugin-step-layoutwizzard_01_02.md)
+    * [Global cutting options](goobi-plugin-step-layoutwizzard_01_02.md)
+    * [Image area](goobi-plugin-step-layoutwizzard_01_02.md)
+    * [Display and navigation options](goobi-plugin-step-layoutwizzard_01_03.md)
+  * [Technical details](goobi-plugin-step-layoutwizzard_02_00.md)
+    * [Installation](goobi-plugin-step-layoutwizzard_02_01.md)
+    * [Configuration of the LayoutWizzard](goobi-plugin-step-layoutwizzard_02_02.md)
+    * [Configuration of the user interface](goobi-plugin-step-layoutwizzard_02_03.md)
+    * [Workflow](goobi-plugin-step-layoutwizzard_02_04.md)
 * [Metadata edition](goobi-plugin-step-metadata-edition.md)
 * [Capture metadata per image](goobi-plugin-step-metadata-per-image.md)
 * [Automatic enrichment of metadata from own vocabularies](goobi-plugin-step-metadata-replacement.md)

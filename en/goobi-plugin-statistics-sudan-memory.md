@@ -3,7 +3,7 @@ description: >-
   This statistics plugin determines the activity of edits to translations within specific metadata fields.
 ---
 
-# identifier: intranda_statistics_ZZZ
+# Sudan Memory Translations
 
 ## Overview
 
@@ -12,7 +12,7 @@ Name                     | Wert
 Identifier               | intranda_statistics_sudan_memory_activity_by_user
 Repository               | [https://github.com/intranda/goobi-plugin-statistics-sudan-memory](https://github.com/intranda/goobi-plugin-statistics-sudan-memory)
 Licence              | GPL 2.0 or newer 
-Last change    | 25.07.2024 12:01:34
+Last change    | 25.07.2024 13:57:17
 
 
 ## Introduction
