@@ -1,15 +1,3 @@
-# Global cutting options
-
-## Overview
-
-Name                     | Wert
--------------------------|-----------
-Identifier               | intranda_step_layoutwizzard
-Repository               | [https://github.com/intranda/goobi-plugin-step-layoutwizzard](https://github.com/intranda/goobi-plugin-step-layoutwizzard)
-Licence              | GPL 2.0 or newer 
-Last change    | 25.07.2024 14:16:01
-
-
 This area is only available if the `Crop page` step is selected and this option is enabled in the configuration. It shows the position and size of the crop frame for the current image. It is displayed in millimeters or another configurable unit of measurement. The values displayed here can be edited directly and always remain synchronous with the frame in the image display.
 
 ![Global cutting options with the associated options](images/goobi-plugin-step-layoutwizzard_screen_07.png)

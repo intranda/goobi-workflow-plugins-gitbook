@@ -1,15 +1,3 @@
-# General settings
-
-## Overview
-
-Name                     | Wert
--------------------------|-----------
-Identifier               | intranda_step_layoutwizzard
-Repository               | [https://github.com/intranda/goobi-plugin-step-layoutwizzard](https://github.com/intranda/goobi-plugin-step-layoutwizzard)
-Licence              | GPL 2.0 or newer 
-Last change    | 25.07.2024 14:15:18
-
-
 Below the image area are several buttons to exit the plugin and continue the workflow.
 
 ![Buttons for exiting the plugin below the image display](images/goobi-plugin-step-layoutwizzard_screen_04.png)

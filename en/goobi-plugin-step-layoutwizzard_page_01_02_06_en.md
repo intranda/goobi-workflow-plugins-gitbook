@@ -1,15 +1,3 @@
-# Working steps
-
-## Overview
-
-Name                     | Wert
--------------------------|-----------
-Identifier               | intranda_step_layoutwizzard
-Repository               | [https://github.com/intranda/goobi-plugin-step-layoutwizzard](https://github.com/intranda/goobi-plugin-step-layoutwizzard)
-Licence              | GPL 2.0 or newer 
-Last change    | 25.07.2024 14:15:32
-
-
 The work step area contains a list of all configured analysis steps. These are each listed with several buttons.
 
 ![Working steps of the respective analysis phases](images/goobi-plugin-step-layoutwizzard_screen_53.png)

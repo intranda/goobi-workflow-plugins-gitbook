@@ -1,15 +1,3 @@
-# Display and navigation options
-
-## Overview
-
-Name                     | Wert
--------------------------|-----------
-Identifier               | intranda_step_layoutwizzard
-Repository               | [https://github.com/intranda/goobi-plugin-step-layoutwizzard](https://github.com/intranda/goobi-plugin-step-layoutwizzard)
-Licence              | GPL 2.0 or newer 
-Last change    | 25.07.2024 14:16:33
-
-
 Within the preview view there is a menu with several buttons for the configuration of the image display in the left area.
 
 ![Menu for display and navigation options](images/goobi-plugin-step-layoutwizzard_screen_17.png)

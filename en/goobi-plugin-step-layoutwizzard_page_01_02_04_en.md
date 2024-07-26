@@ -1,15 +1,3 @@
-# File list
-
-## Overview
-
-Name                     | Wert
--------------------------|-----------
-Identifier               | intranda_step_layoutwizzard
-Repository               | [https://github.com/intranda/goobi-plugin-step-layoutwizzard](https://github.com/intranda/goobi-plugin-step-layoutwizzard)
-Licence              | GPL 2.0 or newer 
-Last change    | 25.07.2024 14:15:18
-
-
 In the file list in the lower area, all image files in the input folder are listed with their file name. A click on one of the file names opens the respective image in the single page view.
 
 ![File list of all the associated images in a Goobi operation](images/goobi-plugin-step-layoutwizzard_screen_54.png)

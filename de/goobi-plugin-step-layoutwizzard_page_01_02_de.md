@@ -1,15 +1,3 @@
-# Bildbereich
-
-## Übersicht
-
-Name                     | Wert
--------------------------|-----------
-Identifier               | intranda_step_layoutwizzard
-Repository               | [https://github.com/intranda/goobi-plugin-step-layoutwizzard](https://github.com/intranda/goobi-plugin-step-layoutwizzard)
-Lizenz              | GPL 2.0 oder neuer 
-Letzte Änderung    | 25.07.2024 14:16:01
-
-
 Die Vorschauansicht beinhaltet für jede Bilddatei einen Bildbereich wie den folgenden. Er besteht aus der eigentlichen Bildanzeige, den Steuerelementen für die Rotation und den Zuschneiderahmen sowie mehreren Buttons zum Betreten der Detailansicht für eine bestimmte Analysephase.
 
 ![Eine Bilddatei in der Vorschauansicht](images/goobi-plugin-step-layoutwizzard_screen_15.png)

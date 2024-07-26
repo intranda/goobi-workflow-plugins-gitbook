@@ -1,15 +1,3 @@
-# Installation und Konfiguration
-
-## Übersicht
-
-Name                     | Wert
--------------------------|-----------
-Identifier               | intranda_administration_goobi2goobi_export intranda_administration_goobi2goobi_import_infrastructure intranda_administration_goobi2goobi_import_data
-Repository               | [https://github.com/intranda/goobi-plugin-administration-goobi2goobi-import](https://github.com/intranda/goobi-plugin-administration-goobi2goobi-import)
-Lizenz              | GPL 2.0 oder neuer 
-Letzte Änderung    | 25.07.2024 11:11:13
-
-
 Für die Inbetriebnahme des Goobi-to-Goobi-Mechanismus müssen sowohl auf dem Ausgangssystem als auch auf dem Zielsystem verschiedene Plugins installiert und Konfigurationen vorgenommen werden. Diese werden hier detailliert beschrieben.
 
 ## 1. Ausgangssystem

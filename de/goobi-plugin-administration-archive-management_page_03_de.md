@@ -1,15 +1,3 @@
-# Konfiguration des Plugins
-
-## Übersicht
-
-Name                     | Wert
--------------------------|-----------
-Identifier               | intranda_administration_archive_management
-Repository               | [https://github.com/intranda/goobi-plugin-administration-archive-management](https://github.com/intranda/goobi-plugin-administration-archive-management)
-Lizenz              | GPL 2.0 oder neuer 
-Letzte Änderung    | 26.07.2024 20:10:46
-
-
 Nach der Durchführung der Installation des Plugins und der zugehörigen Datenbank muss ebenfalls noch eine Konfiguration des Plugins erfolgen. Diese findet innerhalb der Konfigurationsdatei `plugin_intranda_administration_archive_management.xml` statt. und ist beispielhaft wie folgt aufgebaut:
 
 ```xml

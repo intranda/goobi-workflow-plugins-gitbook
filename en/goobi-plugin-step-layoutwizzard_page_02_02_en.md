@@ -1,15 +1,3 @@
-# Configuration of the LayoutWizzard
-
-## Overview
-
-Name                     | Wert
--------------------------|-----------
-Identifier               | intranda_step_layoutwizzard
-Repository               | [https://github.com/intranda/goobi-plugin-step-layoutwizzard](https://github.com/intranda/goobi-plugin-step-layoutwizzard)
-Licence              | GPL 2.0 or newer 
-Last change    | 25.07.2024 14:16:44
-
-
 The central configuration of the LayoutWizzard takes place in a separate configuration file. This file can be located anywhere in the file system, because its path can be specified in any program component of the LayoutWizzard. Usually the path to this central configuration file is as follows:
 
 ```bash

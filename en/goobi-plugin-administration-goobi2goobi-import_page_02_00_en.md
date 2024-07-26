@@ -1,15 +1,3 @@
-# Creation of the export directories
-
-## Overview
-
-Name                     | Wert
--------------------------|-----------
-Identifier               | intranda_administration_goobi2goobi_export intranda_administration_goobi2goobi_import_infrastructure intranda_administration_goobi2goobi_import_data
-Repository               | [https://github.com/intranda/goobi-plugin-administration-goobi2goobi-import](https://github.com/intranda/goobi-plugin-administration-goobi2goobi-import)
-Licence              | GPL 2.0 or newer 
-Last change    | 25.07.2024 11:11:13
-
-
 The export from the source system consists of up to three sub-steps. However, before the export can take place, it must first be specified within the role system of Goobi workflow that the user must have export permissions. Information on the configurations to be made can be found here:
 
 [Installation](goobi-plugin-administration-goobi2goobi-import_page_01_00_en.md)

@@ -1,15 +1,3 @@
-# Konfiguration der Nutzeroberfläche
-
-## Übersicht
-
-Name                     | Wert
--------------------------|-----------
-Identifier               | intranda_step_layoutwizzard
-Repository               | [https://github.com/intranda/goobi-plugin-step-layoutwizzard](https://github.com/intranda/goobi-plugin-step-layoutwizzard)
-Lizenz              | GPL 2.0 oder neuer 
-Letzte Änderung    | 25.07.2024 14:16:44
-
-
 Die Konfigurationsdatei des Goobi Step Plugins, das die Nutzeroberfläche für den LayoutWizzard darstellt, muss im `config` Verzeichnis der Goobi-Installation liegen. Ihr Dateiname lautet in aktuellen Goobi-Versionen `plugin_intranda_step_LayoutWizzard.xml`.
 
 Üblicherweise lautet der vollständige Pfad zu dieser Konfigurationsdatei wie folgt:

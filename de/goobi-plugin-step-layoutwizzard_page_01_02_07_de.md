@@ -1,15 +1,3 @@
-# Ausgewählter Analyseschritt
-
-## Übersicht
-
-Name                     | Wert
--------------------------|-----------
-Identifier               | intranda_step_layoutwizzard
-Repository               | [https://github.com/intranda/goobi-plugin-step-layoutwizzard](https://github.com/intranda/goobi-plugin-step-layoutwizzard)
-Lizenz              | GPL 2.0 oder neuer 
-Letzte Änderung    | 25.07.2024 14:16:01
-
-
 Dieser Bereich ist nur sichtbar wenn ein Analyseschritt ausgewählt wurde und ist dann benannt nach dem jeweiligen Schritt. Er enthält für jeden Schritt Konfigurationsparameter, die die automatische Analyse dieses Schrittes für alle Bilder bestimmen. Die wichtigsten Parameter sind direkt sichtbar, alle weiterem nur in der erweiterten Ansicht. Hilfestellungen zur Bedeutung jedes Parameters werden beim Klick auf `Hilfetexte einblenden` in der Goobi-Kopfleiste angezeigt.
 
 ![Ausgewählter Analyseschritt mit Einstellungen](images/goobi-plugin-step-layoutwizzard_screen_08.png)

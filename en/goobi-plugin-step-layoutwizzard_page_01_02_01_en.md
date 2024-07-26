@@ -1,15 +1,3 @@
-# Folder and file options
-
-## Overview
-
-Name                     | Wert
--------------------------|-----------
-Identifier               | intranda_step_layoutwizzard
-Repository               | [https://github.com/intranda/goobi-plugin-step-layoutwizzard](https://github.com/intranda/goobi-plugin-step-layoutwizzard)
-Licence              | GPL 2.0 or newer 
-Last change    | 25.07.2024 14:15:06
-
-
 In the Folder and File Options area, global settings for handling files can be made. You can also reset the complete LayoutWizzard workflow from here.
 
 ![Activated area for folder and file options](images/goobi-plugin-step-layoutwizzard_screen_13.png)

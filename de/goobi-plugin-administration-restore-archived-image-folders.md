@@ -51,7 +51,9 @@ Das Plugin bietet eine grafische Oberfläche an, die über das Menü `Administra
 Die Konfigurationsdatei ist im Moment leer, muss aber trotzdem vorliegen.
 
 ```xml
-
+<config_plugin>
+  <!-- currently no configuration is needed -->
+</config_plugin>
 ```
 
 Die Information, woher die Daten geholt werden sollen, sind im jeweiligen Vorgangsordner in einer XML-Datei vom Archivierungs-Plugin hinterlegt worden.

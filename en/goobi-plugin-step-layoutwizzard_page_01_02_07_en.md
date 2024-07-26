@@ -1,15 +1,3 @@
-# Selected analysis step
-
-## Overview
-
-Name                     | Wert
--------------------------|-----------
-Identifier               | intranda_step_layoutwizzard
-Repository               | [https://github.com/intranda/goobi-plugin-step-layoutwizzard](https://github.com/intranda/goobi-plugin-step-layoutwizzard)
-Licence              | GPL 2.0 or newer 
-Last change    | 25.07.2024 14:16:01
-
-
 This area is only visible when an analysis step is selected and is then named after the respective step. It contains configuration parameters for each step, which determine the automatic analysis of this step for all images. The most important parameters are directly visible, all others only in the extended view. Help on the meaning of each parameter is displayed in the Goobi header bar when you click `Show help texts`.
 
 ![Selected analysis step with settings](images/goobi-plugin-step-layoutwizzard_screen_08.png)

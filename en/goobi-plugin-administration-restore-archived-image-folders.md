@@ -51,7 +51,9 @@ The plugin offers a graphical user interface that can be opened via the menu `Ad
 The configuration file is empty at the moment, but must still be present.
 
 ```xml
-
+<config_plugin>
+  <!-- currently no configuration is needed -->
+</config_plugin>
 ```
 
 The information from where the data is to be fetched is stored in the respective process folder in an XML file by the archiving plug-in.

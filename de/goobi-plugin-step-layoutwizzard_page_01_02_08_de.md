@@ -1,15 +1,3 @@
-# Globale Zuschneideoptionen
-
-## Übersicht
-
-Name                     | Wert
--------------------------|-----------
-Identifier               | intranda_step_layoutwizzard
-Repository               | [https://github.com/intranda/goobi-plugin-step-layoutwizzard](https://github.com/intranda/goobi-plugin-step-layoutwizzard)
-Lizenz              | GPL 2.0 oder neuer 
-Letzte Änderung    | 25.07.2024 14:16:01
-
-
 Dieser Bereich ist nur verfügbar, wenn der Schritt `Seite zuschneiden` ausgewählt ist und diese Option in der Konfiguration aktiviert ist. Er zeigt die Position und Größe des Zuschneiderahmens für das aktuelle Bildes an. Die Anzeige erfolgt in Millimetern oder einer anderen konfigurierbaren Maßeinheit. Die hier dargestellten Werte sind direkt editierbar und bleiben stets synchron mit dem Rahmen in der Bildanzeige.
 
 ![Globale Zuschneideoptionen mit den zugehörigen Optionen](images/goobi-plugin-step-layoutwizzard_screen_07.png)

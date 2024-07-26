@@ -1,15 +1,3 @@
-# Erzeugung der Export-Verzeichnisse
-
-## Übersicht
-
-Name                     | Wert
--------------------------|-----------
-Identifier               | intranda_administration_goobi2goobi_export intranda_administration_goobi2goobi_import_infrastructure intranda_administration_goobi2goobi_import_data
-Repository               | [https://github.com/intranda/goobi-plugin-administration-goobi2goobi-import](https://github.com/intranda/goobi-plugin-administration-goobi2goobi-import)
-Lizenz              | GPL 2.0 oder neuer 
-Letzte Änderung    | 25.07.2024 11:11:13
-
-
 Der Export aus dem Ausgangssystem besteht aus bis zu drei Teilschritten. Bevor der Export jedoch stattfinden kann, muss zunächst innerhalb des Rollensystems von Goobi workflow festgelegt werden, dass der Nutzer über die Berechtigungen für den Export verfügen muss. Informationen über die vorzunehmenden Konfigurationen finden sich hier:
 
 [Installation](goobi-plugin-administration-goobi2goobi-import_page_01_00_de.md)

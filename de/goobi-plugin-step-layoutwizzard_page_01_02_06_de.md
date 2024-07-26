@@ -1,15 +1,3 @@
-# Arbeitsschritte
-
-## Übersicht
-
-Name                     | Wert
--------------------------|-----------
-Identifier               | intranda_step_layoutwizzard
-Repository               | [https://github.com/intranda/goobi-plugin-step-layoutwizzard](https://github.com/intranda/goobi-plugin-step-layoutwizzard)
-Lizenz              | GPL 2.0 oder neuer 
-Letzte Änderung    | 25.07.2024 14:15:32
-
-
 Der Bereich der Arbeitsschritte enthält eine Liste aller konfigurierten Analyseschritte. Diese werden jeweils mit mehreren Schaltflächen aufgelistet.
 
 ![Arbeitsschritte der jeweiligen Analysephasen](images/goobi-plugin-step-layoutwizzard_screen_53.png)

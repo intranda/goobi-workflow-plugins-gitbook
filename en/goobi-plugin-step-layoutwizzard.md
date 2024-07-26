@@ -48,7 +48,7 @@ LayoutWizzard's image analysis works in several phases in order to arrive at the
   <tbody>
     <tr>
       <td style="text-align:left">
-        <img src="screen_phases_1.png" alt/>
+        <img src="images/goobi-plugin-step-layoutwizzard_screen_phases_1.png" alt/>
       </td>
       <td style="text-align:left">
         <p><b>Start</b>
@@ -59,7 +59,7 @@ LayoutWizzard's image analysis works in several phases in order to arrive at the
     </tr>
     <tr>
       <td style="text-align:left">
-        <img src="screen_phases_2.png" alt/>
+        <img src="images/goobi-plugin-step-layoutwizzard_screen_phases_2.png" alt/>
       </td>
       <td style="text-align:left">
         <p><b>1. Phase: Deskew Page</b>
@@ -72,7 +72,7 @@ LayoutWizzard's image analysis works in several phases in order to arrive at the
     </tr>
     <tr>
       <td style="text-align:left">
-        <img src="screen_phases_3.png" alt/>
+        <img src="images/goobi-plugin-step-layoutwizzard_screen_phases_3.png" alt/>
       </td>
       <td style="text-align:left">
         <p><b>2. Phase: Crop Page</b>
@@ -88,7 +88,7 @@ LayoutWizzard's image analysis works in several phases in order to arrive at the
     </tr>
     <tr>
       <td style="text-align:left">
-        <img src="screen_phases_4.png" alt/>
+        <img src="images/goobi-plugin-step-layoutwizzard_screen_phases_4.png" alt/>
       </td>
       <td style="text-align:left">
         <p><b>3. Phase: Detect Book Spine</b>
@@ -104,7 +104,7 @@ LayoutWizzard's image analysis works in several phases in order to arrive at the
     </tr>
     <tr>
       <td style="text-align:left">
-        <img src="screen_phases_5.png" alt/>
+        <img src="images/goobi-plugin-step-layoutwizzard_screen_phases_5.png" alt/>
       </td>
       <td style="text-align:left">
         <p><b>End</b>

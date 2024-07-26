@@ -1,15 +1,3 @@
-# Einspielen der Export-Verzeichnisse
-
-## Übersicht
-
-Name                     | Wert
--------------------------|-----------
-Identifier               | intranda_administration_goobi2goobi_export intranda_administration_goobi2goobi_import_infrastructure intranda_administration_goobi2goobi_import_data
-Repository               | [https://github.com/intranda/goobi-plugin-administration-goobi2goobi-import](https://github.com/intranda/goobi-plugin-administration-goobi2goobi-import)
-Lizenz              | GPL 2.0 oder neuer 
-Letzte Änderung    | 25.07.2024 13:59:24
-
-
 Der Import von Daten auf dem Zielsystem findet mittels zweier verschiedener Plugins statt. Diese müssen zunächst installiert und entsprechend konfiguriert werden. Mehr Informationen über deren Installation und Konfiguration finden sich hier:
 
 [Installation](goobi-plugin-administration-goobi2goobi-import_page_01_00_de.md)

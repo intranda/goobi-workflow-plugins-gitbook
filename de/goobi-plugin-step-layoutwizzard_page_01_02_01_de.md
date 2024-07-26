@@ -1,15 +1,3 @@
-# Ordner- und Dateioptionen
-
-## Übersicht
-
-Name                     | Wert
--------------------------|-----------
-Identifier               | intranda_step_layoutwizzard
-Repository               | [https://github.com/intranda/goobi-plugin-step-layoutwizzard](https://github.com/intranda/goobi-plugin-step-layoutwizzard)
-Lizenz              | GPL 2.0 oder neuer 
-Letzte Änderung    | 25.07.2024 14:15:06
-
-
 Im Bereich Ordner- und Dateioptionen können globale Einstellungen zur Handhabung der Dateien getätigt werden. Außerdem lässt sich von hier aus der komplette LayoutWizzard-Workflow zurücksetzen.
 
 ![Aktivierter Bereich für die Ordner- und Dateioptionen](images/goobi-plugin-step-layoutwizzard_screen_13.png)

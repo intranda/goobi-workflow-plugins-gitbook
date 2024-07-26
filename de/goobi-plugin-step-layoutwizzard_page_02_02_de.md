@@ -1,15 +1,3 @@
-# Konfiguration des LayoutWizzards
-
-## Übersicht
-
-Name                     | Wert
--------------------------|-----------
-Identifier               | intranda_step_layoutwizzard
-Repository               | [https://github.com/intranda/goobi-plugin-step-layoutwizzard](https://github.com/intranda/goobi-plugin-step-layoutwizzard)
-Lizenz              | GPL 2.0 oder neuer 
-Letzte Änderung    | 25.07.2024 14:16:44
-
-
 Die zentrale Konfiguration des LayoutWizzards findet in einer eigenständigen Konfigurationsdatei statt. Diese kann an einem beliebigen Ort im Dateisystem liegen, da ihr Pfad in jedem Programmbestandteil des LayoutWizzards angegeben werden kann. Üblicherweise lautet der Pfad zu dieser zentralen Konfigurationsdatei folgendermaßen:
 
 ```bash

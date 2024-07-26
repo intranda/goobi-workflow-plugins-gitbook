@@ -1,15 +1,3 @@
-# Installation
-
-## Übersicht
-
-Name                     | Wert
--------------------------|-----------
-Identifier               | intranda_step_layoutwizzard
-Repository               | [https://github.com/intranda/goobi-plugin-step-layoutwizzard](https://github.com/intranda/goobi-plugin-step-layoutwizzard)
-Lizenz              | GPL 2.0 oder neuer 
-Letzte Änderung    | 25.07.2024 14:16:44
-
-
 ## Programmbibliotheken
 
 Die Installation besteht aus insgesamt vier Programmbibliotheken, die im Apache Tomcat bzw. in Goobi erreichbar sein müssen:

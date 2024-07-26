@@ -1,15 +1,3 @@
-# Speicheransicht
-
-## Übersicht
-
-Name                     | Wert
--------------------------|-----------
-Identifier               | intranda_step_layoutwizzard
-Repository               | [https://github.com/intranda/goobi-plugin-step-layoutwizzard](https://github.com/intranda/goobi-plugin-step-layoutwizzard)
-Lizenz              | GPL 2.0 oder neuer 
-Letzte Änderung    | 25.07.2024 14:15:32
-
-
 Die Speicheransicht zeigt das Bild in der Regel so, wie das zugeschnittene Derivat gespeichert wird. Eine Ausnahme davon sind Bilder mit Doppelseitenausrichtung. Diese werden als ein einziges Bild angezeigt, also ohne Teilung an der Falzlinie.
 
 ![Speicheransicht im normalen Modus](images/goobi-plugin-step-layoutwizzard_screen_11.png)

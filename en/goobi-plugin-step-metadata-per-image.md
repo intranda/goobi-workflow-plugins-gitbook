@@ -12,13 +12,9 @@ Name                     | Wert
 Identifier               | intranda_step_metadata_per_image
 Repository               | [https://github.com/intranda/goobi-plugin-step-metadata-per-image](https://github.com/intranda/goobi-plugin-step-metadata-per-image)
 Licence              | GPL 2.0 or newer 
-Last change    | 25.07.2024 11:56:56
+Last change    | 26.07.2024 20:46:31
 
 
-identifier: intranda_step_metadata_per_image
-published: true
-description: This step plugin for Goobi workflow allows you to edit metadata directly from an open task. Links to other processes can be created for each screen.
----
 ## Introduction
 This plugin allows you to edit configurable metadata within the user interface of an open task without having to enter the metadata editor. You can create your own metadata for each audio, video or image file.
 

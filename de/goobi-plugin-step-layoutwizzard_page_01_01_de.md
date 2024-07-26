@@ -1,15 +1,3 @@
-# Vorschauansicht
-
-## Übersicht
-
-Name                     | Wert
--------------------------|-----------
-Identifier               | intranda_step_layoutwizzard
-Repository               | [https://github.com/intranda/goobi-plugin-step-layoutwizzard](https://github.com/intranda/goobi-plugin-step-layoutwizzard)
-Lizenz              | GPL 2.0 oder neuer 
-Letzte Änderung    | 25.07.2024 14:14:44
-
-
 Die Vorschauansicht enthält eine Liste aller Bilder im Eingabeordner. Diese sind jedoch in der Regel auf mehrere Seiten verteilt, um die Ladezeiten der anzuzeigenden Bilder möglichst gering zu halten. Je nach gewählter Einstellung werden dabei gegenüberliegende rechte und linke Buchseiten nebeneinander angezeigt, oder es werden abwechselnd jeweils nur rechte und nur linke Bilder angezeigt, so dass diese jeweils schnell verglichen verglichen werden können.
 
 ![Vorschauansicht mit gegenüberliegenden Seiten nebeneinander dargestellt](images/goobi-plugin-step-layoutwizzard_screen_02.png)

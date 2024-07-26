@@ -1,15 +1,3 @@
-# Installation für die Weiterentwicklung und Tests
-
-## Übersicht
-
-Name                     | Wert
--------------------------|-----------
-Identifier               | intranda_administration_archive_management
-Repository               | [https://github.com/intranda/goobi-plugin-administration-archive-management](https://github.com/intranda/goobi-plugin-administration-archive-management)
-Lizenz              | GPL 2.0 oder neuer 
-Letzte Änderung    | 26.07.2024 20:10:46
-
-
 Soll das Archivmanagement-Plugin für Testzwecke oder für eine Weiterentwicklung in Betrieb genommen werden, kann dies etwas anders erfolgen als unter Produktivbedingungen. Gehen Sie hierzu folgendermaßen vor:
 
 ## Inbetriebnahme der Datenbank BaseX

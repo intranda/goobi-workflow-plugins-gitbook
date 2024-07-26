@@ -1,15 +1,3 @@
-# Image area
-
-## Overview
-
-Name                     | Wert
--------------------------|-----------
-Identifier               | intranda_step_layoutwizzard
-Repository               | [https://github.com/intranda/goobi-plugin-step-layoutwizzard](https://github.com/intranda/goobi-plugin-step-layoutwizzard)
-Licence              | GPL 2.0 or newer 
-Last change    | 25.07.2024 14:16:33
-
-
 The preview view includes an image area like the following for each image file. It consists of the actual image display, the controls for rotation and cropping frame, and several buttons to enter the detail view for a specific analysis phase.
 
 ![An image file in the preview view](images/goobi-plugin-step-layoutwizzard_screen_15.png)

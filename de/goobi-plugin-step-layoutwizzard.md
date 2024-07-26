@@ -12,7 +12,7 @@ Name                     | Wert
 Identifier               | intranda_step_layoutwizzard
 Repository               | [https://github.com/intranda/goobi-plugin-step-layoutwizzard](https://github.com/intranda/goobi-plugin-step-layoutwizzard)
 Lizenz              | GPL 2.0 oder neuer 
-Letzte Änderung    | 25.07.2024 14:14:44
+Letzte Änderung    | 26.07.2024 21:14:34
 
 
 ## Einführung
@@ -48,7 +48,7 @@ Die Bildanalyse des LayoutWizzard arbeitet in mehreren Phasen, um ausgehend von 
   <tbody>
     <tr>
       <td style="text-align:left">
-        <img src="screen_phases_1.png" alt/>
+        <img src="images/goobi-plugin-step-layoutwizzard_screen_phases_1.png" alt/>
       </td>
       <td style="text-align:left">
         <p><b>Start</b>
@@ -59,7 +59,7 @@ Die Bildanalyse des LayoutWizzard arbeitet in mehreren Phasen, um ausgehend von 
     </tr>
     <tr>
       <td style="text-align:left">
-        <img src="screen_phases_2.png" alt/>
+        <img src="images/goobi-plugin-step-layoutwizzard_screen_phases_2.png" alt/>
       </td>
       <td style="text-align:left">
         <p><b>1. Phase: Seite ausrichten</b>
@@ -72,7 +72,7 @@ Die Bildanalyse des LayoutWizzard arbeitet in mehreren Phasen, um ausgehend von 
     </tr>
     <tr>
       <td style="text-align:left">
-        <img src="screen_phases_3.png" alt/>
+        <img src="images/goobi-plugin-step-layoutwizzard_screen_phases_3.png" alt/>
       </td>
       <td style="text-align:left">
         <p><b>2. Phase: Seite zuschneiden</b>
@@ -89,7 +89,7 @@ Die Bildanalyse des LayoutWizzard arbeitet in mehreren Phasen, um ausgehend von 
     </tr>
     <tr>
       <td style="text-align:left">
-        <img src="screen_phases_4.png" alt/>
+        <img src="images/goobi-plugin-step-layoutwizzard_screen_phases_4.png" alt/>
       </td>
       <td style="text-align:left">
         <p><b>3. Phase: Falz erkennen</b>
@@ -106,7 +106,7 @@ Die Bildanalyse des LayoutWizzard arbeitet in mehreren Phasen, um ausgehend von 
     </tr>
     <tr>
       <td style="text-align:left">
-        <img src="screen_phases_5.png" alt/>
+        <img src="images/goobi-plugin-step-layoutwizzard_screen_phases_5.png" alt/>
       </td>
       <td style="text-align:left">
         <p><b>Ende</b>

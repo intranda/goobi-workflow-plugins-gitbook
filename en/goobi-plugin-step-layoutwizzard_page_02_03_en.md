@@ -1,15 +1,3 @@
-# Configuration of the user interface
-
-## Overview
-
-Name                     | Wert
--------------------------|-----------
-Identifier               | intranda_step_layoutwizzard
-Repository               | [https://github.com/intranda/goobi-plugin-step-layoutwizzard](https://github.com/intranda/goobi-plugin-step-layoutwizzard)
-Licence              | GPL 2.0 or newer 
-Last change    | 25.07.2024 14:16:57
-
-
 The configuration file of the Goobi Step plug-in, which is the user interface for LayoutWizzard, must be located in the `config` directory of the Goobi installation. Its file name in current Goobi versions is `plugin_intranda_step_LayoutWizzard.xml`.
 
 Usually the full path to this configuration file is as follows:

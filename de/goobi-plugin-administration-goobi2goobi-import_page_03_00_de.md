@@ -1,15 +1,3 @@
-# Transfer der Export-Verzeichnisse
-
-## Übersicht
-
-Name                     | Wert
--------------------------|-----------
-Identifier               | intranda_administration_goobi2goobi_export intranda_administration_goobi2goobi_import_infrastructure intranda_administration_goobi2goobi_import_data
-Repository               | [https://github.com/intranda/goobi-plugin-administration-goobi2goobi-import](https://github.com/intranda/goobi-plugin-administration-goobi2goobi-import)
-Lizenz              | GPL 2.0 oder neuer 
-Letzte Änderung    | 25.07.2024 11:11:13
-
-
 Nachdem die Erzeugung der Export-Verzeichnisse durchgeführt wurde, können die Vorgangsordner vom Ausgangssystem zu Zielsystem kopiert werden. Je nachdem, um welche Datenmengen es sich hierbei handelt können verschiedene Methoden für den Transfer zum Einsatz kommen.
 
 ## Transfer mittels einer externen Festplatte

@@ -1,15 +1,3 @@
-# Workflow
-
-## Overview
-
-Name                     | Wert
--------------------------|-----------
-Identifier               | intranda_step_layoutwizzard
-Repository               | [https://github.com/intranda/goobi-plugin-step-layoutwizzard](https://github.com/intranda/goobi-plugin-step-layoutwizzard)
-Licence              | GPL 2.0 or newer 
-Last change    | 25.07.2024 14:16:57
-
-
 The LayoutWizzard workflow in Goobi generally consists of several Goobi workflow steps that work together. A typical LayoutWizzard workflow as part of a Goobi workflow might look like the following:
 
 ![Goobi workflow with the typical LayoutWizzard steps](images/goobi-plugin-step-layoutwizzard_screen_goobi_workflow.png)
