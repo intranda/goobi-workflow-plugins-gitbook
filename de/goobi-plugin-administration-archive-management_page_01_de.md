@@ -7,7 +7,7 @@ Name                     | Wert
 Identifier               | intranda_administration_archive_management
 Repository               | [https://github.com/intranda/goobi-plugin-administration-archive-management](https://github.com/intranda/goobi-plugin-administration-archive-management)
 Lizenz              | GPL 2.0 oder neuer 
-Letzte Änderung    | 14.07.2024 11:04:38
+Letzte Änderung    | 26.07.2024 20:10:46
 
 
 Zur Installation des Plugins für den produktiven Einsatz auf einem Webserver gehen Sie folgendermaßen vor:

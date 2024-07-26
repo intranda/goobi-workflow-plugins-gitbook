@@ -12,7 +12,7 @@ Name                     | Wert
 Identifier               | intranda_administration_archive_management
 Repository               | [https://github.com/intranda/goobi-plugin-administration-archive-management](https://github.com/intranda/goobi-plugin-administration-archive-management)
 Licence              | GPL 2.0 or newer 
-Last change    | 15.07.2024 08:05:31
+Last change    | 26.07.2024 20:10:46
 
 
 ## Introduction
@@ -45,9 +45,9 @@ Furthermore, the plugin needs an additional configuration file, which must be lo
 ### Installing the BaseX database
 The plugin reads and writes standardised EAD files. The XML database BaseX is used for this purpose, within which the EAD files are stored and indexed, so that this processing of the data can take place with high performance. The prerequisite for the installation of BaseX is Java 1.8. The commissioning of this database is carried out somewhat differently depending on the intended use, depending on whether the plugin is to be installed for productive operation or for further development.
 
-[Installation for productive operation](page_01_00_en.md)
+[Installation for productive operation](goobi-plugin-administration-archive-management_page_01_en.md)
 
-[Installation for developers](page_02_00_en.md)
+[Installation for developers](goobi-plugin-administration-archive-management_page_02_en.md)
 
 
 ## Overview and functionality
@@ -141,4 +141,4 @@ In addition to the captured metadata, a new `create` or `modified event` includi
 ## Configuration
 After the installation has been completed, the configuration of the plugin and the corresponding interface can take place. This is described in detail on the following page:
 
-[Configuration of the plugins](page_03_00_en.md)
+[Configuration of the plugins](goobi-plugin-administration-archive-management_page_03_en.md)

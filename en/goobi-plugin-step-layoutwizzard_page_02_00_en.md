@@ -12,10 +12,10 @@ Last change    | 25.07.2024 14:16:33
 
 As the installation, configuration and technical operation require more detailed explanations, these are described in the individual chapters of this documentation. The following chapters on technical details are available:
 
-[Installation](page_02_01_en.md)
+[Installation](goobi-plugin-step-layoutwizzard_page_02_01_en.md)
 
-[Configuration](page_02_02_en.md)
+[Configuration](goobi-plugin-step-layoutwizzard_page_02_02_en.md)
 
-[User interface](page_02_03_en.md)
+[User interface](goobi-plugin-step-layoutwizzard_page_02_03_en.md)
 
-[Workflow](page_02_04_en.md)
+[Workflow](goobi-plugin-step-layoutwizzard_page_02_04_en.md)

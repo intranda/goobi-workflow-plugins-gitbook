@@ -20,4 +20,4 @@ All general settings for configuration and analysis workflow are located in the 
 
 [Preview view](page_01_01_en.md)
 
-[Single page view](page_01_02_00_en.md)
+[Single page view](goobi-plugin-step-layoutwizzard_page_01_02_00_en.md)
