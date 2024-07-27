@@ -12,7 +12,7 @@ Name                     | Wert
 Identifier               | intranda_step_layoutwizzard
 Repository               | [https://github.com/intranda/goobi-plugin-step-layoutwizzard](https://github.com/intranda/goobi-plugin-step-layoutwizzard)
 Lizenz              | GPL 2.0 oder neuer 
-Letzte Änderung    | 26.07.2024 21:14:34
+Letzte Änderung    | 26.07.2024 23:15:04
 
 
 ## Einführung
@@ -30,7 +30,7 @@ Die manuelle Kontrolle der Analyseergebnisse mit dem Vorschlag für das Croppen 
 
 Je nach individueller Installation von Goobi workflow und der jeweiligen Workflows können die einzelnen Arbeitsschritte natürlich individuell benannt werden. Im folgenden Screenshot wurden für die drei nacheinander folgenden Arbeitsschritte beispielsweise andere Namen vergeben:
 
-![Individuelle Benennung der einzelnen Arbeitsschritte, die zum LayoutWizzard gehören](screen_goobi_workflow%20%281%29%20%281%29.png)
+![Individuelle Benennung der einzelnen Arbeitsschritte, die zum LayoutWizzard gehören](images/goobi-plugin-step-layoutwizzard_screen_goobi_workflow.png)
 
 
 ## Details zur Bildanalyse
