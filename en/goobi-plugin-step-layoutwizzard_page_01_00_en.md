@@ -6,6 +6,6 @@ However, checking these cropping suggestions is the most important point of inte
 
 All general settings for configuration and analysis workflow are located in the `Single page view`. However, the actual checking and correction will in most cases only take place in the `Preview view`. For this reason, LayoutWizzard should be configured so that the entry into the plugin from an accepted task is as direct as possible to the preview view.
 
-[Preview view](page_01_01_en.md)
+[Preview view](goobi-plugin-step-layoutwizzard_page_01_01_00_en.md)
 
 [Single page view](goobi-plugin-step-layoutwizzard_page_01_02_00_en.md)
