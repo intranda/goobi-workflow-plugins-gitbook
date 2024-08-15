@@ -1,294 +1,101 @@
-Zur Installation des Plugins für den produktiven Einsatz auf einem Webserver gehen Sie folgendermaßen vor:
-
-## Installation der XML-Datenbank BaseX
+Die folgenden Funktionen stehen innerhalb des Plugins für das Archive-Management zur Verfügung:
 
-Zunächst muss die XML-Datenbank BaseX von der BaseX-Webseite heruntergeladen werden. Der Download kann von hier erfolgen:
 
-```text
-https://basex.org/download/
-```
+## Auswahl von vorhandenen Beständen
+Nachdem das Plugin geöffnet wurde, wird zunächst eine Liste der zur Verfügung stehenden Archivbestände angezeigt. Hier kann der Nutzer einen Archivbestand auswählen und mit der Bearbeitung beginnen.
 
-![BaseX Webseite](images/goobi-plugin-administration-archive-management_screenInstall01.png)
+![Öffnen eines vorhandenen Archivbestandes](images/goobi-plugin-administration-archive-management_screen05_de.png)
 
-Am einfachsten erfolgt der Download von dort als `ZIP Package` beispielsweise in der Version 9.4.4:
+Alternativ dazu kann ebenfalls ein neuer Archivbestand erzeugt werden. In diesem Fall muss zunächst ein Name für den Bestand vergeben werden. Der Name muss eindeutig sein, da darüber die Identifikation erfolgt. Außerdem sollten keine Sonderzeichen wie `:/\` genutzt werden, da der Name auch Grundlage für den Dateiname des EAD-Exports ist.
 
-```text
-http://files.basex.org/releases/9.4.4/BaseX944.zip
-```
+![Anlegen eines neuen Archivbestandes](images/goobi-plugin-administration-archive-management_screen04_de.png)
 
-Die heruntergeladene zip-Datei kann anschließend entpackt werden. Üblicherweise erfolgt die Installation der Datenbank unter folgendem Pfad:
+Als dritte Möglichkeit kann eine vorhandene Datei importiert werden. Hier kann eine EAD-Datei ausgewählt und hochgeladen werden. Wenn noch kein Bestand mit dem Namen der Datei existiert, wird die Datei als neuer Bestand importiert und direkt geöffnet. Falls der Name schon in Verwendung ist, kann nach einer Rückfrage der bestehende Bestand mit dem Inhalt der EAD-XML Datei überschrieben werden.
 
-```bash
-/opt/digiverso/basex/
-```
+![Import einer EAD-Datei](images/goobi-plugin-administration-archive-management_screen08_de.png)
 
-Aus einem Linux- oder Mac-Terminal würde das Herunterladen und Entpacken folgendermaßen erfolgen:
+Sofern der Nutzer über die Berechtigung zur Erstellung neuer Bestände verfügt, kann mit dem entsprechenden Button ebenfalls eine Kopie eines Bestandes erstellt werden. Dabei wird ein neuer Bestand erstellt und alle Knoten mit all ihren Metadaten kopiert. Einzige Ausnahme ist hierbei die ID der Knoten. Diese werden automatisch neue erstellt und den Knoten zugewiesen. 
 
-```bash
-cd /opt/digiverso/
-wget http://files.basex.org/releases/9.4.4/BaseX944.zip
-unzip BaseX944.zip
-chown -R tomcat. basex/
-```
+Nach der Auswahl des zu bearbeitenden Archivbestandes wird der Nutzer in die Bearbeitungsmaske weitergeleitet. Hier läßt sich nun im linken Bereich der Strukturbaum bearbeiten. Im rechten Bereich können die Details des jeweils ausgewählten Knoten bearbeitet werden.
 
-Nach dem Herunterladen und Entpacken muss die Jetty-Konfiguration angepasst werden, so dass die Applikation nur auf `localhost` erreichbar ist. Dafür muss in der Konfigurationsdatei `/opt/digiverso/basex/webapp/WEB-INF/jetty.xml` sichergestellt werden, dass der `host` auf `127.0.0.1` und der `port` auf `8984` steht:
+![Bearbeitungsmaske für den Archivbestand](images/goobi-plugin-administration-archive-management_screen06_de.png)
 
-```xml
-<?xml version="1.0"?>
-<!DOCTYPE Configure PUBLIC "-//Jetty//Configure//EN"
-  "http://www.eclipse.org/jetty/configure_9_3.dtd">
+Durch einen Klick auf die Buttons `Abbrechen` (Leserechte) oder `Archivbestand speichern und verlassen` (Schreibrechte) wird man wieder auf die Seite zur Auswahl eines Archivbestandes geleitet.
 
-<Configure id="Server" class="org.eclipse.jetty.server.Server">
-  <!-- Default connector. The Jetty stop port can be specified
-       in the .basex or pom.xml configuration file.  -->
-  <Call name="addConnector">
-    <Arg>
-      <New id="httpConnector" class="org.eclipse.jetty.server.ServerConnector">
-        <Arg name="server"><Ref refid="Server"/></Arg>
-        <Set name="host">127.0.0.1</Set>
-        <Set name="port">8984</Set>
-        <Set name="idleTimeout">60000</Set>
-        <Set name="reuseAddress">true</Set>
-      </New>
-    </Arg>
-  </Call>
-</Configure>
 
-```
-Der Port zum stoppen von BaseX muss auch angepasst werden. Dafür muss unter `/opt/digiverso/basex/.basex` folgendes stehen `STOPPORT = 8985`.
+## Strukturbaum bearbeiten
+Im linken Bereich der Bearbeitungsmaske lässt sich die Struktur des Archivbestandes bearbeiten. Hier lassen sich alle Knoten inklusive ihrer Hierarchie auf einen Blick einsehen. Vor jedem Element befindet sich ein Icon, mit dem sich die Unterelemente des Knotens anzeigen oder ausblenden lassen. Um einen Knoten auszuwählen, kann er angeklickt werden. Er wird dann farbig hervorgehoben und die Details des ausgewählten Knotens werden auf der rechten Seite angezeigt. Wenn ein Knoten im linken Bereich der Bearbeitungsmaske ausgewählt wurde, können ausserdem die Buttons am rechten Rand der linken Box genutzt werden, um den Knoten zu ändern. Folgende Optionen sind hierbei möglich:
 
+| Funktion | Erläuterung |
+| :--- | :--- |
+| `Neuen Knoten einfügen` | Mit diesem Button kann ein neuer Knoten als Unterknoten an das Ende der bereits vorhandenen Unterknoten angefügt werden. |
+| `Mehrere Unterknoten an dieser Stelle einfügen` | Öffnet ein Popup, in dem sich beliebig viele Knoten erstellen lassen.|
+| `Verweise aktualisieren` | Prüft, ob für die Knoten des Bestands Vorgänge existieren. Diese Aktion aktualisiert gegebenenfalls die Verweise. |
+| `Fehlende Vorgänge erstellen` | Generiert für den ausgewählten Knoten und alle Kindknoten Vorgänge, falls für diese Knoten noch keine Vorgänge existieren. |
+| `Knoten löschen` | Hiermit läßt sich der ausgewählte Knoten inklusive aller Unterknoten löschen. <br/><br/>**Achtung:** Diese Funktion kann nicht auf der Ebene des Hauptknotens genutzt werden. |
+| `Validierung ausführen` | Mit dieser Funktion läßt sich eine Validierung des ausgewählten Knotens ausführen. Verstöße gegen die konfigurierten Validierungsvorgaben werden entsprechend aufgelistet. |
+| `Nach oben bewegen` | Dieser Button erlaubt das Verschieben des ausgewählten Knotens nach oben innerhalb der gleichen Hierarchieebene. |
+| `Nach unten bewegen` | Dieser Button erlaubt das Verschieben des ausgewählten Knotens nach unten innerhalb der gleichen Hierarchieebene. |
+| `In der Hierarchie nach unten bewegen` | Mit diesem Button ist es möglich, den ausgewählten Knoten auf eine tiefere Hierarchiestufe zu verschieben. |
+| `In der Hierarchie nach oben bewegen` | Mit diesem Button ist es möglich, den ausgewählten Knoten auf eine höhere Hierarchiestufe zu verschieben. |
+| `Knoten an andere Stelle bewegen` | Mit dieser Funktion öffnet sich eine andere Bearbeitungsmaske, die es ermöglicht, den aktuell ausgewählten Knoten an einer ganz andere Stelle des Hierarchiebaums zu verschieben. Hierbei wird die komplette Hierarchie angezeigt, so dass derjenige Knoten ausgewählt werden kann, innerhalb dessen der ausgewählte Knoten als Unterknoten eingefügt werden soll. |
+| `Knoten duplizieren` | Öffnet ein Popup, in dem bei ausgewählten Metadaten (Attribute `visible` und `showField`) ein Präfix oder Suffix festgelegt werden kann. Die Aktion dupliziert den ausgewählten Knoten und alle Kindelemente und fügt den neuen Metadaten die angegebenen Präfixe und Suffixe hinzu.|
 
-Anschließend wird die `Systemd Unit File` an diesen Pfad installiert:
+![Mehrere Knoten einfügen](images/goobi-plugin-administration-archive-management_screen11_de.png)
 
-```bash
-/etc/systemd/system/basexhttp.service
-```
+Um mehrere Unterknoten auf einmal zu generieren, muss die Anzahl der zu erstellenden Knoten und deren Typ festgelegt werden. Anschließend können verschiedene Metadaten definiert werden, die in alle neuen Knoten eingetragen werden. Dabei kann entweder der gleiche Text in allen Feldern genutzt werden, ein Identifier generiert werden oder ein Text mit anschließendem Zähler generiert werden. Hierbei lässt sich das Zählerformat und der Startwert festlegen.
+ 
+![Suche innerhalb des Bestandes](images/goobi-plugin-administration-archive-management_screen07_de.png)
 
-Diese hat folgenden Aufbau:
+Im oberen Bereich der Hierarchieanzeige kann darüber hinaus auch eine Suche innerhalb der Metadaten der Knoten erfolgen. Dabei werden die gefundenen Knoten samt Hierarchie angezeigt und farbig hervorgehoben. Um die Suche wieder zurückzusetzen genügt es, den Inhalt des Suchbegriffs wieder zu leeren und entsprechen eine leere Suche auszuführen. Alternativ kann der Button auf der linken Seite des Suchfeldes genutzt werden.
 
-```bash
-[Unit]
-Description=BaseX HTTP server
+![Erweiterte Suche](images/goobi-plugin-administration-archive-management_screen10_de.png)
 
-[Service]
-User=tomcat
-Group=tomcat
-ProtectSystem=full
-ExecStart=/opt/digiverso/basex/bin/basexhttp
-ExecStop=/opt/digiverso/basex/bin/basexhttp stop
+Rechts neben dem Feld kann die erweiterte Suche genutzt werden. Hier kann gezielt in einzelnen Feldern gesucht werden. Welche Felder zur Verfügung stehen, kann über die Konfigurationsdatei gesteuert werden (Attribut `searchable="true"` innerhalb von `<metadata>`).
 
-[Install]
-WantedBy=multi-user.target
-```
 
-Anschließend muss der Daemon neu geladen, die Unit-File aktiviert und die Datenbank neu gestartet werden:
+## Bearbeitung eines ausgewählten Knotens
+Sofern im linken Bereich ein Knoten ausgewählt wurde, werden im rechten Bereich die Details des ausgewählten Knotens angezeigt.
 
-```bash
-systemctl daemon-reload
-systemctl enable basexhttp.service
-systemctl start basexhttp.service
-```
+Der rechte Bereich ist dabei in mehrere Kategorien aufgeteilt. Im obersten Teil des rechten Bereichs wird der dazugehörige Goobi-Vorgang angezeigt, sowie eine Möglichkeit zum Erzeugen des Laufzettels. Wenn für den Knoten noch kein Goobi-Vorgang erzeugt wurde, kann ein neuer Vorgang auf der Basis der konfigurierten Produktionsvorlage erstellt werden. Als Dokumententyp wird entprechend der Konfiguration der ausgewählte Knotentyp verwendet. Abhängig von der Konfiguration und dem verwendeten Regelsatz stehen bespielsweise folgende Optionen zur Verfügung:
 
-Damit die Administrationsoberfläche von BaseX auch von extern erreichbar ist, kann dieses im Apache Webserver zum Beispiel mit dem folgenden Abschnitt konfiguriert werden:
+* Folder / Ordner
+* File / Akte
+* Image / Bild
+* Audio
+* Video
+* Other / Sonstiges
 
-```bash
-    redirect 301 /basex http://example.com/basex/
-    <Location /basex/>
-            Require ip 188.40.71.142
-            ProxyPass http://localhost:8984/ retry=0
-            ProxyPassReverse http://localhost:8984/
-    </Location>
-```
+Unterhalb des Dokumententyps werden die einzelnen Metadaten des Knotens aufgelistet. Sie sind gemäß des ISAD(G)-Standards in die folgenden Bereiche aufgeteilt:
 
-Im Anschluß daran muss noch das Apache Modul `proxy_http` aktiviert und der Apache neu gestartet werden, damit die Anpassungen wirksam werden:
+* Identifikation
+* Kontext
+* Inhalt und innere Ordnung
+* Zugangs- und Benutzungsbedingungen
+* Sachverwandte Unterlagen
+* Anmerkungen
+* Verzeichnungskontrolle
 
-```bash
-a2enmod proxy_http
-systemctl restart apache2
-```
+Jeder dieser Bereiche lässt sich einzeln auf- und zuklappen. Auch wenn hierbei ein Bereich zugeklappt ist, läßt sich sehr einfach erkennen, welche Metadaten pro Bereich möglich und welche bereits ausgefüllt sind. Die einzelnen Metadaten werden dabei als verschieden hervorgehobene Badges angezeigt. Ein dunkler Hintergrund zeigt an, dass für diese Metadatum bereits ein Wert erfasst wurde. Ein heller Hintergrund hingeben bedeutet, dass dieses Feld noch ohne Inhalt ist. Sofern ein Feld wiederholbar angelegt werden kann, enthält der Badge ein Plus-Icon.
 
-Die XML Datenbank kann nach der Installation unter folgender URL erreicht werden:
+Wenn die Details eines Bereiches ausgeklappt werden, erfolgt eine Anzeige der einzelnen Metadaten. Standardmäßig werden dabei nur diejenigen Felder angezeigt, die bereits über einen Wert verfügen. Weitere Felder lassen sich durch einen Klick auf eines der Badges hinzufügen. Über das Minus-Icon lassen sich Felder wieder entfernen.
 
-​[http://localhost:8984/](http://localhost:8984/)​
 
-![Gestarteter BaseX Server](images/goobi-plugin-administration-archive-management_screenInstall02.png)
+## Validierung der Metadaten
+Sowohl der Button `Download als EAD Datei` als auch der Button `Validierung ausführen` stellen sicher, dass die Metadaten valide sind. Dabei werden die konfigurierten Regeln angewendet und es wird geprüft, ob einzelne Werte dagegen verstoßen. Ist dies der Fall, werden die betroffenen Knoten im linken Bereich farbig hervorgehoben. Wird ein solcher invalider Knoten ausgewählt, werden die betroffenen Badges rot dargestellt und in den Metadaten wird neben der Umrandung auch der konfigurierte Fehlertext angezeigt.
 
-## Datenbank administrieren und EAD-Datei einspielen
+![Anzeige einer fehlerhaften Validierung](images/goobi-plugin-administration-archive-management_screen09_de.png)
 
-Zum Einloggen müssen vorher Zugangsdaten festgelegt werden. Dies geht mit dem folgendem Befehl:
+Eine fehlgeschlagene Validierung verhindert nicht das Speichern des Archivbestandes oder das Erzeugen von Goobi-Vorgängen.
 
-```text
-/opt/digiverso/basex/bin/basexhttp -c PASSWORD
-```
 
-Nachdem BaseX heruntergeladen und gestartet wurde, können XML-Dateien als neue Datenbanken eingespielt werden. Dazu wird zunächst der Menüpunkt `Database Administration` geöffnet, wo ein Login mit den vorher definierten Zugangsdaten erfolgen kann.
+## Speichern der Daten
+Sofern die Bearbeitung nicht nur im `read-only` Modus erfolgt, werden Daten immer automatsich gespeichert, wenn man Knoten einfügt oder löscht, zu einem anderen Knoten wechselt, den Bestand exportiert, eine Kopie davon erstellt oder Verweise erstellt oder die Bearbeitung mittels `Speichern und verlassen` beendet.
 
 
-![Login f&#xFC;r die Datenbank-Administration](images/goobi-plugin-administration-archive-management_screenInstall03.png)
+## Export und Download
+Die beiden Buttons zum `Download als EAD Datei` und `Viewer export` erzeugen eine neue EAD auf Basis des aktuellen Zustandes der Knoten. Dabei wird mit Ausnahme des obersten Knoten jeder Knoten als eigentständiges `<c>`-Element dargestellt. Die Daten des obersten Knoten werden innerhalb von `<archdesc>` unterhalb des `<ead>` Elements geschrieben. 
 
-Nach dem ersten Anmelden sollte daher als erstes ein neues Passwort vergeben werden. Dazu muss der Menüeintrag Users geöffnet werden. Hier kann der Accountname angeklickt und das neue Passwort gesetzt werden.
+Beim Viewer export wird die erzeugte Datei in den Hotfolder des Goobi viewers geschrieben, beim Download hingegen kann sie lokal gespeichert werden. 
 
-Nach dem erfolgreichen Login erhält man einen Überblick über die installierten Datenbanken, Log-Dateien usw.
-
-![Administrativer &#xDC;bersicht](images/goobi-plugin-administration-archive-management_screenInstall04.png)
-
-Unter dem Menüpunkt `Databases` können neue Datenbanken für die EAD Dateien erzeugt werden. Das Archiv Management Plugin benötigt eine erstelle Datenbank.
-
-![Neue Datenbank anlegen](images/goobi-plugin-administration-archive-management_screenInstall05.png)
-
-Dort kann nun ein `Name` für die neue Datenbank angegeben werden. Anschließend muss auf den Button `Create` geklickt werden.
-
-![Definition des Namens der neuen Datenbank](images/goobi-plugin-administration-archive-management_screenInstall06.png)
-
-Nachdem die neue Datenbank erzeugt wurde, kann eine XML-Datei als Inhalt eingespielt werden. Klicken Sie hierzu auf den Button `Add`.
-
-![Details der neu angelegten Datenbank](images/goobi-plugin-administration-archive-management_screenInstall07.png)
-
-Hier kann nun eine EAD-Datei als XML-Datei ausgewählt und ein Pfad vergeben werden, unter der dieser Datenbestand erreichbar sein soll. Anschließend muss ein Klick auf den Button `Add` erfolgen.
-
-![Upload einer XML-Datei](images/goobi-plugin-administration-archive-management_screenInstall08.png)
-
-Nachdem Einspielen der EAD-Datei steht der Inhalt für das Archivmanagement-Plugin von Goobi bereits zur Verfügung.
-
-![Details der eingespielten XML-Datei](images/goobi-plugin-administration-archive-management_screenInstall09.png)
-
-Im Administrationsbereich von BaseX können auch Dateien entfernt werden. Dazu müssen diese mittels der zugehörigen Checkbox markiert und dann mit einem Klick auf `Delete` gelöscht werden. Das Aktualisieren einer EAD-Datei ist ausschließlich durch vorheriges Löschen und anschließendes neues Hinzufügen möglich.
-
-### Definition der Anfragen
-
-Um BaseX für Abfrage aus Goobi einzurichten, muss der Datenbank bekannt gemacht werden, wie eine solche Anfrage aussieht, was mit dem Ergebnis der Abfrage geschehen soll und wie das Ergebnis der Abfrage auszusehen hat. Dafür bietet BaseX verschiedene Optionen an. Wir haben uns für `RESTXQ` entschieden, da diese im Gegensatz zur REST Schnittstelle keine zusätzliche Authentifizierung benötigt.
-
-Zur Konfiguration der Abfragen müssen im Pfad `/opt/digiverso/basex/webapp/` mehrere neue Dateien erzeugt werden. Diese befinden sich innerhalb des Plugin-Repositories unterhalb des Pfades `plugin/src/main/resources/(basex9|basex10)` und können von dort auch in den Ordner `/opt/digiverso/basex/webapp/` kopiert werden. Alternativ können sie auch mit den folgenden Befehlen automatisch angelegt werden:
-
-Für BaseX 9:
-```bash
-cd /opt/digiverso/basex/webapp/
-sudo -u tomcat wget https://raw.githubusercontent.com/intranda/goobi-plugin-administration-archive-management/master/plugin/src/main/resources/basex9/importFile.xq
-sudo -u tomcat wget https://raw.githubusercontent.com/intranda/goobi-plugin-administration-archive-management/master/plugin/src/main/resources/basex9/listDatabases.xq
-sudo -u tomcat wget https://raw.githubusercontent.com/intranda/goobi-plugin-administration-archive-management/master/plugin/src/main/resources/basex9/openDatabase.xq
-sudo -u tomcat wget https://raw.githubusercontent.com/intranda/goobi-plugin-administration-archive-management/master/plugin/src/main/resources/basex9/findDb.xq
-```
-
-Für BaseX 10:
-```bash
-cd /opt/digiverso/basex/webapp/
-sudo -u tomcat wget https://raw.githubusercontent.com/intranda/goobi-plugin-administration-archive-management/master/plugin/src/main/resources/basex10/createDatabase.xq
-sudo -u tomcat wget https://raw.githubusercontent.com/intranda/goobi-plugin-administration-archive-management/master/plugin/src/main/resources/basex10/eadNode.xq
-sudo -u tomcat wget https://raw.githubusercontent.com/intranda/goobi-plugin-administration-archive-management/master/plugin/src/main/resources/basex10/eadRecord.xq
-sudo -u tomcat wget https://raw.githubusercontent.com/intranda/goobi-plugin-administration-archive-management/master/plugin/src/main/resources/basex10/findDb.xq
-sudo -u tomcat wget https://raw.githubusercontent.com/intranda/goobi-plugin-administration-archive-management/master/plugin/src/main/resources/basex10/importFile.xq
-sudo -u tomcat wget https://raw.githubusercontent.com/intranda/goobi-plugin-administration-archive-management/master/plugin/src/main/resources/basex10/listDatabases.xq
-sudo -u tomcat wget https://raw.githubusercontent.com/intranda/goobi-plugin-administration-archive-management/master/plugin/src/main/resources/basex10/openDatabase.xq
-sudo -u tomcat wget https://raw.githubusercontent.com/intranda/goobi-plugin-administration-archive-management/master/plugin/src/main/resources/basex10/uploadFile.xq
-```
-
-
-![\*.xq-Dateien aus dem ausgecheckten Plugin](images/goobi-plugin-administration-archive-management_screenInstall10.png)
-
-![Kopierte \*.xq-Dateien innerhalb des Verzeichnisses webapp von BaseX](images/goobi-plugin-administration-archive-management_screenInstall11.png)
-
-Inhalt der Datei `listDatabases.xq`:
-
-```text
-(: XQuery file to return the names of all available databases :)
-module namespace page = 'http://basex.org/examples/web-pagepage';
-(:declare default element namespace "urn:isbn:1-931666-22-9";:)
-
-declare
-  %rest:path("/databases")
-  %rest:single
-  %rest:GET
-
-function page:getDatabases() {
-  let $ead := db:list()
-
-  return
-    <databases>
-    {
-      for $c in $ead
-      return
-        <database>
-          <name>
-            {$c}
-          </name>
-          {
-          let $files := db:list-details($c)
-          return
-            <details>
-              {$files}
-            </details>
-          }
-        </database>
-    }
-  </databases>
-};
-```
-
-Inhalt der Datei `openDatabase.xq`:
-
-```text
-(: XQuery file to return a full ead record :)
-module namespace page = 'http://basex.org/examples/web-page';
-declare default element namespace "urn:isbn:1-931666-22-9";
-
-declare
-  %rest:path("/db/{$database}/{$filename}")
-  %rest:single
-  %rest:GET
-
-function page:getDatbase($database, $filename) {
-  let $ead := db:open($database, $filename)/ead
-  return
-  <collection>
-    {$ead}
-  </collection>
-};
-```
-
-Inhalt der Datei `importFile.xq`:
-
-```text
-(: XQuery file to return a full ead record :)
-module namespace page = 'http://basex.org/examples/web-page';
-declare default element namespace "urn:isbn:1-931666-22-9";
-
-declare
-  %rest:GET
-  %rest:path("/import/{$db}/{$filename}")
-
-updating function page:import($db, $filename) {
-  let $path := '/opt/digiverso/basex/import/' || $filename
-  let $details := db:list-details($db, $filename)
-
-  return
-    if (fn:empty($details)) then
-      db:add($db, doc($path), $filename)
-    else
-      db:replace($db, $filename, doc($path))
-};
-```
-
-Je nachdem, wo die BaseX-Datenbank installiert wurde, müssen noch zwei Anpassungen für das Schreiben von EAD-Dateien im Dateisystem vorgenommen werden. Zunächst muss einmal ein Ordner erzeugt und mit entsprechenden Rechten versehen werden, damit darin EAD-Dateien gespeichert werden können. Dieser Ordner kann beispielsweise so lauten:
-
-```bash
-/opt/digiverso/basex/import/
-```
-
-Um auf dieses angegebene Verzeichnis zugreifen zu können, muss es natürlich auf dem System auch tatsächlich existieren und daher ggf. noch angelegt werden und die Rechte angepasst werden:
-
-```bash
-mkdir /opt/digiverso/basex/import
-chown tomcat: /opt/digiverso/basex/import
-```
-
-Dieses Verzeichnis muss nun innerhalb von zwei Konfigurationsdateien richtig konfiguriert werden. Zunächst einmal erfolgt die Anpassung in Konfigurationsdatei `plugin_intranda_administration_archive_management.xml` so, dass dort der Pfad definiert wird:
-
-```markup
-<eadExportFolder>/opt/digiverso/basex/import</eadExportFolder>
-```
-
-Außerdem muss auch die zuvor eingerichtete Datei `importFile.xq` so anpasst werden, dass darin folgende Zeile auf den richtigen Pfad verweist:
-
-```bash
-let $path := '/opt/digiverso/basex/import/' || $filename
-```
+Die erzeugte Datei enthält dabei alle Metadaten in der Form, in der sie in der Konfigurationsdatei angegeben wurden. Dabei wird der Inhalt des `xpath` Attributs der Metadaten genutzt. Wenn für ein Feld keine Angabe existiert, handelt es sich um ein intenes Metadatum, das nicht als EAD exportiert wird.

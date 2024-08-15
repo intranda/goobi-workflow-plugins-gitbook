@@ -12,7 +12,7 @@ Name                     | Wert
 Identifier               | RepresentativeCreation
 Repository               | [https://github.com/intranda/goobi-plugin-step-representative-creation](https://github.com/intranda/goobi-plugin-step-representative-creation)
 Lizenz              | GPL 2.0 oder neuer 
-Letzte Änderung    | 25.07.2024 11:20:58
+Letzte Änderung    | 15.08.2024 10:58:54
 
 
 ## Einführung
@@ -66,6 +66,8 @@ Mit `<StepName>` kann definiert werden, zu welchem Schritt der Vorgang zurückge
 Nachdem das Plugin installiert und konfiguriert wurde, kann es innerhalb eines Arbeitsschrittes von Goobi genutzt werden.
 
 Dazu muss innerhalb der gewünschten Aufgabe das Plugin `RepresentativeCreation` eingetragen werden. Des Weiteren muss die Checkbox `Automatische Aufgabe` gesetzt sein.
+
+![Auwahl des Plugins zur Durchführung des Arbeitsschrittes](images/goobi-plugin-step-representative-creation_screen1_de.png)
 
 Die Arbeitsweise des Plugins innerhalb des korrekt konfigurierten Workflows sieht folgendermaßen aus:
 

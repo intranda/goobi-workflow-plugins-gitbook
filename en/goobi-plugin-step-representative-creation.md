@@ -12,7 +12,7 @@ Name                     | Wert
 Identifier               | RepresentativeCreation
 Repository               | [https://github.com/intranda/goobi-plugin-step-representative-creation](https://github.com/intranda/goobi-plugin-step-representative-creation)
 Licence              | GPL 2.0 or newer 
-Last change    | 25.07.2024 11:20:58
+Last change    | 15.08.2024 10:58:54
 
 
 ## Introduction
@@ -62,6 +62,8 @@ With `StepName` you can define to which step the operation is to be reversed if 
 Once the plugin has been installed and configured, it can be used by Goobi within a workflow step.
 
 To do this, the `RepresentativeCreation` plugin must be entered within the desired task. The `Automatic task` checkbox must also be set.
+
+![Selection of the plugin for performing the step](images/goobi-plugin-step-representative-creation_screen1_en.png)
 
 The way the plugin works within the correctly configured workflow is as follows.
 

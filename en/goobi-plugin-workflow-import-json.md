@@ -12,7 +12,7 @@ Name                     | Wert
 Identifier               | intranda_workflow_import_json
 Repository               | [https://github.com/intranda/goobi-plugin-workflow-import-json](https://github.com/intranda/goobi-plugin-workflow-import-json)
 Licence              | GPL 2.0 or newer 
-Last change    | 25.07.2024 10:56:51
+Last change    | 14.08.2024 19:06:00
 
 
 ## Introduction
@@ -32,6 +32,8 @@ To configure how the plugin should behave, various values can be adjusted in the
 ```bash
 /opt/digiverso/goobi/config/plugin_intranda_workflow_import_json.xml
 ```
+
+![Selection of the Workflow plugin](images/goobi-plugin-workflow-import-json_screen1_en.png)
 
 ## Configuration
 The content of this configuration file is as follows:

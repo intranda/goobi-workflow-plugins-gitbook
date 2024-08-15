@@ -12,7 +12,7 @@ Name                     | Wert
 Identifier               | Ariadne
 Repository               | [https://github.com/intranda/goobi-plugin-opac-ariadne](https://github.com/intranda/goobi-plugin-opac-ariadne)
 Licence              | GPL 2.0 or newer 
-Last change    | 25.07.2024 12:02:49
+Last change    | 14.08.2024 18:40:13
 
 
 ## Introduction
@@ -31,13 +31,14 @@ The files must be installed readable for the user `tomcat` at the following path
 
 ```bash
 /opt/digiverso/goobi/plugins/opac/plugin_intranda_opac_ariadne-base.jar
-/opt/digiverso/goobi/plugins/config/plugin_intranda_opac_ariadne.xml
+/opt/digiverso/goobi/config/plugin_intranda_opac_ariadne.xml
 ```
 
 
 ## Overview and functionality
 A normal OPAC query can now be carried out in Goobi. To do this, the catalogue `Ariadne` must be selected and the desired identifier entered. Please note that the identifier needs a prefix `obj-`, e.g. `obj-5602376`.
 
+![Selection of the plugin](images/goobi-plugin-opac-ariadne_screen1_en.png)
 
 ## Configuration
 In the file `goobi_opac.xml` the interface to the desired catalogue system must be made known. This is done by an entry that looks like this:

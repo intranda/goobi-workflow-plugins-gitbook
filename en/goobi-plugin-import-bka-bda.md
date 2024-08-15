@@ -12,7 +12,7 @@ Name                     | Wert
 Identifier               | intranda_import_bka_bda
 Repository               | [https://github.com/intranda/goobi-plugin-import-bka-bda](https://github.com/intranda/goobi-plugin-import-bka-bda)
 Licence              | GPL 2.0 or newer 
-Last change    | 13.07.2024 09:54:53
+Last change    | 13.08.2024 21:10:13
 
 
 ## Introduction
@@ -33,6 +33,7 @@ To use the import, the mass import area must be opened in the production templat
 
 The import is then carried out line by line. A new process is created for each object and the configured rules are applied. If a valid data record has been created and the generated process title has not yet been assigned, the process is actually created and saved. Within the Excel file, subsequent lines belonging to the Goobi process to be generated are created with the desired structure type depending on the configuration. Associated images are also automatically transferred and assigned to the generated structural elements and processes.
 
+![Selection of the plugin for performing the import](images/goobi-plugin-import-bka-bda_screen1_en.png)
 
 ## Configuration
 The configuration is done via the file `plugin_intranda_import_bka_bda.xml`. This file can be adapted during operation.

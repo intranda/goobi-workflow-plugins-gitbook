@@ -3,9 +3,8 @@
 
 ## Administration <a id="administration"></a>
 * [Archive Management](goobi-plugin-administration-archive-management.md)
-  * [Installation für den Produktivbetrieb](goobi-plugin-administration-archive-management_page_01_de.md)
-  * [Installation für die Weiterentwicklung und Tests](goobi-plugin-administration-archive-management_page_02_de.md)
-  * [Konfiguration des Plugins](goobi-plugin-administration-archive-management_page_03_de.md)
+  * [Bedienung des Plugins](goobi-plugin-administration-archive-management_page_01_de.md)
+  * [Konfiguration des Plugins](goobi-plugin-administration-archive-management_page_02_de.md)
 * [Copy Master-Anchor](goobi-plugin-administration-copyanchor.md)
 * [Data Poller](goobi-plugin-administration-data-poller.md)
 * [Goobi-to-Goobi](goobi-plugin-administration-goobi2goobi-import.md)
@@ -95,6 +94,7 @@
 * [Kopieren von Dateien aus Metadatenfeldern](goobi-plugin-step-fetch-images-from-metadata.md)
 * [Upload von Dateien](goobi-plugin-step-file-upload.md)
 * [Validierung von Dateien](goobi-plugin-step-file-validation.md)
+* [Generate ALTO IDs](goobi-plugin-step-generate-alto-ids.md)
 * [Identifier generieren](goobi-plugin-step-generate-identifier.md)
 * [Automatische Geonames Annotierung](goobi-plugin-step-geonames-auto-annotator.md)
 * [GeoNames Korrektur](goobi-plugin-step-geonames-correction.md)
@@ -128,6 +128,7 @@
 * [Metadaten pro Bild erfassen](goobi-plugin-step-metadata-per-image.md)
 * [Automatische Anreicherung von Metadaten aus eigenen Vokabularen](goobi-plugin-step-metadata-replacement.md)
 * [Strukturdatenimport aus einer Exceldatei](goobi-plugin-step-metadata-structure-import.md)
+* [MIX Metadata Enrichment Plugin](goobi-plugin-step-mix-metadata-enrichment.md)
 * [OCR-Durchführung mit gemischten Schrifttypen](goobi-plugin-step-mixed-ocr.md)
 * [OCR Seitenauswahl](goobi-plugin-step-ocr-selector.md)
 * [OCR-Ergebnis in Metadatenfeld übernehmen](goobi-plugin-step-ocr-to-metadata.md)

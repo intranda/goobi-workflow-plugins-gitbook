@@ -12,7 +12,7 @@ Name                     | Wert
 Identifier               | intranda_import_bka_bda
 Repository               | [https://github.com/intranda/goobi-plugin-import-bka-bda](https://github.com/intranda/goobi-plugin-import-bka-bda)
 Lizenz              | GPL 2.0 oder neuer 
-Letzte Änderung    | 13.07.2024 09:55:40
+Letzte Änderung    | 13.08.2024 21:10:13
 
 
 ## Einführung
@@ -32,6 +32,8 @@ Um das Plugin nutzen zu können, müssen folgende Dateien installiert werden:
 Um den Import zu nutzen, muss in den Produktionsvorlagen der Massenimportbereich geöffnet werden und im Reiter Dateiupload-Import das Plugin `intranda_import_bka_bda` ausgewählt werden. Anschließend kann eine Excel-Datei hochgeladen und importiert werden.
 
 Der Import erfolgt anschließend zeilenweise. Dabei wird für jedes Objekt ein neuer Vorgang erzeugt und die konfigurierten Regeln angewendet. Wenn dabei ein valider Datensatz erzeugt wurde und der generierte Vorgangstitel noch nicht vergeben wurde, wird der Vorgang tatsächlich erzeugt und gespeichert. Innerhalb der Excel-Datei nachfolgende Zeilen, die zu dem zu erzeugenden Goobi-Vorgang gehören, werden abhängig von der Konfiguration mit dem gewünschten Strukturtyp erzeugt. Zugehörige Bilder werden hierbei ebenfalls automatisch übernommen und den erzeugten Strukturelementen und Vorgängen zugeordnet.
+
+![Auswahl des Plugins zur Durchführung des Imports](images/goobi-plugin-import-bka-bda_screen1_de.png)
 
 
 ## Konfiguration

@@ -12,7 +12,7 @@ Name                     | Wert
 Identifier               | intranda_import_endnote
 Repository               | [https://github.com/intranda/goobi-plugin-import-wuwien](https://github.com/intranda/goobi-plugin-import-wuwien)
 Lizenz              | GPL 2.0 oder neuer 
-Letzte Änderung    | 25.07.2024 12:28:26
+Letzte Änderung    | 15.08.2024 06:16:33
 
 
 ## Einführung
@@ -36,7 +36,9 @@ Daneben gibt es eine Konfigurationsdatei, die an folgender Stelle liegen muss:
 ## Überblick und Funktionsweise
 Um den Import zu nutzen, muss in den Produktionsvorlagen der Massenimport Bereich geöffnet werden und im Reiter `Dateiupload-Import` das Plugin `intranda_import_endnote` auswählen. Anschließend kann eine Excel Datei hochladen und importiert werden.
 
-Des Import erfolgt zeilenweise. Dabei wird für jede Zeile der Vorgangstitel aus den konfigurierten Feldern erzeugt und geprüft, ob der Jahrgang bereits in Goobi existiert. Ist dies nicht der Fall, wird der Vorgang neu angelegt und die konfigurierten Metadaten für `anchor` und `volume` importiert.
+![Auswahl des Plugins zur Durchführung des Imports](images/goobi-plugin-import-wuwien_screen1_de.png)
+
+Der Import erfolgt zeilenweise. Dabei wird für jede Zeile der Vorgangstitel aus den konfigurierten Feldern erzeugt und geprüft, ob der Jahrgang bereits in Goobi existiert. Ist dies nicht der Fall, wird der Vorgang neu angelegt und die konfigurierten Metadaten für `anchor` und `volume` importiert.
 
 Nun wird geprüft, ob ein Heft erzeugt werden soll. Dies passiert auf Basis der Angabe der Spalte `Issue`. Wenn das Feld leer ist, wird der Artikel direkt an den Jahrgang angehängt, ansonsten wird nach dem richtigen Heft gesucht. Existiert es noch nicht, wird es ebenfalls erzeugt. Die Sortierung der Hefte basiert auf der Nummer der Spalte `Issue`.
 

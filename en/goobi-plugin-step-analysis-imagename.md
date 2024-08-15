@@ -12,7 +12,7 @@ Name                     | Wert
 Identifier               | intranda_step_imagename_analyse
 Repository               | [https://github.com/intranda/goobi-plugin-step-analysis-imagename](https://github.com/intranda/goobi-plugin-step-analysis-imagename)
 Licence              | GPL 2.0 or newer 
-Last change    | 25.07.2024 11:48:26
+Last change    | 15.08.2024 06:28:53
 
 
 ## Introduction
@@ -44,6 +44,8 @@ The file `plugin_intranda_step_imagename_analyse.xml` must also be readable by t
 Once the plugin has been installed and configured, it can be used by Goobi within a single step.
 
 To do this, the `intranda_step_imagename_analyse` plugin must be selected within the desired task. In addition, the `Automatic task` checkbox must be set.
+
+![Selection of the plugin for performing the step](images/goobi-plugin-step-analysis-imagename_screen1_en.png)
 
 The way the plugin works within the correctly configured workflow looks like this:
 

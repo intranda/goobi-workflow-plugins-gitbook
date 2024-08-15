@@ -11,8 +11,8 @@ Name                     | Wert
 -------------------------|-----------
 Identifier               | intranda_step_layoutwizzard
 Repository               | [https://github.com/intranda/goobi-plugin-step-layoutwizzard](https://github.com/intranda/goobi-plugin-step-layoutwizzard)
-Lizenz              | GPL 2.0 oder neuer 
-Letzte Änderung    | 26.07.2024 23:15:04
+Lizenz              | Proprietary commercial 
+Letzte Änderung    | 27.07.2024 13:42:37
 
 
 ## Einführung

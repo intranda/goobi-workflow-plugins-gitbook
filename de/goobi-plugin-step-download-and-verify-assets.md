@@ -12,7 +12,7 @@ Name                     | Wert
 Identifier               | intranda_step_download_and_verify_assets
 Repository               | [https://github.com/intranda/goobi-plugin-step-download-and-verify-assets](https://github.com/intranda/goobi-plugin-step-download-and-verify-assets)
 Lizenz              | GPL 2.0 oder neuer 
-Letzte Änderung    | 25.07.2024 11:59:45
+Letzte Änderung    | 14.08.2024 18:56:44
 
 
 ## Einführung
@@ -32,6 +32,7 @@ Die Konfigurationsdatei befindet sich üblicherweise hier:
 /opt/digiverso/goobi/config/plugin_intranda_step_download_and_verify_assets.xml
 ```
 
+![Auswahl des Plugsins zur Durchführung des Arbeitschrittes](images/goobi-plugin-step-download-and-verify-assets_screen1_de.png)
 
 ## Konfiguration
 Der Inhalt dieser Konfigurationsdatei sieht beispielhaft wie folgt aus:

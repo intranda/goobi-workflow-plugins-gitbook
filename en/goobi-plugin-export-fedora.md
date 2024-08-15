@@ -12,7 +12,7 @@ Name                     | Wert
 Identifier               | intranda_export_fedora
 Repository               | [https://github.com/intranda/goobi-plugin-export-fedora](https://github.com/intranda/goobi-plugin-export-fedora)
 Licence              | GPL 2.0 or newer 
-Last change    | 25.07.2024 12:04:14
+Last change    | 13.08.2024 14:26:51
 
 
 ## Introduction
@@ -21,6 +21,8 @@ This documentation describes the installation, configuration and use of the Fedo
 
 ## Installation
 The plugin must be installed in the following folder:
+
+![Integration of the plugin into the workflow](images/goobi-plugin-export-fedora_screen1_en.png)
 
 ```bash
 /opt/digiverso/goobi/plugins/export/plugin_intranda_export_fedora*.jar

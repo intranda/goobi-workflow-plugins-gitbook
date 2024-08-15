@@ -12,7 +12,7 @@ Name                     | Wert
 Identifier               | prov_export_fedora
 Repository               | [https://github.com/intranda/goobi-plugin-export-fedora-prov](https://github.com/intranda/goobi-plugin-export-fedora-prov)
 Licence              | GPL 2.0 or newer 
-Last change    | 25.07.2024 12:04:08
+Last change    | 13.08.2024 14:28:03
 
 
 ## Introduction
@@ -40,6 +40,7 @@ The process data can then be retrieved from the repository using the following U
 http(s)://<Fedora REST endpoint>/records/<barcode.substring(0,4)>/<barcode.sunstring(4,8)>/<barcode.substring(8,10)>/
 ```
 
+![Integration of the plugin into the workflow](images/goobi-plugin-export-fedora-prov_screen1_en.png)
 
 ## Examples of URLs after successful ingest to Fedora
 

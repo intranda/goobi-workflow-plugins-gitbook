@@ -12,7 +12,7 @@ Name                     | Wert
 Identifier               | intranda_export_heris
 Repository               | [https://github.com/intranda/goobi-plugin-export-heris](https://github.com/intranda/goobi-plugin-export-heris)
 Lizenz              | GPL 2.0 oder neuer 
-Letzte Änderung    | 25.07.2024 12:04:01
+Letzte Änderung    | 13.08.2024 14:38:49
 
 
 ## Einführung
@@ -23,6 +23,8 @@ Mithilfe dieses Plugins für Goobi workflow können die in einem vorherigen Arbe
 
 ## Installation
 Um den Heris Export nutzen zu können, müssen folgende Dateien installiert werden:
+
+![Integration des Plugins in den Workflow](images/goobi-plugin-export-heris_screen1_de.png)
 
 ```bash
 /opt/digiverso/goobi/plugins/export/plugin_intranda_export_heris-base.jar

@@ -12,7 +12,7 @@ Name                     | Wert
 Identifier               | intranda_opac_xml
 Repository               | [https://github.com/intranda/goobi-plugin-opac-generic-xml](https://github.com/intranda/goobi-plugin-opac-generic-xml)
 Lizenz              | GPL 2.0 oder neuer 
-Letzte Änderung    | 25.07.2024 12:02:35
+Letzte Änderung    | 15.08.2024 06:22:21
 
 
 ## Einführung
@@ -40,6 +40,10 @@ Die Datei`plugin_intranda_opac_xml.xml` muss ebenfalls für den Nutzer `tomcat` 
 ```
 
 ## Überblick und Funktionsweise
+Nachdem das Plugin vollständig installiert wurde, steht es in der Anlegemaske zur Verfügung.
+
+![Anlegemaske mit Auswahl des Plugins](images/goobi-plugin-opac-generic-xml_screen1_de.png)
+
 Wenn in Goobi nach einem Identifier gesucht wird, wird im Hintergrund eine Anfrage an die konfigurierte URL oder an das Dateisystem gestellt:
 
 ```bash

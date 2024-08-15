@@ -12,7 +12,7 @@ Name                     | Wert
 Identifier               | intranda_import_endnote
 Repository               | [https://github.com/intranda/goobi-plugin-import-wuwien](https://github.com/intranda/goobi-plugin-import-wuwien)
 Licence              | GPL 2.0 or newer 
-Last change    | 25.07.2024 12:28:26
+Last change    | 15.08.2024 06:16:52
 
 
 ## Introduction
@@ -35,6 +35,8 @@ There is also a configuration file, which must be located at the following locat
 
 ## Overview and functionality
 To use the import, the mass import area must be opened in the process templates and the `intranda_import_endnote` plugin must be selected in the `File upload import` tab. An Excel file can then be uploaded and imported.
+
+![Selection of the plugin for performing the import](images/goobi-plugin-import-wuwien_screen1_en.png)
 
 The import takes place line by line. For each line, the process title is generated from the configured fields and checked to see whether the volume already exists in Goobi. If this is not the case, the process is created again and the configured metadata for `anchor` and `volume` is imported.
 

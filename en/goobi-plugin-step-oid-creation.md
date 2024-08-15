@@ -12,7 +12,7 @@ Name                     | Wert
 Identifier               | intranda_step_oid_creation
 Repository               | [https://github.com/intranda/goobi-plugin-step-oid-creation](https://github.com/intranda/goobi-plugin-step-oid-creation)
 Licence              | GPL 2.0 or newer 
-Last change    | 25.07.2024 11:56:09
+Last change    | 14.08.2024 19:00:59
 
 
 ## Introduction
@@ -35,6 +35,8 @@ To configure how the plugin should behave, various values can be adjusted in the
 
 ## Overview and functionality
 To use the plug-in, it must be activated in a task in the workflow. This is done by selecting the plugin `intranda_step_oid_creation` from the list of installed plugins. Since the plugin depends on a METS/MODS file, this step should be performed after the metadata processing.
+
+![Selection of the plugin for performing the step](images/goobi-plugin-step-oid-creation_screen1_en.png)
 
 Once the plugin is fully installed and set up, it is usually executed automatically within the workflow, so there is no manual interaction with the user. Instead, the workflow calls the plugin in the background and performs the integration of the OIDs into the METS/MODS file.
 

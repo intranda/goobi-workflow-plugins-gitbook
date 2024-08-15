@@ -3,7 +3,7 @@ description: >-
   This is the technical documentation for the Goobi plugin LayoutWizzard for automated cropping of book page scans.
 ---
 
-# LayoutWizzard
+# Layout Wizzard
 
 ## Overview
 
@@ -11,8 +11,8 @@ Name                     | Wert
 -------------------------|-----------
 Identifier               | intranda_step_layoutwizzard
 Repository               | [https://github.com/intranda/goobi-plugin-step-layoutwizzard](https://github.com/intranda/goobi-plugin-step-layoutwizzard)
-Licence              | GPL 2.0 or newer 
-Last change    | 25.07.2024 14:14:44
+Licence              | Proprietary commercial 
+Last change    | 27.07.2024 13:42:51
 
 
 ## Introduction

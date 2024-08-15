@@ -12,7 +12,7 @@ Name                     | Wert
 Identifier               | goobi-plugin-opac-kalliope
 Repository               | [https://github.com/intranda/goobi-plugin-opac-kalliope](https://github.com/intranda/goobi-plugin-opac-kalliope)
 Licence              | GPL 2.0 or newer 
-Last change    | 25.07.2024 12:02:17
+Last change    | 14.08.2024 18:45:15
 
 
 ## Introduction
@@ -41,6 +41,7 @@ These files must be installed readable for the user `tomcat` at the following pa
 When searching for an identifier in Goobi, a request is made in the background to the URL configured in the file `goobi_opac.xml`.
 After retrieving the record in MODS format, the mapping of the metadata is done according to the rules configured in the file `mods_map_kalliope.xml`.
 
+![Selection of the plugin](images/goobi-plugin-opac-kalliope_screen1_en.png)
 
 ## Configuration
 The configuration file of the plug-in has the following structure:

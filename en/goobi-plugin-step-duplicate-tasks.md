@@ -12,7 +12,7 @@ Name                     | Wert
 Identifier               | intranda_step_duplicate_tasks
 Repository               | [https://github.com/intranda/goobi-plugin-step-duplicate-tasks](https://github.com/intranda/goobi-plugin-step-duplicate-tasks)
 Licence              | GPL 2.0 or newer 
-Last change    | 25.07.2024 11:59:37
+Last change    | 15.08.2024 11:20:05
 
 
 ## Introduction
@@ -32,9 +32,10 @@ The configuration file is usually located here:
 /opt/digiverso/goobi/config/plugin_intranda_step_duplicate_tasks.xml
 ```
 
-
 ## Overview and functionality
+After a successful installation, the plugin is integrated into the workflow as shown in the following screenshot.
 
+![Selection of the plugin for performing the step](images/goobi-plugin-step-duplicate-tasks_screen1_en.png)
 
 ### With duplication of a work step
 1. the plugin retrieves the value of the configured process property and splits it into parts using the possibly configured separator *(or `\n` if not)*.

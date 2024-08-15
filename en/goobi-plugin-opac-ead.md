@@ -12,7 +12,7 @@ Name                     | Wert
 Identifier               | intranda_opac_ead
 Repository               | [https://github.com/intranda/goobi-plugin-opac-ead](https://github.com/intranda/goobi-plugin-opac-ead)
 Licence              | GPL 2.0 or newer 
-Last change    | 25.07.2024 12:02:42
+Last change    | 14.08.2024 18:41:40
 
 
 ## Introduction
@@ -157,6 +157,7 @@ Changes to the files or the databases can be made at any time during operation.
 ### Goobi connection
 Once the database has been set up, it can be configured in Goobi. Since the metadata differs significantly from the bibliographic metadata of libraries, Goobi should use its own project and rule set. In addition, the OPAC plugin `goobi-plugin-opac-ead` must be installed.
 
+![Selection of the plugin](images/goobi-plugin-opac-ead_screen1_en.png)
 
 ### Configuration of the file goobi_opac.xml
 The file `goobi_opac.xml` must be extended by two more entries. On the one hand, the document type to be used must be defined. This happens in the `doctypes` area:

@@ -12,7 +12,7 @@ Name                     | Wert
 Identifier               | intranda_step_imagename_analyse
 Repository               | [https://github.com/intranda/goobi-plugin-step-analysis-imagename](https://github.com/intranda/goobi-plugin-step-analysis-imagename)
 Lizenz              | GPL 2.0 oder neuer 
-Letzte Änderung    | 25.07.2024 11:48:26
+Letzte Änderung    | 15.08.2024 06:28:32
 
 
 ## Einführung
@@ -44,6 +44,8 @@ Die Datei `plugin_intranda_step_imagename_analyse.xml` muss ebenfalls für den `
 Nachdem das Plugin installiert und konfiguriert wurde, kann es innerhalb eines Arbeitsschrittes von Goobi genutzt werden.
 
 Dazu muss innerhalb der gewünschten Aufgabe das Plugin `intranda_step_imagename_analyse` ausgewählt werden. Des Weiteren muss die Checkbox `Automatische Aufgabe` gesetzt sein.
+
+![Auswahl des Plugsins zur Durchführung des Arbeitschrittes](images/goobi-plugin-step-analysis-imagename_screen1_de.png)
 
 Die Arbeitsweise des Plugins innerhalb des korrekt konfigurierten Workflows sieht folgendermaßen aus:
 

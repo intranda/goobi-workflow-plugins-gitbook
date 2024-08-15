@@ -12,7 +12,7 @@ Name                     | Wert
 Identifier               | intranda_step_MetadataStructureImport
 Repository               | [https://github.com/intranda/goobi-plugin-step-metadata-structure-import](https://github.com/intranda/goobi-plugin-step-metadata-structure-import)
 Licence              | GPL 2.0 or newer 
-Last change    | 25.07.2024 12:27:38
+Last change    | 15.08.2024 11:26:09
 
 
 ## Introduction
@@ -31,6 +31,10 @@ A new step must be added to the workflow. This step should run after the import 
 
 
 ## Overview and functionality
+After the successful installation, the plugin will be integrated into the workflow as shown in the following screenshot.
+
+![Selection of the plugin for performing the step](images/goobi-plugin-step-metadata-structure-import_screen1_en.png)
+
 When the plugin is executed, it first searches for an Excel file in the configured location. The Excel file can have any name, but it must have the extension `xlsx`.
 
 If an Excel file exists, the METS file for the process is then opened. If no pagination exists, it is created automatically.  If the file contains structural data, this is now removed. This makes it possible to call up the plugin several times with updated Excel files.
@@ -41,7 +45,6 @@ Once the preparations have been completed, the Excel file is now processed line 
 - If the hierarchy number of the current line is `the same` as that of the previous line, it is a sibling element of the last element. It is then created as the last child element of the parent element of the previous element.
 - If the hierarchy number is `greater` than that of the previous line, it is a child element of the previous element. A hierarchy level is then created below the last element.
 - If the hierarchy number is `lower` than that of the previous element, the previous element is searched for parent elements until one with the same number is found. The new element is then created as a sibling element of the parent element found.
-
 
 ## Configuration
 The configuration takes place in the `plugin_intranda_step_MetadataStructureImport.xml` file:

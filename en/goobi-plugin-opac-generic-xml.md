@@ -12,7 +12,7 @@ Name                     | Wert
 Identifier               | intranda_opac_xml
 Repository               | [https://github.com/intranda/goobi-plugin-opac-generic-xml](https://github.com/intranda/goobi-plugin-opac-generic-xml)
 Licence              | GPL 2.0 or newer 
-Last change    | 25.07.2024 12:02:35
+Last change    | 15.08.2024 06:23:25
 
 
 ## Introduction
@@ -41,6 +41,10 @@ The file `plugin_intranda_opac_xml.xml` must also be readable by the user `tomca
 
 
 ## Overview and functionality
+Once the plugin has been fully installed, it is available in the creation screen.
+
+![Creation screen with selection of the plugin](images/goobi-plugin-opac-generic-xml_screen1_en.png)
+
 When an identifier is searched for in Goobi, a request is made to the configured URL or to the filesystem in the background:
 
 ```bash

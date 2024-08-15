@@ -12,7 +12,7 @@ Name                     | Wert
 Identifier               | intranda_import_excel
 Repository               | [https://github.com/intranda/goobi-plugin-import-excel](https://github.com/intranda/goobi-plugin-import-excel)
 Lizenz              | GPL 2.0 oder neuer 
-Letzte Änderung    | 25.07.2024 12:03:10
+Letzte Änderung    | 13.08.2024 14:33:43
 
 
 ## Einführung
@@ -37,6 +37,7 @@ Um den Import zu nutzen, muss in den Produktionsvorlagen der Massenimportbereich
 
 Der Import erfolgt anschließend zeilenweise. Dabei wird für jede Zeile ein neuer Vorgang erzeugt und die konfigurierten Regeln angewendet. Wenn dabei ein valider Datensatz erzeugt wurde und der generierte Vorgangstitel noch nicht vergeben wurde, wird der Vorgang tatsächlich erzeugt und gespeichert.
 
+![Auswahl des Plugins zur Durchführung des Imports](images/goobi-plugin-import-excel_screen1_de.png)
 
 ## Konfiguration
 Die Konfiguration erfolgt über die Datei `plugin_intranda_import_excel.xml`. Diese Datei kann im laufenden Betrieb angepasst werden.

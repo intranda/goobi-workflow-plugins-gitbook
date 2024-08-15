@@ -12,7 +12,7 @@ Name                     | Wert
 Identifier               | intranda_step_rename_process
 Repository               | [https://github.com/intranda/goobi-plugin-step-rename-process](https://github.com/intranda/goobi-plugin-step-rename-process)
 Lizenz              | GPL 2.0 oder neuer 
-Letzte Änderung    | 25.07.2024 11:55:15
+Letzte Änderung    | 14.08.2024 19:02:14
 
 
 ## Einführung
@@ -41,6 +41,7 @@ Daneben gibt es eine Konfigurationsdatei, die an folgender Stelle liegen muss:
 ## Überblick und Funktionsweise
 Zur Inbetriebnahme des Plugins muss dieses für einen oder mehrere gewünschte automatische Aufgaben im Workflow aktiviert werden. Dies erfolgt durch Auswahl des Plugins `intranda_step_rename_process` aus der Liste der installierten Plugins innerhalb der Schrittekonfiguration des Workflows.
 
+![Auswahl des Plugins zur Durchführung des Arbeitsschrittes](images/goobi-plugin-step-rename-process_screen1_de.png)
 
 ## Konfiguration
 Die Konfiguration des Plugins erfolgt über die Konfigurationsdatei `plugin_intranda_step_rename_process.xml` und kann im laufenden Betrieb angepasst werden. Im folgenden ist eine beispielhafte Konfigurationsdatei aufgeführt:
