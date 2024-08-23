@@ -39,10 +39,14 @@
 ## Importe <a id="import"></a>
 * [Altdatenimport für das Bundesdenkmalamt Österreich](goobi-plugin-import-bka-bda.md)
 * [Archiv-Daten-Import](goobi-plugin-import-crown.md)
+* [Datenimport ohne Katalogabfrage für die ETH Zürich](goobi-plugin-import-eth-no-catalogue.md)
 * [Import von Datensätzen aus einer Excel-Datei](goobi-plugin-import-excel.md)
 * [Import von Zettelkatalogen aus KatZoom](goobi-plugin-import-katzoom.md)
 * [Import von Sisis SunRise Dateien](goobi-plugin-import-sisis-sunrise-file.md)
 * [Import für Zeitschriftenartikel aus einem Endnote Export](goobi-plugin-import-wuwien.md)
+* [Datenimport mit ALMA-Katalogabfrage für die Zentralbibliothek Zürich](goobi-plugin-import-zbz-alma.md)
+* [Datenimport mit CMI-Katalogabfrage für die Zentralbibliothek Zürich](goobi-plugin-import-zbz-cmi.md)
+* [Datenimport ohne Katalogabfrage für die Zentralbibliothek Zürich](goobi-plugin-import-zbz-no-catalogue.md)
 
 
 ## Metadaten <a id="metadata"></a>
@@ -69,6 +73,7 @@
 
 ## Statistiken <a id="statistics"></a>
 * [Sudan Memory Übersetzungen](goobi-plugin-statistics-sudan-memory.md)
+* [Visualisierung des Durchsatzes pro Nutzer](goobi-plugin-statistics-user-throughput.md)
 
 
 ## Arbeitsschritte <a id="step"></a>
@@ -133,6 +138,7 @@
 * [OCR Seitenauswahl](goobi-plugin-step-ocr-selector.md)
 * [OCR-Ergebnis in Metadatenfeld übernehmen](goobi-plugin-step-ocr-to-metadata.md)
 * [Object Identifier Generierung](goobi-plugin-step-oid-creation.md)
+* [Korrektur von Inhaltverzeichnissen nach einer OLR](goobi-plugin-step-olr-correction.md)
 * [Datenimport für Book Interchange Dateien](goobi-plugin-step-pdf-book-interchange-convert.md)
 * [PDFs aufsplitten, Volltext extrahieren und Inhaltsverzeichnis auslesen](goobi-plugin-step-pdf-extraction.md)
 * [Elektronische Publikationen](goobi-plugin-step-pdf-upload.md)
@@ -145,6 +151,7 @@
 * [Automatisches Setzen des Repräsentanten](goobi-plugin-step-representative-creation.md)
 * [Generierung von Laufzetteln](goobi-plugin-step-save-docket-file.md)
 * [Versenden von E-Mails](goobi-plugin-step-send-mail.md)
+* [Import von ECHO-Dateien als TEI](goobi-plugin-step-tei-import.md)
 * [Tif-Validierung](goobi-plugin-step-tif-validation.md)
 * [Transkription von Bildinhalten](goobi-plugin-step-transcription.md)
 * [Einspielen und Download aus Transkribus Collections](goobi-plugin-step-transkribus-collection.md)

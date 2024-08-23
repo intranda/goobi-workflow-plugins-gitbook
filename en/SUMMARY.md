@@ -39,10 +39,14 @@
 ## Imports <a id="import"></a>
 * [Legacy data import for the Austrian Federal Monuments Authority](goobi-plugin-import-bka-bda.md)
 * [Archive data import](goobi-plugin-import-crown.md)
+* [Data import without catalogue query for ETH Zurich](goobi-plugin-import-eth-no-catalogue.md)
 * [Importing records from an Excel file](goobi-plugin-import-excel.md)
 * [Import of card catalogues from KatZoom](goobi-plugin-import-katzoom.md)
 * [Import of Sisis SunRise Files](goobi-plugin-import-sisis-sunrise-file.md)
 * [Import for journal articles from an Endnote Export](goobi-plugin-import-wuwien.md)
+* [Data import with ALMA catalogue query for Zurich Central Library](goobi-plugin-import-zbz-alma.md)
+* [Data import with CMI catalogue query for Zurich Central Library](goobi-plugin-import-zbz-cmi.md)
+* [Data import without catalogue query for the Zentralbibliothek Zurich](goobi-plugin-import-zbz-no-catalogue.md)
 
 
 ## Metadata <a id="metadata"></a>
@@ -69,6 +73,7 @@
 
 ## Statistics <a id="statistics"></a>
 * [Sudan Memory Translations](goobi-plugin-statistics-sudan-memory.md)
+* [Visualisation of the throughput per user](goobi-plugin-statistics-user-throughput.md)
 
 
 ## Steps <a id="step"></a>
@@ -133,6 +138,7 @@
 * [OCR page selection](goobi-plugin-step-ocr-selector.md)
 * [Transfer OCR result to metadata field](goobi-plugin-step-ocr-to-metadata.md)
 * [Object Identifier Generation](goobi-plugin-step-oid-creation.md)
+* [Correction of tables of contents after an OLR](goobi-plugin-step-olr-correction.md)
 * [Data import for Book Interchange files](goobi-plugin-step-pdf-book-interchange-convert.md)
 * [Split PDFs, extract full text and read table of contents](goobi-plugin-step-pdf-extraction.md)
 * [Electronic Publications](goobi-plugin-step-pdf-upload.md)
@@ -145,6 +151,7 @@
 * [Automatic setting of the representative](goobi-plugin-step-representative-creation.md)
 * [Generation of docket files](goobi-plugin-step-save-docket-file.md)
 * [Sending emails](goobi-plugin-step-send-mail.md)
+* [Import of ECHO files as TEI](goobi-plugin-step-tei-import.md)
 * [Tif-Validation](goobi-plugin-step-tif-validation.md)
 * [Transcription of image content](goobi-plugin-step-transcription.md)
 * [Import and download from Transkribus Collections](goobi-plugin-step-transkribus-collection.md)
