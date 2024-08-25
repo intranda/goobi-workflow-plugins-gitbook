@@ -12,7 +12,7 @@ Name                     | Wert
 Identifier               | intranda_statistics_user_througput
 Repository               | [https://github.com/intranda/goobi-plugin-statistics-user-throughput](https://github.com/intranda/goobi-plugin-statistics-user-throughput)
 Licence              | GPL 2.0 or newer 
-Last change    | 22.08.2024 07:23:45
+Last change    | 23.08.2024 13:53:00
 
 
 ## Introduction
@@ -40,3 +40,5 @@ In the `Unit` field, you can specify the time intervals in which the evaluation 
 In the `Display` field, you can specify which figures should be displayed. You can choose from `Pages` or `Processes`.
 
 After clicking the `Calculate Statistics` button, the user throughput will be displayed in detailed tables. Below each table, there is also a link to download the table as an Excel file.
+
+![Opened plugin with a result display](images/goobi-plugin-statistics-user-throughput_screen1_en.png)

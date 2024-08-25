@@ -12,7 +12,7 @@ Name                     | Wert
 Identifier               | intranda_statistics_user_througput
 Repository               | [https://github.com/intranda/goobi-plugin-statistics-user-throughput](https://github.com/intranda/goobi-plugin-statistics-user-throughput)
 Lizenz              | GPL 2.0 oder neuer 
-Letzte Änderung    | 22.08.2024 07:22:06
+Letzte Änderung    | 23.08.2024 13:53:00
 
 
 ## Einführung
@@ -41,3 +41,5 @@ Im Feld `Einheit` wird festgelegt, in welchen Zeiträumen die Auswertung zusamme
 Im Feld `Anzeige` wird festgelegt, welche Zahlen angezeigt werden sollen. Hier kann aus den Werten `Seiten` oder `Vorgänge` gewählt werden.
 
 Nach einem Klick an den Knopf `Statistik berechnen` werden der Durchsatz pro Nutzer in Tabellen detailliert angezeigt. Unter jeder Tabelle gibt es auch einen Link, wodurch man diese Tabelle als Excel-Datei herunterladen kann.
+
+![Geöffnetes Plugin mit einer Ergebnisanzeige](images/goobi-plugin-statistics-user-throughput_screen1_de.png)
