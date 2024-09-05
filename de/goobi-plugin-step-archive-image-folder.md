@@ -12,11 +12,11 @@ Name                     | Wert
 Identifier               | intranda_step_archiveimagefolder
 Repository               | [https://github.com/intranda/goobi-plugin-step-archive-image-folder](https://github.com/intranda/goobi-plugin-step-archive-image-folder)
 Lizenz              | GPL 2.0 oder neuer 
-Letzte Änderung    | 25.07.2024 12:01:20
+Letzte Änderung    | 26.08.2024 10:42:47
 
 
 ## Einführung
-Dieses Step Plugin für Goobi workflow kopiert Bildordner auf einen externen Speicher, der mittels sftp (ssh) angebunden ist und legt eine Datei an, die Goobi workflow dazu veranlasst eine Warnung im Vorgang anzuzeigen. Die Warnung wird in den Vorgangsdetails sowie im Metadateneditor angezeigt.
+Dieses Step Plugin für Goobi workflow kopiert Bildordner auf einen externen Speicher, der mittels sftp (ssh) angebunden ist und legt eine Datei an, die Goobi workflow dazu veranlasst eine Warnung im Vorgang anzuzeigen. Die Warnung wird in den Vorgangsdetails sowie im Metadateneditor angezeigt. Als Alternative zu sftp kann auch ein s3 Bucket eingebunden werden.
 
 
 ## Installation
@@ -44,7 +44,7 @@ Zur Inbetriebnahme des Plugins muss dieses für einen oder mehrere gewünschte a
 
 ![Integration des Plugins in den Workflow](images/goobi-plugin-step-archive-image-folder_screen1_de.png)
 
-Das Plugin kopiert die Dateien aus dem konfigurierten Ordner auf den SSH-Server, schreibt eine XML-Datei mit den Infos wo die Dateien liegen in den Vorgangsordner und löscht (wenn so konfiguriert) danach die Bilder auf dem Goobi-Speicher und schließt den Schritt.
+Das Plugin kopiert die Dateien aus dem konfigurierten Ordner auf den SSH-Server oder den S3 Bucket, schreibt eine XML-Datei mit den Infos wo die Dateien liegen in den Vorgangsordner und löscht (wenn so konfiguriert) danach die Bilder auf dem Goobi-Speicher und schließt den Schritt.
 
 Die Bilder können danach mit dem Plugin `goobi-plugin-administration-restorearchivedimagefolder` wieder hergestellt werden.
 
@@ -79,8 +79,26 @@ Die Konfiguration des Plugins erfolgt über die Konfigurationsdatei `plugin_intr
         </method>
     </config>
 
+    <config>
+        <project>*</project>
+        <step>Copy to S3 storage</step>
+        <folder>media</folder>
+        <deleteAndCloseAfterCopy>false</deleteAndCloseAfterCopy>
+        <method>
+            <name>s3</name>
+            <S3Endpoint>http://127.0.0.1:9000</S3Endpoint>
+            <S3Bucket>storage-bucket</S3Bucket>
+            <S3Prefix>archive</S3Prefix>
+            <S3AccessKeyID>CHANGEME</S3AccessKeyID>
+            <S3SecretAccessKey>CHANGEME</S3SecretAccessKey>
+        </method>
+    </config>
+
 </config_plugin>
 ```
 
-Für die Authentifizierung am ssh-Server wird an den üblichen Stellen (`$USER_HOME/.ssh`) nach public keys gesucht. Andere Authentifizierungsmethoden wie username/password sind bisher nicht vorgesehen.  
+Für die Authentifizierung am ssh-Server wird an den üblichen Stellen (`$USER_HOME/.ssh`) nach public keys gesucht. Andere Authentifizierungsmethoden wie username/password sind bisher nicht vorgesehen. 
+
+Bei der Nutzung von s3 muss der s3 Endpoint, sowie der zu nutzende bucket Name angegeben werden. Optional kann ein Präfix gesetzt werden, wenn die Archivierung nicht direkt im Root des Buckets erfolgen soll. S3AccessKeyID und S3SecretAccessKey enthalten die Zugangsdaten.
+ 
 Die Einstellung `<deleteAndCloseAfterCopy>false</deleteAndCloseAfterCopy>` ist für den Fall gedacht, dass die Dateien auf dem SSH-Server erst einmal in einem Buffer gespeichert und danach noch auf ein Band geschrieben werden. In diesem Fall kann der Arbeitsschritt offen bleiben und durch einen Callback des Bandspeicher-Systems geschlossen werden. Der Callback ist bisher für keinen Bandspeicher implementiert, lässt sich jedoch durch die Standard Goobi workflow REST API abbilden.

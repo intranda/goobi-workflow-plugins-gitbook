@@ -19,6 +19,8 @@
 
 
 ## Dashboards <a id="dashboard"></a>
+* [Barcode Scanner Dashboard](goobi-plugin-dashboard-barcode.md)
+* [Erweitertes Dashboard](goobi-plugin-dashboard-extended.md)
 
 
 ## Exporte <a id="export"></a>
@@ -31,6 +33,7 @@
 * [Export für Zeitungen in das Portal der Deutschen Digitalen Bibliothek](goobi-plugin-export-newspaper.md)
 * [PDF-Export in Verzeichnisstruktur der NLI](goobi-plugin-export-nli-pdf-to-folder-structure.md)
 * [Export ausgewählter Bilder](goobi-plugin-export-selected-images.md)
+* [Stanford Export](goobi-plugin-export-stanford.md)
 * [VLM Export](goobi-plugin-export-vlm.md)
 * [HAAB Export](goobi-plugin-export-weimar-haab.md)
 * [ZOP Export](goobi-plugin-export-zop.md)
@@ -51,6 +54,7 @@
 
 
 ## Metadaten <a id="metadata"></a>
+* [Publikationstyp ändern](goobi-plugin-metadata-change-type.md)
 * [Metadatenerweiterung zur Erstellung von Strukturelementen pro Bild](goobi-plugin-metadata-create-structure-elements.md)
 
 
@@ -67,6 +71,7 @@
 
 ## Wiederholte Jobs <a id="quartz"></a>
 * [Datenimport für Wohnbauförderungsfond Österreich](goobi-plugin-quartz-bka-wohnbau.md)
+* [HERIS Vokabular Aktualisierung](goobi-plugin-quartz-heris.md)
 
 
 ## REST <a id="rest"></a>
@@ -88,6 +93,8 @@
 * [Ändern des Workflows auf Grundlage von Vorgangseigenschaften](goobi-plugin-step-change-workflow.md)
 * [Generierung von PDF-Dateien](goobi-plugin-step-create-full-pdf.md)
 * [Plugin zur Registrierung von DOIs via DataCite API](goobi-plugin-step-datacite-doi.md)
+* [Workflow pausieren](goobi-plugin-step-delay.md)
+* [Bedingte Verzögerung des Workflow Status](goobi-plugin-step-delay-workflow-status.md)
 * [Inhalte löschen](goobi-plugin-step-delete-content.md)
 * [Anzeige von Metadaten in einer Aufgabe](goobi-plugin-step-display-metadata.md)
 * [Plugin zur DOI-Registrierung](goobi-plugin-step-doi.md)
@@ -100,6 +107,7 @@
 * [Kopieren von Dateien aus Metadatenfeldern](goobi-plugin-step-fetch-images-from-metadata.md)
 * [Upload von Dateien](goobi-plugin-step-file-upload.md)
 * [Validierung von Dateien](goobi-plugin-step-file-validation.md)
+* [Flex Editor](goobi-plugin-step-flex-editor.md)
 * [Generate ALTO IDs](goobi-plugin-step-generate-alto-ids.md)
 * [Identifier generieren](goobi-plugin-step-generate-identifier.md)
 * [Automatische Geonames Annotierung](goobi-plugin-step-geonames-auto-annotator.md)
@@ -135,6 +143,8 @@
 * [Metadaten pro Bild erfassen](goobi-plugin-step-metadata-per-image.md)
 * [Automatische Anreicherung von Metadaten aus eigenen Vokabularen](goobi-plugin-step-metadata-replacement.md)
 * [Strukturdatenimport aus einer Exceldatei](goobi-plugin-step-metadata-structure-import.md)
+* [Metadatenfelder aktualisieren](goobi-plugin-step-metadata-update-field.md)
+* [Automatische METS-Anreicherung mit Bilddateien und Paginierung](goobi-plugin-step-mets-creation.md)
 * [MIX Metadata Enrichment Plugin](goobi-plugin-step-mix-metadata-enrichment.md)
 * [OCR-Durchführung mit gemischten Schrifttypen](goobi-plugin-step-mixed-ocr.md)
 * [OCR Seitenauswahl](goobi-plugin-step-ocr-selector.md)
@@ -160,6 +170,7 @@
 * [Transkription von Bildinhalten](goobi-plugin-step-transcription.md)
 * [Einspielen und Download aus Transkribus Collections](goobi-plugin-step-transkribus-collection.md)
 * [Erzeugung von Uniform Resource Names (URN)](goobi-plugin-step-urn.md)
+* [Vokabularanreicherung](goobi-plugin-step-vocabulary-enrichment.md)
 * [Schreiben von XMP Metadaten in Bilddateien](goobi-plugin-step-xmp-header.md)
 * [Metadaten-Validierung innerhalb einer Aufgabe](goobi-plugin-step-yerusha-validation.md)
 * [Rechnungen und Lieferscheine für Nutzerbestellungen](goobi-plugin-step-zbz-order-delivery.md)
@@ -171,6 +182,7 @@
 ## Workflow <a id="workflow"></a>
 * [AEON Datenübernahme](goobi-plugin-workflow-aeon-process-creation.md)
 * [Barcode Generator](goobi-plugin-workflow-barcode-generator.md)
+* [Arbeitsschritte schließen](goobi-plugin-workflow-close-step.md)
 * [Entitäten Editor - Artist Dictionary](goobi-plugin-workflow-entity-editor.md)
 * [Generisches Import Plugin für Excel-Dateien inklusive Validierung](goobi-plugin-workflow-excel-import.md)
 * [Vorgangserstellung durch Dateiupload](goobi-plugin-workflow-file-upload-process-creation.md)
@@ -181,5 +193,6 @@
 * [Massenupload](goobi-plugin-workflow-mass-upload.md)
 * [Import von Zeitungsausgaben als Einzelseiten](goobi-plugin-workflow-newspaper-pages-importer.md)
 * [Projektexport als Ordner mit Bildern und Excel-Datei](goobi-plugin-workflow-project-export.md)
+* [Datenübernahme aus AIM25](goobi-plugin-workflow-yerusha-aim25.md)
 
 

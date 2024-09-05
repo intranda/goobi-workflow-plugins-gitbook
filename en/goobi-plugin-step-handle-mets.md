@@ -12,7 +12,7 @@ Name                     | Wert
 Identifier               | intranda_step_handle_mets
 Repository               | [https://github.com/intranda/goobi-plugin-step-handle-mets](https://github.com/intranda/goobi-plugin-step-handle-mets)
 Licence              | GPL 2.0 or newer 
-Last change    | 25.08.2024 10:10:37
+Last change    | 26.08.2024 09:19:33
 
 
 ## Introduction

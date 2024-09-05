@@ -12,7 +12,7 @@ Name                     | Wert
 Identifier               | intranda_import_bka_bda
 Repository               | [https://github.com/intranda/goobi-plugin-import-bka-bda](https://github.com/intranda/goobi-plugin-import-bka-bda)
 Licence              | GPL 2.0 or newer 
-Last change    | 13.08.2024 21:10:13
+Last change    | 26.08.2024 11:04:47
 
 
 ## Introduction
@@ -244,6 +244,19 @@ The element `moveImages` can be used to control whether the images are to be cop
 
 <!-- defines, if images are moved from the source folder to the destination (true) or copied (false) -->
 <moveImages>true</moveImages>
+```
+
+### Importing images from an S3 storage
+To import images from an S3 storage, the `<imageFolderHeaderName>` parameter described above must also be set. The other two elements when importing images relate to file system operations and are therefore not necessary. The following area is used instead:
+
+```xml
+<s3 use="true">
+       <endpoint>http://127.0.0.1:9000</endpoint>
+       <bucketName>workflow-upload-testing</bucketName>
+       <accessKey>minioadmin</accessKey>
+       <accessSecret>minioadmin</accessSecret>
+       <prefix>prefix/</prefix>
+</s3>
 ```
 
 ### Execution via GoobiScript
