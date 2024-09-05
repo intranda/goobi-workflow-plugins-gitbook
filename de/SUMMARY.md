@@ -25,7 +25,7 @@
 
 ## Exporte <a id="export"></a>
 * [Individueller Export für das DMS Imagen Media Archive Management](goobi-plugin-export-adm-bsme.md)
-* [Enzelseitenexport](goobi-plugin-export-bda-single-image.md)
+* [Einzelseitenexport](goobi-plugin-export-bda-single-image.md)
 * [Konfigurierbarer Export](goobi-plugin-export-configurable.md)
 * [Fedora Export](goobi-plugin-export-fedora.md)
 * [Fedora Export PROV](goobi-plugin-export-fedora-prov.md)
