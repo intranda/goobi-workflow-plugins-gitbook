@@ -1,6 +1,6 @@
 ---
 description: >-
-  This is a Workflow Plugin for Goobi workflow. It allows to create multiple Goobi processes based on an initial AEON request. It allows to manually select items from the AEON response to decide for which items a Goobi process shall be started.
+  This workflow plugin enables Goobi processes to be created on the basis of an initial AEON request. Among other things, it enables manual selection of elements from the AEON response.
 ---
 
 # AEON data transfer
@@ -12,7 +12,7 @@ Name                     | Wert
 Identifier               | intranda_workflow_aeon_process_creation
 Repository               | [https://github.com/intranda/goobi-plugin-workflow-aeon-process-creation](https://github.com/intranda/goobi-plugin-workflow-aeon-process-creation)
 Licence              | GPL 2.0 or newer 
-Last change    | 25.07.2024 10:49:12
+Last change    | 07.09.2024 08:54:29
 
 
 ## Introduction

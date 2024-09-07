@@ -1,6 +1,6 @@
 ---
 description: >-
-  Dieses Step-Plugin ermöglicht es, mehrere Dateien von URLs herunterzuladen und mit Checksummen zu verifizieren, die als Vorgangseigenschaften festgelegt wurden. Rückmeldungen über den Verlauf können zu verschiedenen Systemen oder auch lokal innerhalb des Journals gespeichert werden.
+  Dieses Step-Plugin ermöglicht es, Dateien herunterzuladen und mit Checksummen zu verifizieren, die als Vorgangseigenschaften bestehen. Das Validierungsergebnis wird innerhalb des Journals gespeichert.
 ---
 
 # Download und Verifizieren von Dateien
@@ -12,7 +12,7 @@ Name                     | Wert
 Identifier               | intranda_step_download_and_verify_assets
 Repository               | [https://github.com/intranda/goobi-plugin-step-download-and-verify-assets](https://github.com/intranda/goobi-plugin-step-download-and-verify-assets)
 Lizenz              | GPL 2.0 oder neuer 
-Letzte Änderung    | 14.08.2024 18:56:44
+Letzte Änderung    | 07.09.2024 14:11:55
 
 
 ## Einführung

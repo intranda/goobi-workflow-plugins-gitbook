@@ -1,6 +1,6 @@
 ---
 description: >-
-  This Step Plugin for Goobi workflow automatically requests specific monument information from an internal Vocabulary data source to map these fields into the METS file. It was developed for the Federal Office for the Protection of Monuments in Austria.
+  This step plugin retrieves monument information from a vocabulary database in order to update it in the METS file. It was developed for the Federal Monuments Office in Austria.
 ---
 
 # Heris data import
@@ -12,7 +12,7 @@ Name                     | Wert
 Identifier               | intranda_step_herisimport
 Repository               | [https://github.com/intranda/goobi-plugin-step-heris](https://github.com/intranda/goobi-plugin-step-heris)
 Licence              | GPL 2.0 or newer 
-Last change    | 25.07.2024 11:58:13
+Last change    | 07.09.2024 14:17:33
 
 
 ## Introduction

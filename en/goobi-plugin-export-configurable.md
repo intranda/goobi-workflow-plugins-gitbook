@@ -1,6 +1,6 @@
 ---
 description: >-
-  This is a technical documentation for the configurable Goobi Export plugin. It allows you to customise the export using the project configuration. By using export projects, it is also possible to export to different locations in one go.
+  This export plugin allows a very flexible export of Goobi processes based on individual configuration.
 ---
 
 # Configurable export
@@ -12,7 +12,7 @@ Name                     | Wert
 Identifier               | intranda_export_configurable
 Repository               | [https://github.com/intranda/goobi-plugin-export-configurable](https://github.com/intranda/goobi-plugin-export-configurable)
 Licence              | GPL 2.0 or newer 
-Last change    | 25.07.2024 12:04:21
+Last change    | 07.09.2024 08:52:10
 
 
 ## Introduction

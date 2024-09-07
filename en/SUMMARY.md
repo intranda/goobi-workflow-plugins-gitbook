@@ -2,7 +2,7 @@
 * [Overview](README.md)
 
 ## Administration <a id="administration"></a>
-* [Archiv Management](goobi-plugin-administration-archive-management.md)
+* [Archive Management](goobi-plugin-administration-archive-management.md)
   * [Using the plugin](goobi-plugin-administration-archive-management_page_01_en.md)
   * [Configuration of the plugin](goobi-plugin-administration-archive-management_page_02_en.md)
 * [Copy Master-Anchor](goobi-plugin-administration-copyanchor.md)
@@ -93,7 +93,7 @@
 * [Changing the workflow based on process properties](goobi-plugin-step-change-workflow.md)
 * [Generation of PDF files](goobi-plugin-step-create-full-pdf.md)
 * [Plugin for registering DOI via the DataCite API](goobi-plugin-step-datacite-doi.md)
-* [null](goobi-plugin-step-delay.md)
+* [Delay Workflow](goobi-plugin-step-delay.md)
 * [Conditional workflow status delay  ](goobi-plugin-step-delay-workflow-status.md)
 * [Delete Content](goobi-plugin-step-delete-content.md)
 * [Display of metadata in a task](goobi-plugin-step-display-metadata.md)
@@ -170,6 +170,7 @@
 * [Transcription of image content](goobi-plugin-step-transcription.md)
 * [Import and download from Transkribus Collections](goobi-plugin-step-transkribus-collection.md)
 * [Creation of Uniform Resource Names (URN)](goobi-plugin-step-urn.md)
+* [User Assignment](goobi-plugin-step-user-assignment.md)
 * [Vocabulary enrichment](goobi-plugin-step-vocabulary-enrichment.md)
 * [Writing XMP metadata to image files](goobi-plugin-step-xmp-header.md)
 * [Metadata validation within a task](goobi-plugin-step-yerusha-validation.md)

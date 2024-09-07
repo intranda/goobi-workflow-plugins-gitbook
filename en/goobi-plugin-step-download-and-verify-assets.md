@@ -1,6 +1,6 @@
 ---
 description: >-
-  This step plugin makes it possible to download multiple files from URLs and verify them with checksums that have been defined as process properties. Feedback on the progress can be saved to different systems or locally within the journal.
+  This step plugin makes it possible to download files and verify them with checksums that exist as process properties. The validation result is saved within the journal.
 ---
 
 # Downloading and verifying files
@@ -12,7 +12,7 @@ Name                     | Wert
 Identifier               | intranda_step_download_and_verify_assets
 Repository               | [https://github.com/intranda/goobi-plugin-step-download-and-verify-assets](https://github.com/intranda/goobi-plugin-step-download-and-verify-assets)
 Licence              | GPL 2.0 or newer 
-Last change    | 14.08.2024 18:56:44
+Last change    | 07.09.2024 14:12:25
 
 
 ## Introduction

@@ -12,7 +12,7 @@ Name                     | Wert
 Identifier               | intranda_step_deleteContent
 Repository               | [https://github.com/intranda/goobi-plugin-step-delete-content](https://github.com/intranda/goobi-plugin-step-delete-content)
 Licence              | GPL 2.0 or newer 
-Last change    | 25.07.2024 12:00:07
+Last change    | 06.09.2024 11:40:45
 
 
 ## Introduction
@@ -50,67 +50,84 @@ The configuration of the plugin is structured as follows:
 
 ```xml
 <config_plugin>
+    <config>
+        <project>*</project>
+        <step>*</step>
+        
+        <!-- delete all data within the images/ folder -->
+        <deleteAllContentFromImageDirectory>false</deleteAllContentFromImageDirectory>
+        
+        <!-- OR delete a single image folder - this is only used if deleteAllContentFromImageDirectory is set to false -->
+        <deleteMediaDirectory>false</deleteMediaDirectory>
+        <deleteMasterDirectory>false</deleteMasterDirectory>
+        <deleteSourceDirectory>false</deleteSourceDirectory>
+        <deleteFallbackDirectory>false</deleteFallbackDirectory>
+        <!-- configure any additional folder. This folder gets deleted, if the folder name was configured in goobi_config.properties and does exist in current process -->
+        <!-- 
+        <additionalFolder>images.jpeg</additionalFolder>
+        <additionalFolder>images.cropped</additionalFolder>
+        -->
+        <!-- delete all data within the thumbs/ folder -->
+        <deleteAllContentFromThumbsDirectory>false</deleteAllContentFromThumbsDirectory>
+        
+        <!-- delete all data within the ocr/ folder -->
+        <deleteAllContentFromOcrDirectory>false</deleteAllContentFromOcrDirectory>
+        
+        <!-- OR delete a single ocr folder - this is only used if deleteAllContentFromOcrDirectory is set to false -->
+        <deleteAltoDirectory>false</deleteAltoDirectory>
+        <deletePdfDirectory>false</deletePdfDirectory>
+        <deleteTxtDirectory>false</deleteTxtDirectory>
+        <deleteWcDirectory>false</deleteWcDirectory>
+        <deleteXmlDirectory>false</deleteXmlDirectory>
+        
+        <!-- delete export folder -->
+        <deleteExportDirectory>false</deleteExportDirectory>
+        
+        <!-- delete import folder -->
+        <deleteImportDirectory>false</deleteImportDirectory>
+        
+        <!-- delete processlog folder -->
+        <deleteProcesslogDirectory>false</deleteProcesslogDirectory>
 
-  <config>
-      <project>*</project>
-      <step>*</step>
+        <!-- delete validation folder -->
+        <deleteValidationDirectory>false</deleteValidationDirectory>
+        
+        <!-- delete metadata -->
+        <deleteMetadataFiles>false</deleteMetadataFiles>
+        
+        <!-- deactivate all unfinished tasks -->
+        <deactivateProcess>false</deactivateProcess>
+        
+        <!-- delete specific metadata in the structure main object (e.g. Monograph or Volume) 
+             use the internal ruleset name here, e.g. singleDigCollection, DocLanguage etc. 
+             this field is repeatable -->
+        <deleteMetadata name="myMetadataType"/>
 
-      <!-- delete all data within the images/ folder -->
-      <deleteAllContentFromImageDirectory>false</deleteAllContentFromImageDirectory>
-
-      <!-- OR delete a single image folder - this is only used if deleteAllContentFromImageDirectory is set to false -->
-      <deleteMediaDirectory>false</deleteMediaDirectory>
-      <deleteMasterDirectory>false</deleteMasterDirectory>
-      <deleteSourceDirectory>false</deleteSourceDirectory>
-      <deleteFallbackDirectory>false</deleteFallbackDirectory>
-
-      <!-- delete all data within the thumbs/ folder -->
-      <deleteAllContentFromThumbsDirectory>false</deleteAllContentFromThumbsDirectory>
-
-      <!-- delete all data within the ocr/ folder -->
-      <deleteAllContentFromOcrDirectory>false</deleteAllContentFromOcrDirectory>
-
-      <!-- OR delete a single ocr folder - this is only used if deleteAllContentFromOcrDirectory is set to false -->
-      <deleteAltoDirectory>false</deleteAltoDirectory>
-      <deletePdfDirectory>false</deletePdfDirectory>
-      <deleteTxtDirectory>false</deleteTxtDirectory>
-      <deleteWcDirectory>false</deleteWcDirectory>
-      <deleteXmlDirectory>false</deleteXmlDirectory>
-
-      <!-- delete export folder -->
-      <deleteExportDirectory>false</deleteExportDirectory>
-
-      <!-- delete import folder -->
-      <deleteImportDirectory>false</deleteImportDirectory>
-
-      <!-- delete processlog folder -->
-      <deleteProcesslogDirectory>false</deleteProcesslogDirectory>
-
-      <!-- delete metadata -->
-      <deleteMetadataFiles>false</deleteMetadataFiles>
-
-      <!-- deactivate all unfinished tasks -->
-      <deactivateProcess>false</deactivateProcess>
-
-      <!-- delete specific metadata in the structure main object (e.g. Monograph or Volume) 
-        use the internal ruleset name here, e.g. singleDigCollection, DocLanguage etc. 
-        this field is repeatable -->
-      <deleteMetadata name="myMetadataType"/>
-
-      <!-- delete specific process properties, e.g. Font type, Opening angle etc. 
-        this field is repeatable -->
-      <deleteProperty name="Opening angle"/>
-  </config>
-
+        <!-- delete specific process properties, e.g. Font type, Opening angle etc. 
+             this field is repeatable -->
+        <deleteProperty name="Opening angle"/>
+        
+        
+        
+    </config>
 </config_plugin>
 ```
 
-The block `<config>` can occur repeatedly for different projects or workflow steps in order to be able to carry out different actions within different workflows. The other parameters within this configuration file have the following meanings:
+### General parameters 
+The `<config>` block can occur repeatedly for different projects or work steps in order to be able to perform different actions within different workflows. The other parameters within this configuration file have the following meanings: 
 
-| Value | Description |
+| Parameter | Explanation | 
+| :-------- | :---------- | 
+| `project` | This parameter defines which project the current block `<config>` should apply to. The name of the project is used here. This parameter can occur several times per `<config>` block. | 
+| `step` | This parameter controls which work steps the `<config>` block should apply to. The name of the work step is used here. This parameter can occur several times per `<config>` block. | 
+
+
+### Further parameters 
+In addition to these general parameters, the following parameters are available for further configuration: 
+
+
+| Parameter | Explanation |
 | :--- | :--- |
-| `project` | This parameter determines the project for which the current block `<config>` is to apply. The name of the project is used here. This parameter can occur several times per `<config>` block. |
-| `step` | This parameter controls for which workflow steps the block `<config>` is to apply. The name of the step is used here. This parameter can occur several times per `<config>` block. |
 | `deleteAllContentFromImageDirectory` | Specify whether to delete all data from the `images` folder. |
 | `deleteMediaDirectory` | Specify whether to delete the `media` folder. This option is not evaluated if `deleteAllContentFromImageDirectory` is enabled. |
 | `deleteMasterDirectory` | Specify whether to delete the `master` folder. This option is not evaluated if `deleteAllContentFromImageDirectory` is enabled. |

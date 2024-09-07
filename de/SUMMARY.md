@@ -2,7 +2,7 @@
 * [Übersicht](README.md)
 
 ## Administration <a id="administration"></a>
-* [Archive Management](goobi-plugin-administration-archive-management.md)
+* [Archiv-Management](goobi-plugin-administration-archive-management.md)
   * [Bedienung des Plugins](goobi-plugin-administration-archive-management_page_01_de.md)
   * [Konfiguration des Plugins](goobi-plugin-administration-archive-management_page_02_de.md)
 * [Copy Master-Anchor](goobi-plugin-administration-copyanchor.md)
@@ -170,6 +170,7 @@
 * [Transkription von Bildinhalten](goobi-plugin-step-transcription.md)
 * [Einspielen und Download aus Transkribus Collections](goobi-plugin-step-transkribus-collection.md)
 * [Erzeugung von Uniform Resource Names (URN)](goobi-plugin-step-urn.md)
+* [Benutzerzuweisung](goobi-plugin-step-user-assignment.md)
 * [Vokabularanreicherung](goobi-plugin-step-vocabulary-enrichment.md)
 * [Schreiben von XMP Metadaten in Bilddateien](goobi-plugin-step-xmp-header.md)
 * [Metadaten-Validierung innerhalb einer Aufgabe](goobi-plugin-step-yerusha-validation.md)

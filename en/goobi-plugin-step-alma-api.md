@@ -1,6 +1,6 @@
 ---
 description: >-
-  This plugin was originally implemented to communicate with the ALMA system and process returned responses. However, thanks to its general design, it can also be used to connect to other systems via REST.
+  This plugin was originally implemented to communicate with ALMA and process returned responses. However, thanks to its general design, it can also be used to connect to other systems via REST.
 ---
 
 # ALMA API Plugin
@@ -12,7 +12,7 @@ Name                     | Wert
 Identifier               | intranda_step_alma_api
 Repository               | [https://github.com/intranda/goobi-plugin-step-alma-api](https://github.com/intranda/goobi-plugin-step-alma-api)
 Licence              | GPL 2.0 or newer 
-Last change    | 25.07.2024 12:01:27
+Last change    | 07.09.2024 08:46:07
 
 
 ## Introduction

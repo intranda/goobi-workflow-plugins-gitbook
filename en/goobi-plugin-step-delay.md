@@ -1,13 +1,18 @@
-# null
+---
+description: >-
+  Delay Plugin for pausing the workflow
+---
+
+# Delay Workflow
 
 ## Overview
 
 Name                     | Wert
 -------------------------|-----------
-Identifier               | null
+Identifier               | intranda_step_delay
 Repository               | [https://github.com/intranda/goobi-plugin-step-delay](https://github.com/intranda/goobi-plugin-step-delay)
 Licence              | GPL 2.0 or newer 
-Last change    | 04.09.2024 10:12:56
+Last change    | 07.09.2024 08:09:17
 
 
 ## Introduction

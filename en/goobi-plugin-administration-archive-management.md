@@ -3,7 +3,7 @@ description: >-
   Goobi Administration Plugin for managing archive collections
 ---
 
-# Archiv Management
+# Archive Management
 
 ## Overview
 
@@ -12,7 +12,7 @@ Name                     | Wert
 Identifier               | intranda_administration_archive_management
 Repository               | [https://github.com/intranda/goobi-plugin-administration-archive-management](https://github.com/intranda/goobi-plugin-administration-archive-management)
 Licence              | GPL 2.0 or newer 
-Last change    | 15.08.2024 17:51:43
+Last change    | 05.09.2024 17:03:57
 
 
 ## Introduction
