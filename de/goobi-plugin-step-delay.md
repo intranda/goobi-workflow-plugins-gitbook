@@ -12,7 +12,7 @@ Name                     | Wert
 Identifier               | intranda_step_delay
 Repository               | [https://github.com/intranda/goobi-plugin-step-delay](https://github.com/intranda/goobi-plugin-step-delay)
 Lizenz              | GPL 2.0 oder neuer 
-Letzte Änderung    | 04.09.2024 10:13:18
+Letzte Änderung    | 21.11.2024 11:45:52
 
 
 ## Einführung
@@ -29,6 +29,12 @@ Um das Plugin nutzen zu können, müssen folgende Dateien installiert werden:
 Nach der Installation des Plugins kann dieses innerhalb des Workflows für die jeweiligen Arbeitsschritte ausgewählt und somit automatisch ausgeführt werden.
 
 Für die Verwendung des Plugins muss dieses in einem Arbeitsschritt ausgewählt sein:
+
+|Parameter|Belegung|
+|-- |-- |
+|Automatische Aufgabe|Ja|
+|Plugin für Arbeitsschritt|intranda_step_delay|
+|Plugin für Zeitverzögerung|Ja|
 
 ![Konfiguration des Arbeitsschritts für die Nutzung des Plugins](images/goobi-plugin-step-delay_screen1_de.png)
 

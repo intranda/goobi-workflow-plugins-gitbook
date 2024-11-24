@@ -12,7 +12,7 @@ Name                     | Wert
 Identifier               | intranda_import_eth_no_catalogue
 Repository               | [https://github.com/intranda/goobi-plugin-import-eth-no-catalogue](https://github.com/intranda/goobi-plugin-import-eth-no-catalogue)
 Lizenz              | GPL 2.0 oder neuer 
-Letzte Änderung    | 23.08.2024 11:11:47
+Letzte Änderung    | 18.11.2024 16:38:04
 
 
 ## Einführung
@@ -38,12 +38,26 @@ Wenn das Plugin betreten wurde, steht eine Nutzeroberfläche zur Verfügung, in 
 ## Überblick und Funktionsweise
 Nach der Auswahl des richtigen Plugins können in der Nutzeroberfläche die Daten die entweder als CSV-Daten TAB-getrennt vorliegen oder die aus einer Excel-Datei kopiert werden in das Feld `Datensätze` eingefügt werden. Die Daten haben dabei den folgenden Aufbau:
 
+### Vier Spalten für Monographien und Mehrbändige Werke
+Wenn vier Spalten verwendet werden, haben diese den folgenden Aufbau:
+
 Spalte    | Metadatum       | Erläuterung
 ----------|-----------------|-------------------------
 `1`       | `MMS-ID`        | Wenn diese einen Unterstrich enthält, wird ein Mehrbändiges Werk angelegt, andernfalls eine Monographie. Hierbei handelt es sich um eine Pflichtangabe.
 `2`       | `Signatur`      | Hierbei handelt es sich um eine Pflichtangabe.
 `3`       | `Kollektion`    | Angabe der zuzuweisenden Kollektion. Hierbei handelt es sich um eine Pflichtangabe.
 `4`       | `Titel`         | Hierbei handelt es sich um eine optionale Angabe.
+
+
+### Zwei Spalten für Archivalien
+Wenn zwei Spalten verwendet werden, haben diese den folgenden Aufbau:
+
+Spalte    | Metadatum       | Erläuterung
+----------|-----------------|-------------------------
+`1`       | `Signatur`      | Hierbei handelt es sich um die Pflichtangabe der Signatur.
+`2`       | `Datum`         | Hierbei handelt es sich um die Pflichtangabe des Digitalisierungsdatums.
+
+
 
 Unmittelbar nach dem Einfügen der Daten und dem Klick auf `Speichern` startet das Anlegen der Vorgänge, ohne dass dabei ein Katalog abgefragt wird.
 
@@ -57,6 +71,10 @@ Die Konfiguration des Plugins erfolgt in der Datei `plugin_intranda_import_eth_n
 
 		<!-- which workflow template shall be used -->
 		<template>*</template>
+
+		<!-- which digital collection to use 
+		<collection>General</collection> 
+		-->
 
 		<!-- define if import shall use GoobiScript to run in the background -->
 		<runAsGoobiScript>true</runAsGoobiScript>

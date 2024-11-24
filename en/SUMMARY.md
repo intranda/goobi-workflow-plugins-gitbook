@@ -194,6 +194,7 @@
 * [Mass upload](goobi-plugin-workflow-mass-upload.md)
 * [Import of newspaper issues as single pages](goobi-plugin-workflow-newspaper-pages-importer.md)
 * [Project export as folder with images and Excel file](goobi-plugin-workflow-project-export.md)
+* [Mass import for brand studies and advertising material](goobi-plugin-workflow-wu-wma-import.md)
 * [Data transfer from AIM25](goobi-plugin-workflow-yerusha-aim25.md)
 
 

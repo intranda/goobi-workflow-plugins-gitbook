@@ -12,7 +12,7 @@ Name                     | Wert
 Identifier               | intranda_export_adm_bsme
 Repository               | [https://github.com/intranda/goobi-plugin-export-adm-bsme](https://github.com/intranda/goobi-plugin-export-adm-bsme)
 Lizenz              | GPL 2.0 oder neuer 
-Letzte Änderung    | 17.07.2024 09:01:42
+Letzte Änderung    | 14.10.2024 09:27:36
 
 
 ## Einführung
@@ -79,7 +79,7 @@ Insbesondere der Aufbau der XML-Export-Dateien ist je nach Publikationstyp sehr 
       <BitDepth>8</BitDepth>
       <ColorSpace>color</ColorSpace>
       <ScanningDevice>Bookeye 5</ScanningDevice>
-      <ScanningDeviceID>- no serial number available -</ScanningDeviceID>
+      <ScanningDeviceID />
       <Width>1272</Width>
       <Height>1680</Height>
       <file>123456789-0001.tif</file>
@@ -91,7 +91,7 @@ Insbesondere der Aufbau der XML-Export-Dateien ist je nach Publikationstyp sehr 
       <BitDepth>8</BitDepth>
       <ColorSpace>color</ColorSpace>
       <ScanningDevice>Bookeye 5</ScanningDevice>
-      <ScanningDeviceID>- no serial number available -</ScanningDeviceID>
+      <ScanningDeviceID />
       <Width>1272</Width>
       <Height>1680</Height>
       <file>123456789-0002.tif</file>
@@ -104,7 +104,7 @@ Insbesondere der Aufbau der XML-Export-Dateien ist je nach Publikationstyp sehr 
       <BitDepth>8</BitDepth>
       <ColorSpace>color</ColorSpace>
       <ScanningDevice>Bookeye 5</ScanningDevice>
-      <ScanningDeviceID>- no serial number available -</ScanningDeviceID>
+      <ScanningDeviceID />
       <Width>1192</Width>
       <Height>1608</Height>
       <file>123456789-0003.tif</file>
@@ -148,6 +148,7 @@ Die Konfiguration des Plugins erfolgt in der Datei `plugin_intranda_export_adm_b
 	<sourceOrganisation>$(meta.AdmSourceOrganization)</sourceOrganisation>
 	<frequency>$(meta.AdmIssueFrequency)</frequency>
 	<eventName>$(meta.AdmEventName)</eventName>
+	<eventNameEnglish>$(meta.AdmEventNameEnglish)</eventNameEnglish>
 	<eventDate>$(meta.AdmEventDate)</eventDate>
 	<eventTime>$(meta.AdmEventTime)</eventTime>
 	<subject>$(meta.Subject)</subject>
@@ -157,6 +158,7 @@ Die Konfiguration des Plugins erfolgt in der Datei `plugin_intranda_export_adm_b
 	<personsInImage>$(meta.AdmPersonsInImage)</personsInImage>
 	<locations>$(meta.AdmEventLocations)</locations>
 	<description>$(meta.Description)</description>
+	<descriptionArabic>$(meta.AdmEventDescriptionArabic)</descriptionArabic>
 	<editorInChief>$(meta.AdmEditorInChief)</editorInChief>
 	<format>$(meta.Format)</format>
 	<envelopeNumber>$(meta.AdmEnvelopeNumber)</envelopeNumber>

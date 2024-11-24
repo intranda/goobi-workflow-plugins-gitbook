@@ -12,7 +12,7 @@ Name                     | Wert
 Identifier               | intranda_dashboard_barcode
 Repository               | [https://github.com/intranda/goobi-plugin-dashboard-barcode](https://github.com/intranda/goobi-plugin-dashboard-barcode)
 Licence              | GPL 2.0 or newer 
-Last change    | 04.09.2024 09:33:25
+Last change    | 21.09.2024 11:37:28
 
 
 ## Introduction
@@ -40,9 +40,22 @@ To use this plugin, the user must select the `intranda_dashboard_barcode` value 
 ## Overview and functionality
 To use this dashboard plugin, you first need to activate it via `Settings` -> `General` -> `Dashboard` and then log in again. If the plugin is correctly installed and configured, it should already be activated under the `Dashboard` menu item.
 
-![User interface of the dashboard](images/goobi-plugin-dashboard-barcode_screen2_de.png)
+![Accepting and completing tasks](images/goobi-plugin-dashboard-barcode_screen2_en.png)
 
-On the right side, there is a form with various actions. You can select one by clicking on it. If the action `Change Location Only` is chosen, an additional input field will appear, expecting the name of the new location. For all actions, there is a mandatory input field where the title of the Goobi process is expected. This field is automatically focused after loading to facilitate the use of a barcode scanner. By clicking the `Execute` button, the selected action will be performed, and messages regarding success will be displayed. The performed action and the input location are saved to facilitate further applications. They remain unchanged until a manual change is made.
+On the right side, there is a form with various actions. You can select one by clicking on it. If the action `Change Location Only` is chosen, an additional input field will appear, expecting the name of the new location. 
+
+![Recording a change of location](images/goobi-plugin-dashboard-barcode_screen3_en.png)
+
+For all actions, there is a mandatory input field where the title of the Goobi process is expected. This field is automatically focused after loading to facilitate the use of a barcode scanner. By clicking the `Execute` button, the selected action will be performed, and messages regarding success will be displayed. The performed action and the input location are saved to facilitate further applications. They remain unchanged until a manual change is made.
+
+Im Fall, dass Ortwechsel erfasst werden, sind diese auch zu einem späteren Zeitpunkt jederzeit innerhalb des Journals noch nachvollziehbar.
+
+![Stored information on the change of location in the journal](images/goobi-plugin-dashboard-barcode_screen4_en.png)
+
+Der jeweils aktuelle Aufenthaltsort des Objektes wird darüber hinaus in einer eigenen Eigenschaft gespeichert.
+
+![Current location within a property](images/goobi-plugin-dashboard-barcode_screen5_en.png)
+
 
 ## Configuration
 The plugin is configured in the file `plugin_intranda_dashboard_barcode.xml` as shown here:

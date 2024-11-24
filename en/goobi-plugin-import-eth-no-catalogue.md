@@ -12,7 +12,7 @@ Name                     | Wert
 Identifier               | intranda_import_eth_no_catalogue
 Repository               | [https://github.com/intranda/goobi-plugin-import-eth-no-catalogue](https://github.com/intranda/goobi-plugin-import-eth-no-catalogue)
 Licence              | GPL 2.0 or newer 
-Last change    | 23.08.2024 11:11:47
+Last change    | 18.11.2024 16:38:04
 
 
 ## Introduction
@@ -57,6 +57,10 @@ The plugin is configured in the file `plugin_intranda_import_eth_no_catalogue.xm
 
 		<!-- which workflow template shall be used -->
 		<template>*</template>
+
+		<!-- which digital collection to use 
+		<collection>General</collection> 
+		-->
 
 		<!-- define if import shall use GoobiScript to run in the background -->
 		<runAsGoobiScript>true</runAsGoobiScript>

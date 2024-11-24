@@ -12,7 +12,7 @@ Name                     | Wert
 Identifier               | intranda_administration_archive_management
 Repository               | [https://github.com/intranda/goobi-plugin-administration-archive-management](https://github.com/intranda/goobi-plugin-administration-archive-management)
 Licence              | GPL 2.0 or newer 
-Last change    | 05.09.2024 17:03:57
+Last change    | 16.09.2024 13:07:31
 
 
 ## Introduction
@@ -72,6 +72,7 @@ Authorisation | Explanation
 `Plugin_Administration_Archive_Management_Inventory_NAME` | Access to individual selected inventories, whereby the suffix NAME must be replaced by the name of the inventory
 `Plugin_Administration_Archive_Management_All_Inventories` | Access to all inventories
 `Plugin_Administration_Archive_Management_Delete` | Delete the selected inventory
+`Plugin_Administration_Archive_Management_Process` | Create processes
 
 A detailed explanation of how to use the plugin and its functions can be found on this page:
 

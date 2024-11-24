@@ -12,7 +12,7 @@ Name                     | Wert
 Identifier               | intranda_step_mix_metadata_enrichment
 Repository               | [https://github.com/intranda/goobi-plugin-step-mix-metadata-enrichment](https://github.com/intranda/goobi-plugin-step-mix-metadata-enrichment)
 Lizenz              | GPL 2.0 oder neuer 
-Letzte Änderung    | 15.08.2024 17:57:08
+Letzte Änderung    | 14.10.2024 10:52:57
 
 
 ## Einführung
@@ -58,10 +58,26 @@ Die Konfiguration des Plugins erfolgt in der Datei `plugin_intranda_step_mix_met
         <!-- which projects to use for (can be more then one, otherwise use *) -->
         <project>*</project>
         <step>*</step>
-        <folder>*</folder>
+        <!-- which folder should be used for technical metadata extraction (results are also saved to derivatives in mets) -->
+        <folder>master</folder>
 
         <!-- jhove configuration file path -->
         <jhoveConfig>/opt/digiverso/goobi/config/jhove/jhove.conf</jhoveConfig>
+        <renameMappings>
+            <value from="ImageCaptureMetadata/ScannerCapture/scannerManufacturer" to="ImageCaptureMetadata/DigitalCameraCapture/digitalCameraManufacturer" removeEmptyParents="true"/>
+            <value from="ImageCaptureMetadata/ScannerCapture/ScannerModel/scannerModelName" to="ImageCaptureMetadata/DigitalCameraCapture/DigitalCameraModel/digitalCameraModelName" removeEmptyParents="true"/>
+            <value from="ImageCaptureMetadata/ScannerCapture/ScannerModel/scannerModelNumber" to="ImageCaptureMetadata/DigitalCameraCapture/DigitalCameraModel/digitalCameraModelNumber" removeEmptyParents="true"/>
+            <value from="ImageCaptureMetadata/ScannerCapture/ScannerModel/scannerModelSerialNo" to="ImageCaptureMetadata/DigitalCameraCapture/DigitalCameraModel/digitalCameraModelSerialNo" removeEmptyParents="true"/>
+        </renameMappings>
+        <extraMappings>
+            <value source="//jhove:property[jhove:name='FNumber']//jhove:value[1]" target="ImageCaptureMetadata/DigitalCameraCapture/CameraCaptureSettings/ImageData/fNumber" transform="rational2real"/>
+            <value source="//jhove:property[jhove:name='ExposureTime']//jhove:value[1]" target="ImageCaptureMetadata/DigitalCameraCapture/CameraCaptureSettings/ImageData/exposureTime" transform="rational2real"/>
+            <value source="//jhove:property[jhove:name='ISOSpeedRatings']//jhove:value[1]" target="ImageCaptureMetadata/DigitalCameraCapture/CameraCaptureSettings/ImageData/isoSpeedRatings"/>
+            <value source="//jhove:property[jhove:name='ShutterSpeedValue']//jhove:value[1]" target="ImageCaptureMetadata/DigitalCameraCapture/CameraCaptureSettings/ImageData/shutterSpeedValue" transform="rational2rationalType"/>
+            <value source="//jhove:property[jhove:name='ApertureValue']//jhove:value[1]" target="ImageCaptureMetadata/DigitalCameraCapture/CameraCaptureSettings/ImageData/apertureValue" transform="rational2rationalType"/>
+            <value source="//jhove:property[jhove:name='ExposureBiasValue']//jhove:value[1]" target="ImageCaptureMetadata/DigitalCameraCapture/CameraCaptureSettings/ImageData/exposureBiasValue" transform="rational2rationalType"/>
+            <value source="//jhove:property[jhove:name='MaxApertureValue']//jhove:value[1]" target="ImageCaptureMetadata/DigitalCameraCapture/CameraCaptureSettings/ImageData/maxApertureValue" transform="rational2rationalType"/>
+        </extraMappings>
     </config>
 
     <config>
@@ -89,7 +105,9 @@ Der Block `<config>` kann für verschiedene Projekte oder Arbeitsschritte wieder
 Neben diesen allgemeinen Parametern stehen die folgenden Parameter für die weitergehende Konfiguration zur Verfügung: 
 
 
-Parameter               | Erläuterung
-------------------------|------------------------------------
-`folder`                | Angabe des Ordners, der von JHove analysiert werden soll um technische Metadaten zu extrahieren. <br /><br />Es können mehrere Ordner angegeben werden, indem das `<folder>` Element wiederholt wird. Der Wert `*` kann verwendet werden, um alle Standardordner auszuwählen.
-`jhoveConfig`           | Der Pfad zur JHove Konfigurationsdatei. Eine Beispielkonfiguration liegt dem Plugin bei.
+Parameter               | Erläuterung                                                                                                                                                                                                                                                                                                                                                                           
+------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+`folder`                | Angabe des Ordners, der von JHove analysiert werden soll um technische Metadaten zu extrahieren. <br /><br />Der konfigurierte Ordner wird verwendet, um die technischen Metadaten in Mets zu speichern. Es können durchaus `master` Bilder analysiert und Derivate dann um technische Metadaten ergänzt werden.                                                                      
+`jhoveConfig`           | Der Pfad zur JHove Konfigurationsdatei. Eine Beispielkonfiguration liegt dem Plugin bei.                                                                                                                                                                                                                                                                                              
+`renameMappings`        | In diesem Element können beliebig viele Umbenennungen in MIX definiert werden.<br /><br />Die Kindelemente müssen folgende Form haben: `<value from="a/b/c" to="d/e" removeEmptyParents="true\|false"/>`. Das Element `c`, welches in MIX in der Hierarchie `a/b/c` steht, wird in `e` als Kindelement von `d` umbenannt. Wenn `removeEmptyParents` auf `true` gesetzt ist, werden sowohl `b` als auch `a` entfernt, wenn sie keine weiteren Kindelemente haben.<br /><br />Das kann beispielsweise nützlich sein, wenn Daten in MIX vorhersehbar in den falschen Feldern stehen (Kamera wird als Scanner erkannt): `<value from="ImageCaptureMetadata/ScannerCapture/scannerManufacturer" to="ImageCaptureMetadata/DigitalCameraCapture/digitalCameraManufacturer" removeEmptyParents="true"/>`. 
+`extraMappings`         | In diesem Element können beliebig viele MIX-Zusatzfelder definiert werden, die von JHove nicht automatisch korrekt erkannt werden.<br /><br />Die Kindelemente müssen folgende Form haben: `<value source="//some/xpath" target="a/b/c" transform="TRANSFORM"/>`. `source` enthält einen XPath Ausdruck zu einem Wert, der im JHove Ergebnis zu finden ist. `target` enthält den Pfad in MIX, wo der Wert gespeichert werden soll. `transform` kann optional angegeben werden, wenn eine Wertkonvertierung erforderlich ist. Es gibt aktuell zwei mögliche Konvertierung: `rational2real` und `rational2rationalType`. `rational2real` wandelt Brüche in Zahlen mit Punkt um (bspw. `1/4` zu `0.25`). `rational2rationalType` wandelt Brüche in einen speziellen MIX-Typen für Brüche um.<br /><br />Um zusätzlich die Blende zu speichern, könnte man sowas konfigurieren: `<value source="//jhove:property[jhove:name='FNumber']//jhove:value[1]" target="ImageCaptureMetadata/DigitalCameraCapture/CameraCaptureSettings/ImageData/fNumber" transform="rational2real"/>`.

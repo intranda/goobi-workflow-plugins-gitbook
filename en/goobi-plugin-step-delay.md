@@ -12,7 +12,7 @@ Name                     | Wert
 Identifier               | intranda_step_delay
 Repository               | [https://github.com/intranda/goobi-plugin-step-delay](https://github.com/intranda/goobi-plugin-step-delay)
 Licence              | GPL 2.0 or newer 
-Last change    | 07.09.2024 08:09:17
+Last change    | 21.11.2024 11:45:52
 
 
 ## Introduction
@@ -29,6 +29,12 @@ To be able to use the plugin, the following files must be installed:
 After installing the plugin, it can be selected within the workflow for the respective steps and will be executed automatically.
 
 To use the plugin, it must be selected in a workflow step:
+
+| Parameter               | Configuration                                |  
+|-------------------------|----------------------------------------------|  
+| Automatic Task          | Yes                                          |  
+| Plugin for Workflow Step| intranda_step_delay                          |  
+| Plugin for Delay        | Yes                                          |
 
 ![Configuration of the workflow step for using the plugin](images/goobi-plugin-step-delay_screen1_en.png)
 
