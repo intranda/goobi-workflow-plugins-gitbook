@@ -168,6 +168,7 @@
 * [Import von ECHO-Dateien als TEI](goobi-plugin-step-tei-import.md)
 * [Tif-Validierung](goobi-plugin-step-tif-validation.md)
 * [Transkription von Bildinhalten](goobi-plugin-step-transcription.md)
+* [OCR mittels Transkribus](goobi-plugin-step-transkribus.md)
 * [Einspielen und Download aus Transkribus Collections](goobi-plugin-step-transkribus-collection.md)
 * [Erzeugung von Uniform Resource Names (URN)](goobi-plugin-step-urn.md)
 * [Benutzerzuweisung](goobi-plugin-step-user-assignment.md)
