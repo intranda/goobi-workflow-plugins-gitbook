@@ -12,7 +12,7 @@ Name                     | Wert
 Identifier               | intranda_step_transkribus
 Repository               | [https://github.com/intranda/goobi-plugin-step-transkribus](https://github.com/intranda/goobi-plugin-step-transkribus)
 Lizenz              | Proprietary commercial 
-Letzte Änderung    | 27.11.2024 20:06:54
+Letzte Änderung    | 28.11.2024 07:24:10
 
 
 ## Einführung
@@ -73,8 +73,17 @@ Periodisch ruft Goobi im Hintergrund alle Delay-Plugins auf, so auch dieses. Bei
 
 ![Manueller Aufruf des Plugins als Delay Job aus den regelmäßigen Aufgaben](images/goobi-plugin-step-transkribus_screen3_de.png)
 
-
 Im Fall, dass alle Seiten heruntergeladen werden konnten, wird der Arbeitsschritt geschlossen und der Workflow fortgesetzt. Im Fehlerfall hingegen, ändert der Schritt seinen Status zu einem Fehler weist entsprechende Fehlermeldungen im Journal auf.
+
+
+## Intervention im Fehlerfall
+Sollte der Fall eintreten, dass eine Seite nicht richtig hochgeladen, verarbeitet oder heruntergeladen werden, empfiehlt es sich, folgendermaßen vorzugehen:
+
+- Öffnen der entsprechenden `processing.json`-Datei aus dem `ocr`-Verzeichnis des Vorgangs
+- Setzen des Wertes in `status` auf `NEW` für das entsprechende Bild
+- Eventuell die Anzahl für `failCounter` und `downloadCounter` wieder auf 0 setzen
+- Den Arbeitsschritt im Workflow wieder auf `In Bearbeitung` setzen
+- Manuell aus der administrative Oberfläche für die regelmäßigen Aufgaben den Delay-Job neu starten
 
 
 ## Konfiguration

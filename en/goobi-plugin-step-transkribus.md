@@ -12,7 +12,7 @@ Name                     | Wert
 Identifier               | intranda_step_transkribus
 Repository               | [https://github.com/intranda/goobi-plugin-step-transkribus](https://github.com/intranda/goobi-plugin-step-transkribus)
 Licence              | Proprietary commercial 
-Last change    | 27.11.2024 20:06:54
+Last change    | 28.11.2024 07:24:10
 
 
 ## Introduction
@@ -75,6 +75,16 @@ Goobi periodically calls all delay plug-ins in the background, including this on
 
 
 If all pages could be downloaded, the step is closed and the workflow continues. In the event of an error, however, the step changes its status to an error with corresponding error messages in the journal.
+
+
+## Intervention in the event of an error
+If a page is not uploaded, processed or downloaded correctly, it is recommended to proceed as follows:
+
+- Open the corresponding `processing.json` file from the `ocr` directory of the process
+- Set the value in `status` to `NEW` for the corresponding image
+- If necessary, set the number for `failCounter` and `downloadCounter` back to 0
+- Set the workflow step to `In work` again
+- Manually restart the delay job from the administrative interface for the regular tasks
 
 
 ## Konfiguration
