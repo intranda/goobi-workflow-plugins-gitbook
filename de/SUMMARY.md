@@ -145,6 +145,7 @@
 * [Strukturdatenimport aus einer Exceldatei](goobi-plugin-step-metadata-structure-import.md)
 * [Metadatenfelder aktualisieren](goobi-plugin-step-metadata-update-field.md)
 * [Automatische METS-Anreicherung mit Bilddateien und Paginierung](goobi-plugin-step-mets-creation.md)
+* [Datenmigration aus Visual Library](goobi-plugin-step-migrate-visual-library-to-goobi.md)
 * [MIX Metadata Enrichment Plugin](goobi-plugin-step-mix-metadata-enrichment.md)
 * [OCR-Durchführung mit gemischten Schrifttypen](goobi-plugin-step-mixed-ocr.md)
 * [OCR Seitenauswahl](goobi-plugin-step-ocr-selector.md)

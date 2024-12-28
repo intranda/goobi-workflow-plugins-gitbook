@@ -58,7 +58,7 @@ The plugin is configured in the file `plugin_intranda_dashboard_extended.xml` as
 	<nagios-password>pass</nagios-password>
 	
 	<!-- RSS-Feed e.g. of last imports -->
-	<rss-show>false</rss-show>
+	<rss-show>true</rss-show>
 	<rss-cache-time>900000</rss-cache-time>
 	<rss-url>https://www.intranda.com/feed/</rss-url>
 	<rss-title>News by intranda GmbH</rss-title>
@@ -87,7 +87,7 @@ The plugin is configured in the file `plugin_intranda_dashboard_extended.xml` as
 	<statistics-show>true</statistics-show>
 	
 	<!-- Batches -->
-	<batches-show>true</batches-show>
+	<batches-show>false</batches-show>
 	<!-- define time range as months before and after the today date -->
 	<batches-timerange-start>2</batches-timerange-start>
 	<batches-timerange-end>4</batches-timerange-end>

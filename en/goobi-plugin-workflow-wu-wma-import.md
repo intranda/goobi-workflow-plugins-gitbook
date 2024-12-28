@@ -12,7 +12,7 @@ Name                     | Wert
 Identifier               | intranda_workflow_wu_wma_import
 Repository               | [https://github.com/intranda/goobi-plugin-workflow-wu-wma-import](https://github.com/intranda/goobi-plugin-workflow-wu-wma-import)
 Licence              | GPL 2.0 or newer 
-Last change    | 24.11.2024 19:07:56
+Last change    | 18.12.2024 13:57:25
 
 
 ## Introduction
@@ -57,14 +57,11 @@ The plugin is configured in the file `plugin_intranda_workflow_wu_wma_import.xml
 	<title>Mass import for the WU</title>
 
 	<!-- importsets with source folder definition -->
-	<importSet title="Markenstudien 1" source="/opt/digiverso/import/markenstudien01/" />
-	<importSet title="Markenstudien 2" source="/opt/digiverso/import/markenstudien02/" />
-	<importSet title="Markenstudien 3" source="/opt/digiverso/import/markenstudien03/" />
-	<importSet title="Markenstudien 4" source="/opt/digiverso/import/markenstudien04/" />
-	
-	<!-- which workflow to use -->
-	<workflow>Sample_Workflow</workflow>
-		
+	<importSet title="Markenstudien 1" workflow="Marken-Workflow" source="/opt/digiverso/import/markenstudien01/" />
+	<importSet title="Markenstudien 2" workflow="Marken-Workflow" source="/opt/digiverso/import/markenstudien02/" />
+	<importSet title="Markenstudien 3" workflow="Marken-Workflow" source="/opt/digiverso/import/markenstudien03/" />
+	<importSet title="Markenstudien 4" workflow="Marken-Workflow" source="/opt/digiverso/import/markenstudien04/" />
+			
 </config_plugin>
 
 ```
@@ -74,5 +71,4 @@ The following table contains a summary of the parameters and their descriptions:
 Parameter               | Explanation
 ------------------------|------------------------------------
 `title`                 | An individual title for the display in the menu and the headings of the plugin can be defined here.
-`importSet`             | Individual import sets can be defined with this element. They each consist of a `title` for the name to be displayed and a specification for the storage location from which the data is to be imported. The storage location can have any depth of directory structure.
-`workflow`              | This allows you to specify which production template is to be used for creating Goobi processes.
+`importSet`             | Individual import sets can be defined with this element. They each consist of a `title` for the name to be displayed and a specification for the storage location from which the data is to be imported. The storage location can have any depth of directory structure. You can also use `workflow` to specify which production template is to be used for creating Goobi processes.

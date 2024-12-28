@@ -12,7 +12,7 @@ Name                     | Wert
 Identifier               | intranda_workflow_wu_wma_import
 Repository               | [https://github.com/intranda/goobi-plugin-workflow-wu-wma-import](https://github.com/intranda/goobi-plugin-workflow-wu-wma-import)
 Lizenz              | GPL 2.0 oder neuer 
-Letzte Änderung    | 24.11.2024 19:07:56
+Letzte Änderung    | 18.12.2024 13:57:25
 
 
 ## Einführung
@@ -56,14 +56,11 @@ Die Konfiguration des Plugins erfolgt in der Datei `plugin_intranda_workflow_wu_
 	<title>Mass import for the WU</title>
 
 	<!-- importsets with source folder definition -->
-	<importSet title="Markenstudien 1" source="/opt/digiverso/import/markenstudien01/" />
-	<importSet title="Markenstudien 2" source="/opt/digiverso/import/markenstudien02/" />
-	<importSet title="Markenstudien 3" source="/opt/digiverso/import/markenstudien03/" />
-	<importSet title="Markenstudien 4" source="/opt/digiverso/import/markenstudien04/" />
-	
-	<!-- which workflow to use -->
-	<workflow>Sample_Workflow</workflow>
-		
+	<importSet title="Markenstudien 1" workflow="Marken-Workflow" source="/opt/digiverso/import/markenstudien01/" />
+	<importSet title="Markenstudien 2" workflow="Marken-Workflow" source="/opt/digiverso/import/markenstudien02/" />
+	<importSet title="Markenstudien 3" workflow="Marken-Workflow" source="/opt/digiverso/import/markenstudien03/" />
+	<importSet title="Markenstudien 4" workflow="Marken-Workflow" source="/opt/digiverso/import/markenstudien04/" />
+			
 </config_plugin>
 
 ```
@@ -73,5 +70,4 @@ Die folgende Tabelle enthält eine Zusammenstellung der Parameter und ihrer Besc
 Parameter               | Erläuterung
 ------------------------|------------------------------------
 `title`                 | Hier kann ein individueller Titel für die Anzeige im Menü und die Überschriften des Plugins festgelegt werden.
-`importSet`             | Mit diesem Element lassen sich individuelle Importsets definieren. Sie bestehen jeweils aus einem `title` für den anzuzeigenden Namen, sowie einer Angabe für den Speicherort, von dem die Daten importiert werden sollen. Der Speicherort kann dabei beliebig tiefe Verzeichnisstrukturen aufweisen.
-`workflow`              | Hiermit läßt sich festlegen, welche Produktionsvorlage für das Anlegen von Goobi-Vorgängen verwendet werden soll.
+`importSet`             | Mit diesem Element lassen sich individuelle Importsets definieren. Sie bestehen jeweils aus einem `title` für den anzuzeigenden Namen, sowie einer Angabe für den Speicherort, von dem die Daten importiert werden sollen. Der Speicherort kann dabei beliebig tiefe Verzeichnisstrukturen aufweisen. Ausserdem läßt sich mit `workflow` festlegen, welche Produktionsvorlage für das Anlegen von Goobi-Vorgängen verwendet werden soll.

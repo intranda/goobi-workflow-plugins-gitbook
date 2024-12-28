@@ -12,7 +12,7 @@ Name                     | Wert
 Identifier               | intranda_step_transkribus
 Repository               | [https://github.com/intranda/goobi-plugin-step-transkribus](https://github.com/intranda/goobi-plugin-step-transkribus)
 Licence              | Proprietary commercial 
-Last change    | 28.11.2024 07:24:10
+Last change    | 23.12.2024 10:38:52
 
 
 ## Introduction
@@ -28,11 +28,11 @@ To be able to use the plugin, the following files must be installed:
 
 Once the plugin has been installed, it can be selected within the workflow for the respective work step and thus executed automatically. A workflow could look like the following example:
 
-![Example of a workflow structure](images/goobi-plugin-step-transkribus_screen1_de.png)
+![Example of a workflow structure](images/goobi-plugin-step-transkribus_screen1_en.png)
 
 The work step must be configured so that the plugin is selected and the checkbox for the time delay is set.
 
-![Configuration of the plugin within one work step](images/goobi-plugin-step-transkribus_screen2_de.png)
+![Configuration of the plugin within one work step](images/goobi-plugin-step-transkribus_screen2_en.png)
 
 
 ## Overview and functionality
@@ -48,6 +48,7 @@ The plugin is designed in such a way that it first uploads all images of a proce
     "transkribusId" : "13121160",
     "failCounter" : 0,
     "downloadCounter" : 4,
+    "numberInQueue" : 0,
     "status" : "FINISHED"
   }, {
     "image" : "/opt/digiverso/goobi/metadata/2298/images/buch3_03_media/00000011.jpg",
@@ -55,6 +56,7 @@ The plugin is designed in such a way that it first uploads all images of a proce
     "transkribusId" : "13121161",
     "failCounter" : 0,
     "downloadCounter" : 4,
+    "numberInQueue" : 0,
     "status" : "FINISHED"
   }, {
     "image" : "/opt/digiverso/goobi/metadata/2298/images/buch3_03_media/00000012.jpg",
@@ -62,6 +64,7 @@ The plugin is designed in such a way that it first uploads all images of a proce
     "transkribusId" : "13121162",
     "failCounter" : 0,
     "downloadCounter" : 4,
+    "numberInQueue" : 0,
     "status" : "FINISHED"
   } ],
   "lastCheck" : "2024-11-27T19:21:04",
@@ -71,23 +74,62 @@ The plugin is designed in such a way that it first uploads all images of a proce
 
 Goobi periodically calls all delay plug-ins in the background, including this one. With every automatic call and also every manual call via the administrative interface for the regular tasks, the plugin attempts to download the pages that have not yet been completed.
 
-![Manual call of the plugin as a delay job from the regular tasks](images/goobi-plugin-step-transkribus_screen3_de.png)
+![Manual call of the plugin as a delay job from the regular tasks](images/goobi-plugin-step-transkribus_screen3_en.png)
 
 
 If all pages could be downloaded, the step is closed and the workflow continues. In the event of an error, however, the step changes its status to an error with corresponding error messages in the journal.
 
 
+## Easy insight into the progress
+During Transkribus processing, the plugin updates the exact progress within the `processing.json` file. However, in addition 
+the progress of the processing is also saved as a process property with the name `Transkribus Processing`. This property can be displayed within the tabular process list by configuring it as an additional column for display.
+
+![Configuration of the column display in the user's settings](images/goobi-plugin-step-transkribus_screen4_en.png)
+
+The display then provides a good overview of the exact status of the processing. If several processes are being processed, not only the number of images still to be processed is displayed, but also the number of Transkribus jobs that still need to be processed before the process can be completed.
+
+![Simple display of progress in the process list](images/goobi-plugin-step-transkribus_screen5_en.png)
+
+
+## Insight into the exact details of the progress
+If you want to view the exact progress, this can be viewed in the `ocr` subfolder of the process. This contains a directory with the generated ALTO files and the file `processing.json` mentioned above.
+
+A simple script that opens the path to the respective directory of the desired process looks like this and could be stored under `/usr/local/sbin/ocr-folder.sh`:
+
+```bash
+#!/bin/sh
+cd /opt/digiverso/goobi/metadata/$1/ocr/
+$SHELL
+```
+
 ## Intervention in the event of an error
-If a page is not uploaded, processed or downloaded correctly, it is recommended to proceed as follows:
+If a page is not uploaded, processed or downloaded correctly, it is recommended to proceed as follows, depending on the error:
+
+### Process image again from scratch
+If individual images have failed during processing, they can be completely reprocessed without affecting the other images in the same directory. The best way to do this is as follows:
 
 - Open the corresponding `processing.json` file from the `ocr` directory of the process
-- Set the value in `status` to `NEW` for the corresponding image
-- If necessary, set the number for `failCounter` and `downloadCounter` back to 0
-- Set the workflow step to `In work` again
+- Set the value in `status` to `RETRY` for the corresponding image
+- Set the work step in the workflow to `In process` again
 - Manually restart the delay job from the administrative interface for the regular tasks
 
 
-## Konfiguration
+### Download results again
+If there is a problem downloading the results, for example because the internet connection has been lost and the number of download attempts has exceeded the configured maximum, you can have the selected images downloaded again from the Transkribus server:
+
+- Open the corresponding `processing.json` file from the `ocr` directory of the process
+- Set the value in `status` to `RUNNING` for the corresponding image
+- Set the work step in the workflow to `In process` again
+- Manually restart the delay job from the administrative interface for the regular tasks
+
+If many images are affected by the fact that they are incorrectly in the `CANCELED` status, this can be easily changed for a process as follows:
+
+```bash
+sed -i "s/CANCELED/RUNNING/g" /opt/digiverso/goobi/metadata/12345678/ocr/processing.json
+```
+
+
+## Configuration
 The plugin is configured in the file `plugin_intranda_step_transkribus.xml` as shown here:
 
 ```xml
@@ -152,3 +194,18 @@ Parameter         | Explanation
 `model-default`   | Transkribus model ID to be used if there is no property with a value in the process. Example: `36202`
 `max-failed`      | Maximum number of new attempts if an OCR cannot be performed for a page. The workflow step remains in error status if the number of attempts is exceeded.
 `max-download`    | Maximum number of attempts to download the OCR result from Transkribus. The workflow step remains in error status if the number of attempts is exceeded.
+
+
+## Configuration of the time control
+As the plugin was designed as a delay plugin, it is called periodically by Goobi's scheduler to retrieve new completed pages from Transkribus. The time control of the `dailyDelayJob` is used for this periodic query. However, this can also be configured differently in the configuration file `goobi_config.properties` using the following syntax: 
+
+```toml
+# Execution daily at midnight 
+dailyDelayJob=0 0 0 * * ? 
+
+# Execution every 15 minutes
+dailyDelayJob=0 */15 * * * ?
+
+# Execution every hour
+dailyDelayJob=0 0 */1 * * ? 
+```
