@@ -147,6 +147,7 @@
 * [Structure data import from an Excel file](goobi-plugin-step-metadata-structure-import.md)
 * [Update Metadata Fields](goobi-plugin-step-metadata-update-field.md)
 * [Automatic METS enrichment with image files and pagination](goobi-plugin-step-mets-creation.md)
+* [Enrich METS file](goobi-plugin-step-mets-enhancer.md)
 * [Data migration from Visual Library](goobi-plugin-step-migrate-visual-library-to-goobi.md)
 * [MIX Metadata Enrichment Plugin](goobi-plugin-step-mix-metadata-enrichment.md)
 * [OCR execution with mixed fonts](goobi-plugin-step-mixed-ocr.md)
