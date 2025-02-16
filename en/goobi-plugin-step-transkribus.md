@@ -12,7 +12,7 @@ Name                     | Wert
 Identifier               | intranda_step_transkribus
 Repository               | [https://github.com/intranda/goobi-plugin-step-transkribus](https://github.com/intranda/goobi-plugin-step-transkribus)
 Licence              | Proprietary commercial 
-Last change    | 23.12.2024 10:38:52
+Last change    | 25.01.2025 09:01:36
 
 
 ## Introduction
@@ -105,6 +105,13 @@ $SHELL
 ## Intervention in the event of an error
 If a page is not uploaded, processed or downloaded correctly, it is recommended to proceed as follows, depending on the error:
 
+### Listing of images in a specific status
+The first step is to find out which images are currently in an undesired status. For example, the following call can be used to determine which images of a process have not already been completed:
+
+```bash
+jq '.pages[] | select(.status != "FINISHED") | {image, status}' processing.json
+```
+
 ### Process image again from scratch
 If individual images have failed during processing, they can be completely reprocessed without affecting the other images in the same directory. The best way to do this is as follows:
 
@@ -113,6 +120,12 @@ If individual images have failed during processing, they can be completely repro
 - Set the work step in the workflow to `In process` again
 - Manually restart the delay job from the administrative interface for the regular tasks
 
+If, for example, several images are incorrectly in the ‘NEW’ status, this can be easily changed for an operation as follows:
+
+```bash
+cd /opt/digiverso/goobi/metadata/123456/ocr/
+sed -i "s/NEW/RETRY/g" processing.json
+```
 
 ### Download results again
 If there is a problem downloading the results, for example because the internet connection has been lost and the number of download attempts has exceeded the configured maximum, you can have the selected images downloaded again from the Transkribus server:
@@ -125,7 +138,8 @@ If there is a problem downloading the results, for example because the internet 
 If many images are affected by the fact that they are incorrectly in the `CANCELED` status, this can be easily changed for a process as follows:
 
 ```bash
-sed -i "s/CANCELED/RUNNING/g" /opt/digiverso/goobi/metadata/12345678/ocr/processing.json
+cd /opt/digiverso/goobi/metadata/123456/ocr/
+sed -i "s/CANCELED/RUNNING/g" processing.json
 ```
 
 

@@ -12,7 +12,7 @@ Name                     | Wert
 Identifier               | intranda_step_metadata_update_field
 Repository               | [https://github.com/intranda/goobi-plugin-step-metadata-update-field](https://github.com/intranda/goobi-plugin-step-metadata-update-field)
 Licence              | GPL 2.0 or newer 
-Last change    | 04.09.2024 10:23:38
+Last change    | 04.02.2025 11:00:59
 
 
 ## Introduction
@@ -69,6 +69,11 @@ The plugin is configured in the file `plugin_intranda_step_metadata_update_field
 			<!-- define if the content shall be overwritten if the field is not empty -->
 			<forceUpdate>true</forceUpdate>
 	
+            <!-- optional: configure a condition. If enabled, the condition must match, otherwise the update will be skipped -->
+            <!--
+            <condition field="PublicationYear" value="\d[4}]" />
+            -->
+    
 			<!-- define a list of content here to be used for the field as metadata value
 				variable: this content gets analyzed and replaced by the variable replacer 
 				metadata: value of the metadata field with the given name inside of the same docstruct element
@@ -132,3 +137,4 @@ Parameter               | Explanation
 `counter`      | Generates a sequential number that is automatically incremented. For example, using `%03d` will count as follows: `001`, `002`, `003`, etc. |
 `groupcounter` | A separate counter for each value of the `groupField` is used as the content.  |
 `<replace>`    | Allows text replacement, where specified texts are replaced with others. |
+`<condition>`  | If this field exists, the replacement is only executed if the metadata configured there exists and corresponds to the expression specified in `value`. |

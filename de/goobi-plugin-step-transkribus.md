@@ -12,7 +12,7 @@ Name                     | Wert
 Identifier               | intranda_step_transkribus
 Repository               | [https://github.com/intranda/goobi-plugin-step-transkribus](https://github.com/intranda/goobi-plugin-step-transkribus)
 Lizenz              | Proprietary commercial 
-Letzte Änderung    | 23.12.2024 10:38:52
+Letzte Änderung    | 25.01.2025 09:01:36
 
 
 ## Einführung
@@ -101,9 +101,15 @@ cd /opt/digiverso/goobi/metadata/$1/ocr/
 $SHELL
 ```
 
-
 ## Intervention im Fehlerfall
 Sollte der Fall eintreten, dass eine Seite nicht richtig hochgeladen, verarbeitet oder heruntergeladen wird, empfiehlt es sich, abhängig vom Fehlerfall folgendermaßen vorzugehen:
+
+### Auflistung der Bilder in bestimmtem Status
+Zuminst einmal sollte herausgefunden werden, welche Bilder sich gerade in einem ungewünschten Status befinden. Mit dem folgenden Aufruf läßt sich beispielsweise ermitteln, welche Bilder eines Vorgangs nicht bereits abgeschlossen sind:
+
+```bash
+jq '.pages[] | select(.status != "FINISHED") | {image, status}' processing.json
+```
 
 ### Bild noch einmal komplett neu verarbeiten
 Wenn einzelne Bilder in der Verarbeitung gescheitert sind, können sie noch einmal komplett neu verarbeitet werden, ohne dass die anderen Bilder aus dem gleichen Verzeichnis davon betroffen sind. Dazu geht man am besten so vor:
@@ -113,6 +119,12 @@ Wenn einzelne Bilder in der Verarbeitung gescheitert sind, können sie noch einm
 - Den Arbeitsschritt im Workflow wieder auf `In Bearbeitung` setzen
 - Manuell aus der administrative Oberfläche für die regelmäßigen Aufgaben den Delay-Job neu starten
 
+Sind mehrere Bilder beispielsweise fälschlicherweise im Status `NEW`, läßt sich dies für einen Vorgang wie folgt einfach ändern:
+
+```bash
+cd /opt/digiverso/goobi/metadata/123456/ocr/
+sed -i "s/NEW/RETRY/g" processing.json
+```
 
 ### Ergebnis noch einmal herunterladen
 Sollte es zu einem Problem mit dem Herunterladen der Ergebnisse gekommemn sind, weil beispielsweise die Internetanbindung verlorgen gegangen ist und die Anzahl der Download-Versuche das konfigurierte Maximum überschritten wurde, kann man die ausgewählten Bilder neu vom Transkribus-Server herunterladen lassen:
@@ -125,8 +137,10 @@ Sollte es zu einem Problem mit dem Herunterladen der Ergebnisse gekommemn sind, 
 Sind viele Bilder davon betroffen, dass sie fälschlicherweise im Status `CANCELED` sind, läßt sich dies für einen Vorgang wie folgt einfach ändern:
 
 ```bash
-sed -i "s/CANCELED/RUNNING/g" /opt/digiverso/goobi/metadata/12345678/ocr/processing.json
+cd /opt/digiverso/goobi/metadata/123456/ocr/
+sed -i "s/CANCELED/RUNNING/g" processing.json
 ```
+
 
 ## Konfiguration
 Die Konfiguration des Plugins erfolgt in der Datei `plugin_intranda_step_transkribus.xml` wie hier aufgezeigt:
