@@ -89,7 +89,7 @@
 * [Archivierung von Bildordnern](goobi-plugin-step-archive-image-folder.md)
 * [Erzeugen von Archival Resource Keys (ARK)](goobi-plugin-step-ark.md)
 * [Libsafe Integration](goobi-plugin-step-bag-creation.md)
-* [Batch zuweisen](goobi-plugin-step-batch-assignement.md)
+* [Batch zuweisen](goobi-plugin-step-batch-assignment.md)
 * [Batch Progress Plugin](goobi-plugin-step-batch-progress.md)
 * [Katalogabfrage](goobi-plugin-step-catalogue-request.md)
 * [Ändern des Workflows auf Grundlage von Vorgangseigenschaften](goobi-plugin-step-change-workflow.md)

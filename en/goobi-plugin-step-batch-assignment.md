@@ -9,10 +9,10 @@ description: >-
 
 Name                     | Wert
 -------------------------|-----------
-Identifier               | intranda_step_batch_assignement
-Repository               | [https://github.com/intranda/goobi-plugin-step-batch-assignement](https://github.com/intranda/goobi-plugin-step-batch-assignement)
+Identifier               | intranda_step_batch_assignment
+Repository               | [https://github.com/intranda/goobi-plugin-step-batch-assignment](https://github.com/intranda/goobi-plugin-step-batch-assignment)
 Licence              | GPL 2.0 or newer 
-Last change    | 15.02.2025 10:38:42
+Last change    | 25.02.2025 11:03:03
 
 
 ## Introduction
@@ -34,33 +34,33 @@ Once the plugin has been installed, it can be selected within the workflow for t
  
 A workflow could therefore look like the following example:
 
-![Example of a workflow structure](images/goobi-plugin-step-batch-assignement_screen1_en.png)
+![Example of a workflow structure](images/goobi-plugin-step-batch-assignment_screen1_en.png)
 
 To use the plugin, it must be selected in the first of the two steps:
 
-![Configuration of the workflow for using the plugin](images/goobi-plugin-step-batch-assignement_screen2_en.png)
+![Configuration of the workflow for using the plugin](images/goobi-plugin-step-batch-assignment_screen2_en.png)
 
 ## Overview and functionality
 Once the user has accepted the task, they can first decide in the plugin whether a new batch should be created or whether a selection should be made from the existing batches that are still waiting. If the user wants to define a new batch, they can define the title for the batch here and, if required, also enter properties that were defined via the configuration:
 
-![Create a new batch with defined properties for the process](images/goobi-plugin-step-batch-assignement_screen3_en.png)
+![Create a new batch with defined properties for the process](images/goobi-plugin-step-batch-assignment_screen3_en.png)
 
 Alternatively, the user can select a batch from the list of currently waiting batches. Once the desired batch has been selected, the task can be completed as normal.
 
-![Selection from the list of waiting batches](images/goobi-plugin-step-batch-assignement_screen4_en.png)
+![Selection from the list of waiting batches](images/goobi-plugin-step-batch-assignment_screen4_en.png)
 
 After assignment to an existing or newly created batch, the workflow for the process moves on to the subsequent workflow step, which can be regarded as a kind of ‘waiting zone’. All processes in a batch initially remain there and do not yet pass through the subsequent steps. 
 
 If the user decides in the workflow step of a process that the batch with this process is now complete, he can click on the button for ‘Close batch’. This opens a dialogue window in which a batch docket can be downloaded and the batch can be closed:
 
-![Closing a batch](images/goobi-plugin-step-batch-assignement_screen5_en.png)
+![Closing a batch](images/goobi-plugin-step-batch-assignment_screen5_en.png)
 
 By closing the batch, the workflow step for waiting for all processes in the batch to be complete is finished and the workflow step of the currently open workflow step is also finished. This means that all processes assigned to a batch simultaneously switch to the next subsequent workflow step so that they can be processed further together.
 
-![Further progress of the workflow](images/goobi-plugin-step-batch-assignement_screen6_en.png)
+![Further progress of the workflow](images/goobi-plugin-step-batch-assignment_screen6_en.png)
 
 ## Configuration
-The plugin is configured in the file `plugin_intranda_step_batch_assignement.xml` as shown here:
+The plugin is configured in the file `plugin_intranda_step_batch_assignment.xml` as shown here:
 
 ```xml
 <config_plugin>

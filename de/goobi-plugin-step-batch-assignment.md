@@ -9,10 +9,10 @@ description: >-
 
 Name                     | Wert
 -------------------------|-----------
-Identifier               | intranda_step_batch_assignement
-Repository               | [https://github.com/intranda/goobi-plugin-step-batch-assignement](https://github.com/intranda/goobi-plugin-step-batch-assignement)
+Identifier               | intranda_step_batch_assignment
+Repository               | [https://github.com/intranda/goobi-plugin-step-batch-assignment](https://github.com/intranda/goobi-plugin-step-batch-assignment)
 Lizenz              | GPL 2.0 oder neuer 
-Letzte Änderung    | 15.02.2025 10:38:42
+Letzte Änderung    | 25.02.2025 11:03:03
 
 
 ## Einführung
@@ -34,33 +34,33 @@ Nach der Installation des Plugins kann dieses innerhalb des Workflows für die j
  
 Ein Workflow könnte somit beispielhaft wie folgt aussehen:
 
-![Beispielhafter Aufbau eines Workflows](images/goobi-plugin-step-batch-assignement_screen1_de.png)
+![Beispielhafter Aufbau eines Workflows](images/goobi-plugin-step-batch-assignment_screen1_de.png)
 
 Für die Verwendung des Plugins muss dieses in dem ersten der beiden Arbeitsschritte ausgewählt sein:
 
-![Konfiguration des Arbeitsschritts für die Nutzung des Plugins](images/goobi-plugin-step-batch-assignement_screen2_de.png)
+![Konfiguration des Arbeitsschritts für die Nutzung des Plugins](images/goobi-plugin-step-batch-assignment_screen2_de.png)
 
 ## Überblick und Funktionsweise
 Nachdem der Nutzer die Aufgabe angenommen hat, kann er in dem Plugin zunächst entscheiden, ob ein neuer Batch angelegt oder eine Auswahl aus den bereits vorhandenen noch wartenden Batches erfolgen soll. Möchte der Nutzer einen neuen Batch definieren, kann er hier den Titel für den Batch definieren sowie bei Bedarf auch Eigenschaften mit erfassen, die über die Konfiguration festgelegt wurden:
 
-![Erzeugen eines neuen Batches mit festgelegten Eigenschaften für den Vorgang](images/goobi-plugin-step-batch-assignement_screen3_de.png)
+![Erzeugen eines neuen Batches mit festgelegten Eigenschaften für den Vorgang](images/goobi-plugin-step-batch-assignment_screen3_de.png)
 
 Alternativ kann der Nutzer aus der Liste der aktuell wartenden Batches einen Batch auswählen. Nach der Auswahl des gewünschten Batches kann die Aufgabe regulär abgeschlossen werden.
 
-![Auswahl aus der Liste der wartenden Batches](images/goobi-plugin-step-batch-assignement_screen4_de.png)
+![Auswahl aus der Liste der wartenden Batches](images/goobi-plugin-step-batch-assignment_screen4_de.png)
 
 Nach der Zuweisung zu einem bestehenden oder neu erzeugten Batches, geht der Workflow für den Vorgang in den nachfolgenden Arbeitsschritt über, der als eine Art `Wartezone` betrachtet werden kann. Dort verbleiben alle Vorgänge eines Batches zunächst und durchlaufen noch nicht die weiteren nachfolgenden Schritte. 
 
 Wenn der Nutzer in dem Arbeitsschritt eines Vorgangs entscheidet, dass der Batch mit diesem Vorgang nun vollständig ist, kann er auf den Button für das `Schließen des Batches` klicken. Damit öffnet sich ein Dialogfenster, in dem ein Batch-Laufzettel heruntergeladen sowie der Batch geschlossen werden kann:
 
-![Schließen eines Batches](images/goobi-plugin-step-batch-assignement_screen5_de.png)
+![Schließen eines Batches](images/goobi-plugin-step-batch-assignment_screen5_de.png)
 
 Durch das Schließen des Batches, wird der Arbeitsschritt für das Warten auf Vollständigkeit aller Vorgänge des Batches abgeschlossen und auch der der Arbeitsschritt des gerade geöffneten Arbeitsschritt wird abgeschlossen. Somit wechseln alle zu einem Batch zugewiesenen Vorgänge gleichzeitig in den nächsten nachfolgenden Arbeitsschritt, um dann gemeinsam weiter verarbeitet werden zu können.
 
-![Weiterer Verlauf des Workflows](images/goobi-plugin-step-batch-assignement_screen6_de.png)
+![Weiterer Verlauf des Workflows](images/goobi-plugin-step-batch-assignment_screen6_de.png)
 
 ## Konfiguration
-Die Konfiguration des Plugins erfolgt in der Datei `plugin_intranda_step_batch_assignement.xml` wie hier aufgezeigt:
+Die Konfiguration des Plugins erfolgt in der Datei `plugin_intranda_step_batch_assignment.xml` wie hier aufgezeigt:
 
 ```xml
 <config_plugin>
