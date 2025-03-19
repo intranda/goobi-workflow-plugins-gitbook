@@ -81,7 +81,7 @@ The plugin is configured in the file `plugin_intranda_step_batch_assignment.xml`
         <batchWaitStep>Waiting for batch completion</batchWaitStep>
 
         <!-- properties to be editable for new batches -->
-        <property>Scanner</property>
+        <property vocabularyPropertyFilterField="Working" vocabularyPropertyFilterValue="Yes">Scanner</property>
         <property>Opening angle</property>
 
     </config>
