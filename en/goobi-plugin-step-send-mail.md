@@ -12,7 +12,7 @@ Name                     | Wert
 Identifier               | intranda_step_sendMail
 Repository               | [https://github.com/intranda/goobi-plugin-step-send-mail](https://github.com/intranda/goobi-plugin-step-send-mail)
 Licence              | GPL 2.0 or newer 
-Last change    | 21.03.2025 14:56:32
+Last change    | 21.03.2025 15:09:37
 
 
 ## Introduction
@@ -77,15 +77,15 @@ The configuration of the plugin is done via the configuration file `plugin_intra
         <!-- displayed sender address -->
         <smtpSenderAddress>do-not-reply@example.com</smtpSenderAddress>
 
-        <!-- receiver, can be repeated -->
+        <!-- receiver, can be repeated, can use variables -->
         <receiver>user@example.com</receiver>
         <receiver>second-user@example.com</receiver>
         
-        <!-- message -->
+        <!-- message, can use variables -->
         <messageSubject>subject text for {processtitle}</messageSubject>
         <messageBody>body &lt;br /&gt; &lt;h1&gt;with html&lt;/h1&gt;</messageBody>
         
-        <!-- path to attachment, leave it empty to send mail without attached file -->
+        <!-- path to attachment, leave it empty to send mail without attached file, can use variables -->
         <attachment>{processpath}/ocr/{processtitle}_txt/00000001.txt</attachment>
         
     </config>
@@ -113,7 +113,7 @@ In addition to these general parameters, the following parameters are available 
 | `<smtpUser>` | Dieser Parameter legt den Nutzernamen fest. |
 | `<smtpPassword>` | This defines the password to be used. |
 | `<smtpSenderAddress>` | The field `<smtpSenderAddress>` defines the displayed sender, which can also be different from the user name. |
-| `<receiver>` | The field `<receiver>` can be used multiple times and contains the email addresses of the recipients. |
+| `<receiver>` | The field `<receiver>` can be used multiple times and contains the email addresses of the recipients. The use of variables is possible here. |
 | `<messageSubject>` | This parameter allows the subject to be defined. The use of variables is possible here. |
 | `<messageBody>` | In `<messageBody>` the mail itself is defined. Plain text or HTML formatted text can be written here. In addition, access to the Goobi variable system is possible here, so that information on the task, project, properties or metadata can also be used in the mail. |
 | `<attachment>` | In `<attachment>` the path to a file that is to be sent as an attachment with the mail can be specified. Variables can be used within the path specification. |
