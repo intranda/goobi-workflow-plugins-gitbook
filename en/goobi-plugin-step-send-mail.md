@@ -12,7 +12,7 @@ Name                     | Wert
 Identifier               | intranda_step_sendMail
 Repository               | [https://github.com/intranda/goobi-plugin-step-send-mail](https://github.com/intranda/goobi-plugin-step-send-mail)
 Licence              | GPL 2.0 or newer 
-Last change    | 25.07.2024 11:19:40
+Last change    | 21.03.2025 14:56:32
 
 
 ## Introduction
@@ -47,12 +47,11 @@ This plugin is integrated into the workflow in such a way that it is executed au
 
 ![Integration of the plugin into the workflow](images/goobi-plugin-step-send-mail_screen1_en.png)
 
-
+ 
 ## Configuration
-The configuration of the plugin is done via the configuration file `plugin_intranda_step_sendMail.xml` and can be adjusted during operation. The following is an example configuration file:
+The configuration of the plugin is done via the configuration file `plugin_intranda_step_sendMail.xml` and can be adjusted during operation.
 
 ```xml
-<?xml version="1.0" encoding="UTF-8"?>
 <config_plugin>
     <!--
         order of configuration is:
@@ -65,6 +64,7 @@ The configuration of the plugin is done via the configuration file `plugin_intra
         <!-- which projects to use for (can be more then one, otherwise use *) -->
         <project>*</project>
         <step>*</step>
+        
         <!-- mail account -->
         <smtpUser>test@example.com</smtpUser>
         <smtpPassword>password</smtpPassword>
@@ -76,21 +76,37 @@ The configuration of the plugin is done via the configuration file `plugin_intra
 
         <!-- displayed sender address -->
         <smtpSenderAddress>do-not-reply@example.com</smtpSenderAddress>
+
         <!-- receiver, can be repeated -->
         <receiver>user@example.com</receiver>
         <receiver>second-user@example.com</receiver>
-
+        
         <!-- message -->
-        <messageSubject>subject text</messageSubject>
+        <messageSubject>subject text for {processtitle}</messageSubject>
         <messageBody>body &lt;br /&gt; &lt;h1&gt;with html&lt;/h1&gt;</messageBody>
+        
+        <!-- path to attachment, leave it empty to send mail without attached file -->
+        <attachment>{processpath}/ocr/{processtitle}_txt/00000001.txt</attachment>
+        
     </config>
 </config_plugin>
 ```
 
+### General parameters 
+The `<config>` block can occur repeatedly for different projects or work steps in order to be able to perform different actions within different workflows. The other parameters within this configuration file have the following meanings: 
+
+| Parameter | Explanation | 
+| :-------- | :---------- | 
+| `project` | This parameter defines which project the current block `<config>` should apply to. The name of the project is used here. This parameter can occur several times per `<config>` block. | 
+| `step` | This parameter controls which work steps the `<config>` block should apply to. The name of the work step is used here. This parameter can occur several times per `<config>` block. | 
+
+
+### Further parameters 
+In addition to these general parameters, the following parameters are available for further configuration: 
+
+
 | Parameter | Explanation |
 | :--- | :--- |
-| `project` | This parameter determines for which project the current block `<config>` should apply. The name of the project is used here. This parameter can occur several times per `<config>` block. |
-| `step` | This parameter controls for which workflow steps the block `<config>` should apply. The name of the workflow step is used here. This parameter can occur several times per `<config>` block. |
 | `<smtpServer>` | This parameter sets the SMTP server. |
 | `<smtpUseStartTls>` | This parameter controls whether the access should run like TLS. |
 | `<smtpUseSsl>` | This sets whether communication should be encrypted via SSL. |
@@ -100,3 +116,4 @@ The configuration of the plugin is done via the configuration file `plugin_intra
 | `<receiver>` | The field `<receiver>` can be used multiple times and contains the email addresses of the recipients. |
 | `<messageSubject>` | This parameter allows the subject to be defined. The use of variables is possible here. |
 | `<messageBody>` | In `<messageBody>` the mail itself is defined. Plain text or HTML formatted text can be written here. In addition, access to the Goobi variable system is possible here, so that information on the task, project, properties or metadata can also be used in the mail. |
+| `<attachment>` | In `<attachment>` the path to a file that is to be sent as an attachment with the mail can be specified. Variables can be used within the path specification. |
