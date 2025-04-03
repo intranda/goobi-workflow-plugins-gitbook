@@ -12,7 +12,7 @@ Name                     | Wert
 Identifier               | intranda_generic_barcodeScanner
 Repository               | [https://github.com/intranda/goobi-plugin-generic-barcode-scanner](https://github.com/intranda/goobi-plugin-generic-barcode-scanner)
 Licence              | GPL 2.0 or newer 
-Last change    | 03.04.2025 10:36:32
+Last change    | 03.04.2025 14:24:35
 
 
 ## Introduction
@@ -75,22 +75,20 @@ The plugin is configured in the file `plugin_intranda_generic_barcodeScanner.xml
 ```
 
 ### General parameters 
-The `<config>` block can occur repeatedly for different projects or work steps in order to be able to perform different actions within different workflows. The other parameters within this configuration file have the following meanings: 
+The `<config>` block contains parameters that can be used for all generic plugins: 
 
 | Parameter | Explanation | 
 | :-------- | :---------- | 
-| `project` | This parameter defines which project the current block `<config>` should apply to. The name of the project is used here. This parameter can occur several times per `<config>` block. | 
-| `step` | This parameter controls which work steps the `<config>` block should apply to. The name of the work step is used here. This parameter can occur several times per `<config>` block. | 
+| `docking` | This element is used to control where the plugin is to be integrated. With `MENU_BAR`, for example, the plugin can be displayed in the main bar. The element can be repeated to integrate the plugin in several places. The values `FOOTER` and `MENU_BAR` can currently be selected to display the plugin either in the menu bar or in the footer bar. | 
 
 
-### Further parameters 
-In addition to these general parameters, the following parameters are available for further configuration: 
+### Weitere Parameter 
+Neben den allgemeinen Parametern stehen die folgenden Parameter für die weitergehende Konfiguration zur Verfügung: 
 
 
 Parameter               | Explanation
 ------------------------|------------------------------------
-`docking`                      | This element is used to control where the plugin is to be integrated. With `MENU_BAR`, for example, the plugin can be displayed in the main bar. The element can be repeated to integrate the plugin in several places. The values `FOOTER` and `MENU_BAR` can currently be selected to display the plugin either in the menu bar or in the footer bar.
-`barcode`                      | The `barcode` element can be repeated as often as required to specify barcode formats. A barcode format has the attributes `description`, `pattern` and `sample`. <br /><br />The `description` is a textual description of the barcode format. If the barcode format can contain parameters, these can be included in the description with `{{n}}`. In this case, `n` must be replaced by the number of the parameter, starting with `1`.<br /><br />The `pattern` is a regular expression that describes the entire barcode. Groups can be defined with brackets in the regular expression. This can be used to define parts of the barcode as parameters. In the case of the example configuration, `(\d+)` is a group that describes a number with at least one digit. This group can then be used as `{{1}}` (the first parameter).<br /><br />The `sample` is a possible sample barcode. This is used during barcode generation to display possible sample barcodes. This sample barcode must match the regular expression.<br /><br />The content of the `barcode` element is any GoobiScript. Several GoobiScripts can also be entered in succession with `---`. With `{{n}}` the parameters of the barcode can be used in GoobiScript.
+`barcode`               | The `barcode` element can be repeated as often as required to specify barcode formats. A barcode format has the attributes `description`, `pattern` and `sample`. <br /><br />The `description` is a textual description of the barcode format. If the barcode format can contain parameters, these can be included in the description with `{{n}}`. In this case, `n` must be replaced by the number of the parameter, starting with `1`.<br /><br />The `pattern` is a regular expression that describes the entire barcode. Groups can be defined with brackets in the regular expression. This can be used to define parts of the barcode as parameters. In the case of the example configuration, `(\d+)` is a group that describes a number with at least one digit. This group can then be used as `{{1}}` (the first parameter).<br /><br />The `sample` is a possible sample barcode. This is used during barcode generation to display possible sample barcodes. This sample barcode must match the regular expression.<br /><br />The content of the `barcode` element is any GoobiScript. Several GoobiScripts can also be entered in succession with `---`. With `{{n}}` the parameters of the barcode can be used in GoobiScript.
 
 As the configuration is somewhat complex, we will explain it using the example of the second barcode format in the configuration:
 

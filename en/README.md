@@ -85,7 +85,7 @@ The import plugins are installed in the folder:
 
 These plugins are used in a separate mask for mass imports in which you select the different import mechanism and the desired plugin before selecting the data.
 
-![Import Plugin for data transfer from provided directories with xml files as data source](images/overview_import_en.png)
+![Import Plugin for data transfer from Excel as data source](images/overview_import_en.png)
 
 Some import plugins have their own configuration file. This is generally named like the plugin itself and is usually located at the following path:
 
@@ -108,7 +108,7 @@ The installation of the administration plugins takes place in the folder:
 /opt/digiverso/goobi/plugins/GUI/
 ```
 
-![The Vocabulary Manager as Administration Plugin](images/overview_administration_en.png)
+![The Ruleset Editor as Administration Plugin](images/overview_administration_en.png)
 
 Some administration plugins have their own configuration file. This file is generally named like the plugin itself and is usually located at the following path:
 
@@ -202,6 +202,23 @@ Some validation plugins have their own configuration file. This is generally nam
 
 ```bash
 /opt/digiverso/goobi/config/
+```
+
+## Generic Plugins
+The generic plugins are plugins that can be integrated at various points in the user interface. They can currently be integrated either directly into the menu bar at the top or into the footer at the bottom.
+
+![Barcode scanner plugin in the menu bar](images/overview_generic_en.png)
+
+The generic plugins are installed in the folder:
+
+```bash
+/opt/digiverso/goobi/plugins/generic/
+```
+
+The user interface of the generic plugins must also be installed in the following folder:
+
+```bash
+/opt/digiverso/goobi/plugins/GUI/
 ```
 
 ## REST Plugins

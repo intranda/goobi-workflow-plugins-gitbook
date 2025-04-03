@@ -1,7 +1,6 @@
 ---
 description: >-
-  Dokumentation für die Plugins der Open-Source-Software Goobi workflow von
-  intranda
+  Dokumentation für die Plugins der Open-Source-Software Goobi workflow von intranda
 ---
 
 # Übersicht
@@ -85,7 +84,7 @@ Die Installation der Import Plugins erfolgt im Ordner:
 
 Der Einsatz dieser Plugins erfolgt in einer eigenen Maske für Massenimporte, in der man den unterschiedlichen Importmechanismus sowie das gewünschte Plugin auswählt, bevor anschließend eine Auswahl der Daten erfolgt.
 
-![Import Plugin für die Datenübernahme aus bereitgestellten Verzeichnissen mit xml-Dateien als Datenquelle](images/overview_import_de.png)
+![Import Plugin für die Datenübernahme aus Excel als Datenquelle](images/overview_import_de.png)
 
 Einige Import Plugins verfügen über eine eigene Konfigurationsdatei. Diese ist im allgemeinen so benannt wie das Plugin selbst und befindet sich üblicherweise unter folgendem Pfad:
 
@@ -108,7 +107,7 @@ Da die meisten Administration Plugins neben der eigentlichen Funktionalität aus
 /opt/digiverso/goobi/plugins/GUI/
 ```
 
-![Der Vokabular-Manager als Administration Plugin](images/overview_administration_de.png)
+![Der Regelsatzeditor als Administration Plugin](images/overview_administration_de.png)
 
 Manche Administration Plugins verfügen über eine eigene Konfigurationsdatei. Diese ist im allgemeinen so benannt wie das Plugin selbst und befindet sich üblicherweise unter folgendem Pfad:
 
@@ -148,7 +147,7 @@ Die Installation der Dashboard Plugins erfolgt im Ordner:
 /opt/digiverso/goobi/plugins/dashboard/
 ```
 
-Die Nutzeroberfläche der Dashboards muss diese zusätzlich in folgenden Ordner installiert werden:
+Die Nutzeroberfläche der Dashboards muss zusätzlich in folgenden Ordner installiert werden:
 
 ```bash
 /opt/digiverso/goobi/plugins/GUI/
@@ -177,7 +176,7 @@ Die Installation der Statistik Plugins erfolgt im Ordner:
 /opt/digiverso/goobi/plugins/statistics/
 ```
 
-Die Nutzeroberfläche der Dashboards muss diese zusätzlich in folgenden Ordner installiert werden:
+Die Nutzeroberfläche der Dashboards muss zusätzlich in folgenden Ordner installiert werden:
 
 ```bash
 /opt/digiverso/goobi/plugins/GUI/
@@ -202,6 +201,23 @@ Einige Validation Plugins verfügen über eine eigene Konfigurationsdatei. Diese
 
 ```bash
 /opt/digiverso/goobi/config/
+```
+
+## Generische Plugins
+Bei den generischen Plugins handelt es sich um Plugins, die perspektivisch an verschiedenen Stellen der Nutzeroberfläche integriert werden können. Derzeitig können sie entweder direkt in die Menüleiste oben oder in die Fußleiste unten integriert werden.
+
+![Barcode Scanner Plugin in der Menüleiste ](images/overview_generic_de.png)
+
+Die Installation der generischen Plugins erfolgt im Ordner:
+
+```bash
+/opt/digiverso/goobi/plugins/generic/
+```
+
+Die Nutzeroberfläche der generischen Plugins muss zusätzlich in folgenden Ordner installiert werden:
+
+```bash
+/opt/digiverso/goobi/plugins/GUI/
 ```
 
 ## REST Plugins
