@@ -12,7 +12,7 @@ Name                     | Wert
 Identifier               | intranda_step_createfullpdf
 Repository               | [https://github.com/intranda/goobi-plugin-step-create-full-pdf](https://github.com/intranda/goobi-plugin-step-create-full-pdf)
 Licence              | GPL 2.0 or newer 
-Last change    | 17.09.2024 16:58:45
+Last change    | 21.03.2025 15:24:58
 
 
 ## Introduction
@@ -39,7 +39,7 @@ Once the plugin has been installed correctly, it can be configured in the user i
 
 
 ## Configuration
-The plugin is configured in the file `plugin_intranda_step_zbz_order_delivery.xml` as shown here:
+The plugin is configured in the file `plugin_intranda_step_createfullpdf.xml` as shown here:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
