@@ -40,6 +40,10 @@
 * [ZOP Export](goobi-plugin-export-zop.md)
 
 
+## Generisch <a id="generic"></a>
+* [Barcode Scanner](goobi-plugin-generic-barcode-scanner.md)
+
+
 ## Importe <a id="import"></a>
 * [Altdatenimport für das Bundesdenkmalamt Österreich](goobi-plugin-import-bka-bda.md)
 * [Archiv-Daten-Import](goobi-plugin-import-crown.md)

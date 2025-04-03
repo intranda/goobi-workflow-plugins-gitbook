@@ -40,6 +40,10 @@
 * [ZOP Export](goobi-plugin-export-zop.md)
 
 
+## Generic <a id="generic"></a>
+* [Barcode Scanner](goobi-plugin-generic-barcode-scanner.md)
+
+
 ## Imports <a id="import"></a>
 * [Legacy data import for the Austrian Federal Monuments Authority](goobi-plugin-import-bka-bda.md)
 * [Archive data import](goobi-plugin-import-crown.md)
