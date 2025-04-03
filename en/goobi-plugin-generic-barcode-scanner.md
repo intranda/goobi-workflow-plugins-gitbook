@@ -12,7 +12,7 @@ Name                     | Wert
 Identifier               | intranda_generic_barcodeScanner
 Repository               | [https://github.com/intranda/goobi-plugin-generic-barcode-scanner](https://github.com/intranda/goobi-plugin-generic-barcode-scanner)
 Licence              | GPL 2.0 or newer 
-Last change    | 03.04.2025 14:24:35
+Last change    | 03.04.2025 15:11:37
 
 
 ## Introduction
@@ -48,6 +48,7 @@ If the barcode corresponds to a configured barcode format, the corresponding Goo
 If the plugin is re-entered and a process title is then scanned, the previously activated GoobiScript is applied to this process.
 
 ![Scan process barcode](images/goobi-plugin-generic-barcode-scanner_screen_04_en.png)
+
 ![Applying GoobiScript to a process](images/goobi-plugin-generic-barcode-scanner_screen_05_en.png)
 
 Batches can also be scanned instead of processes. In this case, the GoobiScript is executed for all processes in the batch.

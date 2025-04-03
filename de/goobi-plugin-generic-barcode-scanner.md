@@ -12,7 +12,7 @@ Name                     | Wert
 Identifier               | intranda_generic_barcodeScanner
 Repository               | [https://github.com/intranda/goobi-plugin-generic-barcode-scanner](https://github.com/intranda/goobi-plugin-generic-barcode-scanner)
 Lizenz              | GPL 2.0 oder neuer 
-Letzte Änderung    | 03.04.2025 14:24:35
+Letzte Änderung    | 03.04.2025 15:11:37
 
 
 ## Einführung
@@ -48,6 +48,7 @@ Wenn der Barcode einem konfigurierten Barcodeformat entspricht, wird das entspre
 Wenn das Plugin erneut betreten wird und dann ein Vorgangstitel gescannt wird, wird das zuvor aktivierte GoobiScript auf diesen Vorgang angewandt.
 
 ![Vorgangsbarcode scannen](images/goobi-plugin-generic-barcode-scanner_screen_04_de.png)
+
 ![GoobiScript auf Vorgang anwenden](images/goobi-plugin-generic-barcode-scanner_screen_05_de.png)
 
 Anstelle von Vorgängen können auch Batches gescannt werden. In diesem Fall wird das GoobiScript für alle Vorgänge des Batches ausgeführt.
