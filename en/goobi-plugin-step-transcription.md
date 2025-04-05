@@ -12,7 +12,7 @@ Name                     | Wert
 Identifier               | intranda_step_transcription
 Repository               | [https://github.com/intranda/goobi-plugin-step-transcription](https://github.com/intranda/goobi-plugin-step-transcription)
 Licence              | GPL 2.0 or newer 
-Last change    | 25.07.2024 11:19:07
+Last change    | 05.04.2025 15:31:38
 
 
 ## Introduction
@@ -51,7 +51,7 @@ After entering the plugin, the user can browse through the image files. A rich t
 
 
 ## Configuration
-The configuration of the plugin is as follows:
+The plugin is configured in the file `plugin_intranda_step_transcription.xml` as shown here:
 
 ```xml
 <config_plugin>
@@ -61,28 +61,41 @@ The configuration of the plugin is as follows:
           2.) step name matches and project is *
           3.) project name matches and step name is *
           4.) project name and step name are *
-    -->
-
+	-->
+    
     <config>
         <!-- which projects to use for (can be more then one, otherwise use *) -->
         <project>*</project>
         <step>*</step>
-
+        
         <!-- which folder to use (master|main|jpeg|source|...) -->
-        <imageFolder>master</imageFolder>
-
+		<imageFolder>master</imageFolder>
+        
+        <!-- use tiles in image view -->
+        <useTiles>true</useTiles>
+        
         <!-- display button to finish the task directly from within the entered plugin -->
         <allowTaskFinishButtons>true</allowTaskFinishButtons>
     </config>
 
 </config_plugin>
+
 ```
 
-The parameters within this configuration file have the following meanings:
+### General parameters 
+The `<config>` block can occur repeatedly for different projects or work steps in order to be able to perform different actions within different workflows. The other parameters within this configuration file have the following meanings: 
 
-| Value | Description |
-| :--- | :--- |
-| `project` | This parameter specifies for which project the current block `<config>` should apply. The name of the project is used here. This parameter can occur several times per `<config>` block. |
-| `step` | This parameter controls for which steps the block `<config>` should apply. The name of the step is used here. This parameter can occur several times per `<config>` block. |
-| `imageFolder` | Specify here from which directory the images are to be displayed. Possible values are e.g. `master`, `media` or individual folders like `photos` and `scans`. |
-| `allowTaskFinishButtons` | This parameter can be used to enable buttons for completing the task to be displayed in the regular plugin interface so that the plugin does not have to be exited first. |
+| Parameter | Explanation | 
+| :-------- | :---------- | 
+| `project` | This parameter defines which project the current block `<config>` should apply to. The name of the project is used here. This parameter can occur several times per `<config>` block. | 
+| `step` | This parameter controls which work steps the `<config>` block should apply to. The name of the work step is used here. This parameter can occur several times per `<config>` block. | 
+
+
+### Further parameters 
+In addition to these general parameters, the following parameters are available for further configuration: 
+
+
+Parameter               | Explanation
+------------------------|------------------------------------
+`imageFolder`           | Specify here from which directory the images are to be displayed. Possible values are e.g. `master`, `media` or individual folders like `photos` and `scans`.
+`allowTaskFinishButtons` | This parameter can be used to enable buttons for completing the task to be displayed in the regular plugin interface so that the plugin does not have to be exited first.

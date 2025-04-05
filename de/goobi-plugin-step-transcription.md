@@ -12,7 +12,7 @@ Name                     | Wert
 Identifier               | intranda_step_transcription
 Repository               | [https://github.com/intranda/goobi-plugin-step-transcription](https://github.com/intranda/goobi-plugin-step-transcription)
 Lizenz              | GPL 2.0 oder neuer 
-Letzte Änderung    | 25.07.2024 11:19:07
+Letzte Änderung    | 05.04.2025 15:31:38
 
 
 ## Einführung
@@ -51,7 +51,7 @@ Nachdem der Nutzer das Plugin betreten hat, kann er dort zwischen den Bilddateie
 
 
 ## Konfiguration
-Die Konfiguration des Plugins ist folgendermaßen aufgebaut:
+Die Konfiguration des Plugins erfolgt in der Datei `plugin_intranda_step_transcription.xml` wie hier aufgezeigt:
 
 ```xml
 <config_plugin>
@@ -61,28 +61,41 @@ Die Konfiguration des Plugins ist folgendermaßen aufgebaut:
           2.) step name matches and project is *
           3.) project name matches and step name is *
           4.) project name and step name are *
-    -->
-
+	-->
+    
     <config>
         <!-- which projects to use for (can be more then one, otherwise use *) -->
         <project>*</project>
         <step>*</step>
-
+        
         <!-- which folder to use (master|main|jpeg|source|...) -->
-        <imageFolder>master</imageFolder>
-
+		<imageFolder>master</imageFolder>
+        
+        <!-- use tiles in image view -->
+        <useTiles>true</useTiles>
+        
         <!-- display button to finish the task directly from within the entered plugin -->
         <allowTaskFinishButtons>true</allowTaskFinishButtons>
     </config>
 
 </config_plugin>
+
 ```
 
-Die Parameter innerhalb dieser Konfigurationsdatei haben folgende Bedeutungen:
+### Allgemeine Parameter 
+Der Block `<config>` kann für verschiedene Projekte oder Arbeitsschritte wiederholt vorkommen, um innerhalb verschiedener Workflows unterschiedliche Aktionen durchführen zu können. Die weiteren Parameter innerhalb dieser Konfigurationsdatei haben folgende Bedeutungen: 
 
-| Wert | Beschreibung |
-| :--- | :--- |
-| `project` | Dieser Parameter legt fest, für welches Projekt der aktuelle Block `<config>` gelten soll. Verwendet wird hierbei der Name des Projektes. Dieser Parameter kann mehrfach pro `<config>` Block vorkommen. |
-| `step` | Dieser Parameter steuert, für welche Arbeitsschritte der Block `<config>` gelten soll. Verwendet wird hier der Name des Arbeitsschritts. Dieser Parameter kann mehrfach pro `<config>` Block vorkommen. |
-| `imageFolder` | Legen Sie hier fest, aus welchem Verzeichnis die Bilder angezeigt werden sollen. Mögliche Werte hierfür sind z.B. `master`, `media` oder auch individuelle Ordner wie `photos` und `scans`. |
-| `allowTaskFinishButtons` | Mit diesem Parameter kann ermöglicht werden, dass in der regulären Plugin-Oberfläche bereits Buttons zum Abschließen der Aufgabe angezeigt werden sollen, so dass das Plugin nicht zunächst verlassen werden muss. |
+| Parameter | Erläuterung | 
+| :-------- | :---------- | 
+| `project` | Dieser Parameter legt fest, für welches Projekt der aktuelle Block `<config>` gelten soll. Verwendet wird hierbei der Name des Projektes. Dieser Parameter kann mehrfach pro `<config>` Block vorkommen. | 
+| `step` | Dieser Parameter steuert, für welche Arbeitsschritte der Block `<config>` gelten soll. Verwendet wird hier der Name des Arbeitsschritts. Dieser Parameter kann mehrfach pro `<config>` Block vorkommen. | 
+
+
+### Weitere Parameter 
+Neben diesen allgemeinen Parametern stehen die folgenden Parameter für die weitergehende Konfiguration zur Verfügung: 
+
+
+Parameter               | Erläuterung
+------------------------|------------------------------------
+`imageFolder`           | Legen Sie hier fest, aus welchem Verzeichnis die Bilder angezeigt werden sollen. Mögliche Werte hierfür sind z.B. `master`, `media` oder auch individuelle Ordner wie `photos` und `scans`.
+`allowTaskFinishButtons` | Mit diesem Parameter kann ermöglicht werden, dass in der regulären Plugin-Oberfläche bereits Buttons zum Abschließen der Aufgabe angezeigt werden sollen, so dass das Plugin nicht zunächst verlassen werden muss.
