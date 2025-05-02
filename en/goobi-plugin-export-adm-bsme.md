@@ -127,7 +127,7 @@ The plugin is configured in the file `plugin_intranda_export_adm_bsme.xml` as sh
 	<targetDirectoryNegatives>/opt/digiverso/export/bsme/mnt/export/Negatives/</targetDirectoryNegatives>
 	<targetDirectorySlides>/opt/digiverso/export/bsme/mnt/export/Slides/</targetDirectorySlides>
 	<targetDirectoryGeneric>/opt/digiverso/export/bsme/mnt/export/Generic/</targetDirectoryGeneric>
-	
+
 	<!-- additional PDF copy directory, leave empty if not needed -->
 	<pdfCopyNewspapers>/opt/digiverso/export/bsme/mnt/pdf/Newspapers/</pdfCopyNewspapers>
 	<pdfCopyMagazines>/opt/digiverso/export/bsme/mnt/pdf/Magazines/</pdfCopyMagazines>
@@ -140,6 +140,7 @@ The plugin is configured in the file `plugin_intranda_export_adm_bsme.xml` as sh
 		- $(meta.CatalogIDDigital) 
 		- $(meta.topstruct.TitleDocMain) 
 		- $(process.Template) -->
+	<volumeNumber>$(meta.CurrentNo)</volumeNumber>
 	<rightsToUse>$(meta.AdmRightToUse)</rightsToUse>
 	<rightsDetails>$(meta.AdmRightDetails)</rightsDetails>
 	<source>Goobi</source>
@@ -163,7 +164,7 @@ The plugin is configured in the file `plugin_intranda_export_adm_bsme.xml` as sh
 	<format>$(meta.Format)</format>
 	<envelopeNumber>$(meta.AdmEnvelopeNumber)</envelopeNumber>
 	<backprint>$(meta.AdmBackprint)</backprint>
-	
+
 	<!-- mets parameter -->
 	<!-- if a field is empty or missing, project configuration is used -->
 	<metsUrl addFileExtension="true">https://adm.goobi.cloud/viewer/sourcefile?id=
@@ -203,6 +204,8 @@ The plugin is configured in the file `plugin_intranda_export_adm_bsme.xml` as sh
 		<titleLabel>TitleDocMain</titleLabel>
 		<modsTitle>MainTitle</modsTitle>
 		<issueNumber>CurrentNo</issueNumber>
+		<issueName>IssueName</issueName>
+		<issueNotes>AdmIssueNote</issueNotes>
 		<sortNumber>CurrentNoSorting</sortNumber>
 		<language>DocLanguage</language>
 		<location>PhysicalLocation</location>
@@ -221,6 +224,7 @@ The plugin is configured in the file `plugin_intranda_export_adm_bsme.xml` as sh
 		<month>Month</month>
 		<day>Day</day>
 		<issue>NewspaperIssue</issue>
+		<supplement>NewspaperSupplement</supplement>
 		<newspaperStub>NewspaperStub</newspaperStub>
 	</docstruct>
 

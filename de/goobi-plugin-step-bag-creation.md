@@ -12,7 +12,7 @@ Name                     | Wert
 Identifier               | intranda_step_bagcreation,intranda_step_bagsubmission
 Repository               | [https://github.com/intranda/goobi-plugin-step-bag-creation](https://github.com/intranda/goobi-plugin-step-bag-creation)
 Lizenz              | GPL 2.0 oder neuer 
-Letzte Änderung    | 25.07.2024 11:50:00
+Letzte Änderung    | 22.04.2025 11:00:25
 
 
 ## Einführung
@@ -239,9 +239,14 @@ Die Syntax ist dabei identisch zum MODS-Mapping im Regelsatz.
                     <DisplayNameXPath>./mods:displayForm</DisplayNameXPath>
                     <IdentifierXPath>../mods:name[@authority='gbv'][@ID='']</IdentifierXPath>
                 </Person>
-            </Group>            
+            </Group>
+            <archiveIdMETS>RecordID</archiveIdMETS>
+            <archiveIdEAD>recordid</archiveIdEAD>
         </additionalMetadata>
 ```
+
+Sofern auch das Archiv-Management installiert ist, kann auch der zum Datensatz gehörende Bestand mit archiviert werden. Dazu muss mittels `archiveIdMETS` und `archiveIdEAD` angegeben werden, in welchen Feldern die ID des Knotens in der METS Datei und im Knoten zu finden ist. Wenn das Feld existiert, wird mit Hilfe der ID der Knoten in allen Beständen gesucht. Wurde der Knoten gefunden, wird der komplette Bestand in den `other` Ordner exportiert.
+
 
 Als letztes werden die Zugangsdaten für den SFTP-Transfer konfiguriert.
 
