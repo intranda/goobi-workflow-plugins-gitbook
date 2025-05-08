@@ -12,7 +12,7 @@ Name                     | Wert
 Identifier               | intranda_import_eth_no_catalogue
 Repository               | [https://github.com/intranda/goobi-plugin-import-eth-no-catalogue](https://github.com/intranda/goobi-plugin-import-eth-no-catalogue)
 Lizenz              | GPL 2.0 oder neuer 
-Letzte Änderung    | 16.02.2025 11:25:03
+Letzte Änderung    | 06.05.2025 14:30:04
 
 
 ## Einführung
@@ -30,7 +30,9 @@ Nach der Installation des Plugins, kann dieses aus der Übersicht der Produktion
 
 ![Produktionsvorlage mit zusätzlichem blauen Button für den Massenimport](images/goobi-plugin-import-eth-no-catalogue_screen1_de.png)
 
-Wenn das Plugin betreten wurde, steht eine Nutzeroberfläche zur Verfügung, in der die einzuspielenden Daten ausgewählt bzw. hochgeladen werden können.
+An dieser Stelle kann zwischen zwei verschiedenen Bereichen des Plugins gewählt werden. Es steht hier zur Auswahl, ob mit bibliothekarischen Objekten gearbeitet werden soll (`plugin_import_eth_no_catalogue`) oder mit Archivalien (`plugin_import_eth_archival_objects`).
+
+Wenn das gewünschte Plugin betreten wurde, steht eine Nutzeroberfläche zur Verfügung, in der die einzuspielenden Daten ausgewählt bzw. hochgeladen werden können.
 
 ![Nutzeroberfläche des Import-Plugins](images/goobi-plugin-import-eth-no-catalogue_screen2_de.png)
 
@@ -38,27 +40,9 @@ Wenn das Plugin betreten wurde, steht eine Nutzeroberfläche zur Verfügung, in 
 ## Überblick und Funktionsweise
 Nach der Auswahl des richtigen Plugins können in der Nutzeroberfläche die Daten die entweder als CSV-Daten TAB-getrennt vorliegen oder die aus einer Excel-Datei kopiert werden in das Feld `Datensätze` eingefügt werden. Die Daten haben dabei den folgenden Aufbau:
 
-### Vier Spalten für Monographien und Mehrbändige Werke
-Wenn vier Spalten verwendet werden, haben diese den folgenden Aufbau:
+### Plugin: plugin_import_eth_no_catalogue
 
-Spalte    | Metadatum       | Erläuterung
-----------|-----------------|-------------------------
-`1`       | `MMS-ID`        | Wenn diese einen Unterstrich enthält, wird ein Mehrbändiges Werk angelegt, andernfalls eine Monographie. Hierbei handelt es sich um eine Pflichtangabe.
-`2`       | `Signatur`      | Hierbei handelt es sich um eine Pflichtangabe.
-`3`       | `Kollektion`    | Angabe der zuzuweisenden Kollektion. Hierbei handelt es sich um eine Pflichtangabe.
-`4`       | `Titel`         | Hierbei handelt es sich um eine optionale Angabe.
-
-
-### Zwei Spalten für Archivalien
-Wenn zwei Spalten verwendet werden, haben diese den folgenden Aufbau:
-
-Spalte    | Metadatum       | Erläuterung
-----------|-----------------|-------------------------
-`1`       | `Signatur`      | Hierbei handelt es sich um die Pflichtangabe der Signatur.
-`2`       | `Datum`         | Hierbei handelt es sich um die Pflichtangabe des Digitalisierungsdatums.
-
-
-### Acht Spalten für Karten
+#### Acht Spalten für Karten
 Wenn acht Spalten verwendet werden, haben diese den folgenden Aufbau:
 
 Spalte    | Metadatum       | Erläuterung
@@ -71,6 +55,38 @@ Spalte    | Metadatum       | Erläuterung
 `6`       | `Scans`         | Hierbei handelt es sich um die Pflichtangabe der Scans.
 `7`       | `dpi`           | Hierbei handelt es sich um die Pflichtangabe der Auflösung.
 `8`       | `Bemerkungen`   | Hierbei handelt es sich um die Pflichtangabe mit Bemerkungen.
+
+
+#### Vier Spalten für Monographien und Mehrbändige Werke
+Wenn vier Spalten verwendet werden, haben diese den folgenden Aufbau:
+
+Spalte    | Metadatum       | Erläuterung
+----------|-----------------|-------------------------
+`1`       | `MMS-ID`        | Wenn diese einen Unterstrich enthält, wird ein Mehrbändiges Werk angelegt, andernfalls eine Monographie. Hierbei handelt es sich um eine Pflichtangabe.
+`2`       | `Signatur`      | Hierbei handelt es sich um eine Pflichtangabe.
+`3`       | `Kollektion`    | Angabe der zuzuweisenden Kollektion. Hierbei handelt es sich um eine Pflichtangabe.
+`4`       | `Titel`         | Hierbei handelt es sich um eine optionale Angabe.
+
+
+### Plugin: plugin_import_eth_archival_objects
+
+#### Zwei Spalten für Archivalien
+Wenn zwei Spalten verwendet werden, haben diese den folgenden Aufbau:
+
+Spalte    | Metadatum       | Erläuterung
+----------|-----------------|-------------------------
+`1`       | `Signatur`      | Hierbei handelt es sich um die Pflichtangabe der Signatur.
+`2`       | `Datum`         | Hierbei handelt es sich um die Pflichtangabe des Digitalisierungsdatums.
+
+
+#### Drei Spalten für Archivalien in Boxen
+Wenn drei Spalten verwendet werden, haben diese den folgenden Aufbau:
+
+Spalte    | Metadatum       | Erläuterung
+----------|-----------------|-------------------------
+`1`       | `Schachtel`     | Hierbei handelt es sich um die Pflichtangabe der Box-Nummer.
+`2`       | `Mappe`         | Hierbei handelt es sich um die Pflichtangabe der Mappen-Nummer.
+`3`       | `Datum`         | Hierbei handelt es sich um die Pflichtangabe des Digitalisierungsdatums.
 
 
 Unmittelbar nach dem Einfügen der Daten und dem Klick auf `Speichern` startet das Anlegen der Vorgänge, ohne dass dabei ein Katalog abgefragt wird.
@@ -86,12 +102,8 @@ Die Konfiguration des Plugins erfolgt in der Datei `plugin_intranda_import_eth_n
 		<!-- which workflow template shall be used -->
 		<template>*</template>
 
-		<!-- which digital collection to use 
-		<collection>General</collection> 
-		-->
-
 		<!-- define if import shall use GoobiScript to run in the background -->
-		<runAsGoobiScript>true</runAsGoobiScript>
+		<runAsGoobiScript>false</runAsGoobiScript>
 
 	</config>
 </config_plugin>

@@ -12,7 +12,7 @@ Name                     | Wert
 Identifier               | intranda_import_eth_no_catalogue
 Repository               | [https://github.com/intranda/goobi-plugin-import-eth-no-catalogue](https://github.com/intranda/goobi-plugin-import-eth-no-catalogue)
 Licence              | GPL 2.0 or newer 
-Last change    | 16.02.2025 11:25:03
+Last change    | 06.05.2025 14:30:04
 
 
 ## Introduction
@@ -30,7 +30,9 @@ Once the plugin has been installed, it can be accessed from the overview of prod
 
 ![Production template with additional blue button for mass import](images/goobi-plugin-import-eth-no-catalogue_screen1_en.png)
 
-Once the plugin has been entered, a user interface is available in which the data to be imported can be selected or uploaded.
+At this point, you can choose between two different areas of the plugin. You can choose whether you want to work with library objects (`plugin_import_eth_no_catalogue`) or archival objects (`plugin_import_eth_archival_objects`).
+
+Once the desired plugin has been entered, a user interface is available in which the data to be imported can be selected or uploaded.
 
 ![User interface of the import plugin](images/goobi-plugin-import-eth-no-catalogue_screen2_en.png)
 
@@ -38,27 +40,9 @@ Once the plugin has been entered, a user interface is available in which the dat
 ## Overview and functionality
 After selecting the correct plugin, the data that is either available as TAB-separated CSV data or copied from an Excel file can be inserted into the ‘Data records’ field in the user interface. The data has the following structure:
 
-### Four columns for monographs and multi-volume works
-If four columns are used, they have the following structure:
+### Plugin: plugin_import_eth_no_catalogue
 
-Column    | Metadata       | Explanation
-----------|-----------------|-------------------------
-`1`       | `MMS-ID`        | If this contains an underscore, a multi-volume work is created, otherwise a monograph. This is a mandatory entry.
-`2`       | `Signature`      | This is a mandatory entry.
-`3`       | `Collection`    | Specification of the collection to be assigned. This is a mandatory entry.
-`4`       | `Title`         | This is an optional specification.
-
-
-### Two columns for archive records
-If two columns are used, they have the following structure:
-
-Spalte    | Metadata       | Explanation
-----------|-----------------|-------------------------
-`1`       | `Signature`      | This is the mandatory signature information.
-`2`       | `Date`         | This is the mandatory entry of the digitisation date.
-
-
-### Eight columns for cards
+#### Eight columns for cards
 If eight columns are used, they have the following structure:
 
 Spalte    | Metadata       | Explanation
@@ -71,6 +55,38 @@ Spalte    | Metadata       | Explanation
 `6`       | `Scans`         | This is the mandatory information for the scans.
 `7`       | `dpi`           | This is the mandatory information for the resolution.
 `8`       | `Remarks`   | This is the mandatory information with comments.
+
+
+#### Four columns for monographs and multi-volume works
+If four columns are used, they have the following structure:
+
+Column    | Metadata       | Explanation
+----------|-----------------|-------------------------
+`1`       | `MMS-ID`        | If this contains an underscore, a multi-volume work is created, otherwise a monograph. This is a mandatory entry.
+`2`       | `Signature`     | This is a mandatory entry.
+`3`       | `Collection`    | Specification of the collection to be assigned. This is a mandatory entry.
+`4`       | `Title`         | This is an optional specification.
+
+
+### Plugin: plugin_import_eth_archival_objects
+
+#### Two columns for archive records
+If two columns are used, they have the following structure:
+
+Spalte    | Metadata       | Explanation
+----------|----------------|-------------------------
+`1`       | `Signature`    | This is the mandatory signature information.
+`2`       | `Date`         | This is the mandatory entry of the digitisation date.
+
+
+#### Drei Spalten für Archivalien in Boxen
+Wenn drei Spalten verwendet werden, haben diese den folgenden Aufbau:
+
+Spalte    | Metadatum       | Erläuterung
+----------|-----------------|-------------------------
+`1`       | `Box`           | This is the mandatory entry of the box number.
+`2`       | `Map`           | This is the mandatory entry of the folder number.
+`3`       | `Date`          | This is the mandatory entry of the digitisation date.
 
 
 Immediately after inserting the data and clicking on ‘Save’, the creation of the processes starts without a catalogue being requested.
@@ -86,12 +102,8 @@ The plugin is configured in the file `plugin_intranda_import_eth_no_catalogue.xm
 		<!-- which workflow template shall be used -->
 		<template>*</template>
 
-		<!-- which digital collection to use 
-		<collection>General</collection> 
-		-->
-
 		<!-- define if import shall use GoobiScript to run in the background -->
-		<runAsGoobiScript>true</runAsGoobiScript>
+		<runAsGoobiScript>false</runAsGoobiScript>
 
 	</config>
 </config_plugin>
