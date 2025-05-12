@@ -12,7 +12,7 @@ Name                     | Wert
 Identifier               | intranda_import_eth_no_catalogue
 Repository               | [https://github.com/intranda/goobi-plugin-import-eth-no-catalogue](https://github.com/intranda/goobi-plugin-import-eth-no-catalogue)
 Lizenz              | GPL 2.0 oder neuer 
-Letzte Änderung    | 06.05.2025 14:30:04
+Letzte Änderung    | 12.05.2025 13:53:05
 
 
 ## Einführung
@@ -85,7 +85,7 @@ Wenn drei Spalten verwendet werden, haben diese den folgenden Aufbau:
 Spalte    | Metadatum       | Erläuterung
 ----------|-----------------|-------------------------
 `1`       | `Schachtel`     | Hierbei handelt es sich um die Pflichtangabe der Box-Nummer.
-`2`       | `Mappe`         | Hierbei handelt es sich um die Pflichtangabe der Mappen-Nummer.
+`2`       | `Signatur`         | Hierbei handelt es sich um die Pflichtangabe der Signatur.
 `3`       | `Datum`         | Hierbei handelt es sich um die Pflichtangabe des Digitalisierungsdatums.
 
 

@@ -133,7 +133,7 @@ The plugin is configured in the file `plugin_intranda_export_adm_bsme.xml` as sh
 	<pdfCopyMagazines>/opt/digiverso/export/bsme/mnt/pdf/Magazines/</pdfCopyMagazines>
 
 	<!-- main viewer url -->
-	<viewerUrl>https://adm.goobi.cloud/viewer/</viewerUrl>
+	<viewerUrl>https://adm.goobi.cloud/viewer</viewerUrl>
 
 	<!-- configured values to be used inside of the export xml, 
 	    you can use variable replacer expressions here like e.g.: 
