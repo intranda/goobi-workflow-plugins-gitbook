@@ -2,6 +2,7 @@
 * [Übersicht](README.md)
 
 ## Administration <a id="administration"></a>
+* [ACTApro Synchronisation](goobi-plugin-administration-actapro-sync.md)
 * [Archiv-Management](goobi-plugin-administration-archive-management.md)
   * [Bedienung des Plugins](goobi-plugin-administration-archive-management_page_01_de.md)
   * [Konfiguration des Plugins](goobi-plugin-administration-archive-management_page_02_de.md)
@@ -88,6 +89,7 @@
 
 
 ## Arbeitsschritte <a id="step"></a>
+* [Anreichern von ACTApro Dokumenten](goobi-plugin-step-actapro.md)
 * [ALMA API Plugin](goobi-plugin-step-alma-api.md)
 * [Automatische Paginierung auf Basis der Dateinamen](goobi-plugin-step-analysis-imagename.md)
 * [Archivierung von Bildordnern](goobi-plugin-step-archive-image-folder.md)
