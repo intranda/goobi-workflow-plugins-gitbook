@@ -161,6 +161,7 @@
 * [OCR-Ergebnis in Metadatenfeld übernehmen](goobi-plugin-step-ocr-to-metadata.md)
 * [Object Identifier Generierung](goobi-plugin-step-oid-creation.md)
 * [Korrektur von Inhaltverzeichnissen nach einer OLR](goobi-plugin-step-olr-correction.md)
+* [Kontrolle der Ausgabenerkennung innerhalb von Zeitungen](goobi-plugin-step-olr-newspaper-recognizer.md)
 * [Datenimport für Book Interchange Dateien](goobi-plugin-step-pdf-book-interchange-convert.md)
 * [PDFs aufsplitten, Volltext extrahieren und Inhaltsverzeichnis auslesen](goobi-plugin-step-pdf-extraction.md)
 * [Elektronische Publikationen](goobi-plugin-step-pdf-upload.md)
